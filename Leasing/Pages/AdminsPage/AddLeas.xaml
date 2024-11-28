@@ -1,0 +1,47 @@
+﻿<Window x:Class="Leasing.Pages.AdminsPage.AddLeas"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Leasing.Pages.AdminsPage"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"   
+        mc:Ignorable="d"
+        Title="AddLeas"  ResizeMode="NoResize" Height="700" Width="500" AllowsTransparency="True" WindowStartupLocation="CenterScreen" WindowStyle="None" Background="Transparent">
+    <Grid >
+        <materialDesign:Card Margin="10" UniformCornerRadius="20" >
+            <Grid Margin="0,0,0,-21">
+                <Button Style="{StaticResource MaterialDesignFloatingActionButton}" HorizontalAlignment="Left" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="Black" x:Name="CloseButton"   Margin="414,10,0,635" Click="ExitClick" Cursor="Hand">
+                    <materialDesign:PackIcon Kind="Close" Foreground="Black" Height="39" Width="39" VerticalAlignment="Center">
+                        <UIElement.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </UIElement.RenderTransform>
+                    </materialDesign:PackIcon>
+                </Button>
+                <TextBox x:Name="TxbName" HorizontalContentAlignment="Center"   Style="{StaticResource MaterialDesignOutlinedTextBox}" HorizontalAlignment="Center" Margin="0,41,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="240" Height="52" Background="#FF6F63C5" Foreground="White"/>
+                <Label Content="Название" HorizontalAlignment="Left" Margin="215,18,0,0" VerticalAlignment="Top" Height="24" Width="62" Foreground="#FF7D32FF" FontSize="14" FontFamily="Bahnschrift Condensed"/>
+                <TextBox x:Name="TxbCount" HorizontalContentAlignment="Center"   Style="{StaticResource MaterialDesignOutlinedTextBox}" HorizontalAlignment="Center" Margin="0,122,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="240" Height="52" Background="#FF6F63C5" Foreground="White"/>
+                <Label Content="Кол-во месяцев лизинга" HorizontalAlignment="Center" Margin="0,98,0,0" VerticalAlignment="Top" Height="24" Width="123" Foreground="#FF7D32FF" FontSize="14" FontFamily="Bahnschrift Condensed"/>
+                <TextBox x:Name="TxbPrice" HorizontalContentAlignment="Center"   Style="{StaticResource MaterialDesignOutlinedTextBox}" HorizontalAlignment="Center" Margin="0,203,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="240" Height="52" Background="#FF6F63C5" Foreground="White"/>
+                <Label Content="Цена машины" HorizontalAlignment="Center" Margin="0,179,0,0" VerticalAlignment="Top" Height="24" Width="74" Foreground="#FF7D32FF" FontSize="14" FontFamily="Bahnschrift Condensed"/>
+                <TextBox x:Name="TxbAvance" HorizontalContentAlignment="Center"   Style="{StaticResource MaterialDesignOutlinedTextBox}" HorizontalAlignment="Center" Margin="0,279,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="240" Height="52" Background="#FF6F63C5" Foreground="White"/>
+                <Label Content="Аванс" HorizontalAlignment="Center" Margin="0,255,0,0" VerticalAlignment="Top" Height="24" Width="38" Foreground="#FF7D32FF" FontSize="14" FontFamily="Bahnschrift Condensed"/>
+                <Label Content="Ежемесячная плата" HorizontalAlignment="Left" Margin="192,334,0,0" VerticalAlignment="Top" Height="24" Width="106" Foreground="#FF7D32FF" FontSize="14" FontFamily="Bahnschrift Condensed"/>
+                <Button Content="Добавить" HorizontalAlignment="Left" Margin="194,627,0,0" VerticalAlignment="Top" Click="AddLease"/>
+                <Label Content="Полная цена" HorizontalAlignment="Left" Margin="209,415,0,0" VerticalAlignment="Top" Height="24" Width="106" Foreground="#FF7D32FF" FontSize="14" FontFamily="Bahnschrift Condensed"/>
+                <Button Content="Добавить фото" HorizontalAlignment="Center" Margin="0,583,0,0" VerticalAlignment="Top" Click="AddImg" Background="#FF56AB5B" BorderBrush="#FF56AB5B"/>
+                <TextBox x:Name="TxbMouthly" HorizontalContentAlignment="Center"   Style="{StaticResource MaterialDesignOutlinedTextBox}" HorizontalAlignment="Center" Margin="0,358,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="240" Height="52" Background="#FF6F63C5" Foreground="White"/>
+                <TextBox x:Name="TxbAllPrice" HorizontalContentAlignment="Center"   Style="{StaticResource MaterialDesignOutlinedTextBox}" HorizontalAlignment="Center" Margin="0,437,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="240" Height="52" Background="#FF6F63C5" Foreground="White"/>
+                <Label Content="Айди договора (если есть)" HorizontalAlignment="Left" Margin="178,491,0,0" VerticalAlignment="Top" Height="24" Width="130" Foreground="#FF7D32FF" FontSize="14" FontFamily="Bahnschrift Condensed"/>
+                <TextBox x:Name="TxbDogovor" HorizontalContentAlignment="Center"   Style="{StaticResource MaterialDesignOutlinedTextBox}" HorizontalAlignment="Left" Margin="122,515,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="240" Height="52" Background="#FF6F63C5" Foreground="White"/>
+
+
+            </Grid>
+        </materialDesign:Card>
+    </Grid>
+</Window>
+

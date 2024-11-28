@@ -1,0 +1,96 @@
+﻿<Page x:Class="Leasing.Pages.WorkersPage.WorkerPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Leasing.Pages.WorkersPage"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="WorkerPage" Loaded="Page_Loaded">
+    <Page.Resources>
+        <local:ImageConverterer x:Key="ByteArrayToImageConverter"/>
+    </Page.Resources>
+    <Grid>
+        <materialDesign:Card Margin="10" UniformCornerRadius="20" Background="#00000000">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="15*" />
+                </Grid.ColumnDefinitions>
+                <Grid.Resources>
+                    <Style TargetType="materialDesign:PackIcon">
+                        <Setter Property="Width" Value="30"></Setter>
+                        <Setter Property="Height" Value="30"></Setter>
+                    </Style>
+                </Grid.Resources>
+                <Grid Grid.Column="0" Background="White">
+                    <ListView Margin="-13,17,-25,-47">
+                        <ListViewItem Margin="0 0">
+                            <Button Style="{StaticResource MaterialDesignFloatingActionButton}" HorizontalAlignment="Left"
+                             BorderBrush="{x:Null}" Background="{x:Null}" Foreground="Black">
+                                <StackPanel Margin="0">
+                                    <materialDesign:PackIcon Kind="Car"/>
+                                </StackPanel>
+                            </Button>
+                        </ListViewItem>
+
+
+
+                    
+
+                        <ListViewItem Margin="0 0">
+                            <Button Style="{StaticResource MaterialDesignFloatingActionButton}" HorizontalAlignment="Left"
+      BorderBrush="{x:Null}" Background="{x:Null}" Foreground="Black">
+                                <StackPanel Margin="0">
+                                    <materialDesign:PackIcon Kind="History"/>
+                                </StackPanel>
+                            </Button>
+                        </ListViewItem>
+
+
+                        <ListViewItem Margin="0 0 0 0">
+                            <Button Style="{StaticResource MaterialDesignFloatingActionButton}" HorizontalAlignment="Left"
+                             BorderBrush="{x:Null}" Background="{x:Null}" Foreground="Black" x:Name="ExitToAuth" Click="ExitToAuthClick" >
+                                <StackPanel Margin="0">
+                                    <materialDesign:PackIcon Kind="ExitToApp"/>
+                                </StackPanel>
+                            </Button>
+                        </ListViewItem>
+                    </ListView>
+                </Grid>
+                <Grid Grid.Column="1" Background="#FF221835" Name="RenderPages" Margin="0,0,-10,0">
+                    <Ellipse HorizontalAlignment="Left" Height="292" Margin="561,254,0,0" VerticalAlignment="Top" Width="376" Fill="#19FFFFFF"/>
+
+                    <Button Style="{StaticResource MaterialDesignFloatingActionButton}" HorizontalAlignment="Left" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="Black" x:Name="CloseButton"   Margin="679,-5,0,379"  Cursor="Hand" Click="CloseApp">
+                        <materialDesign:PackIcon Kind="Close" Foreground="White"/>
+                    </Button>
+                    
+                    <DataGrid x:Name="DataGR" Margin="22,56,22,102" AutoGenerateColumns="False">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="НАЗВАНИЕ" Width="101" Binding="{Binding Name}"/>
+                            <DataGridTextColumn Header="CРОК" Width="66" Binding="{Binding MonthCount}"/>
+                            <DataGridTextColumn Header="СТОИМОСТЬ" Width="112" Binding="{Binding CarPrice}"/>
+                            <DataGridTextColumn Header="АВАНС" Width="75" Binding="{Binding Avance}"/>
+                            <DataGridTemplateColumn Header="ФОТО">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Image Width="100" Height="100" 
+                                            Source="{Binding Images, Converter={StaticResource ByteArrayToImageConverter}}" />
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                            <DataGridTextColumn Header="ПОЛНАЯ ЦЕНА" Width="126" Binding="{Binding AllAmount}"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <Button Content="ВЗЯТЬ В ЛИЗИНГ" HorizontalAlignment="Left" Margin="22,344,0,0" VerticalAlignment="Top" Click="TakeLease"/>
+
+                    <Ellipse HorizontalAlignment="Left" Height="200" Margin="-23,-149,0,0" VerticalAlignment="Top" Width="233" Fill="#19FFFFFF"/>
+                    <Button Content="ОБНОВИТЬ" HorizontalAlignment="Left" Margin="612,344,0,0" VerticalAlignment="Top" Click="Refresh" Cursor="Hand"/>
+                    <Label Content="Доступные лизинги" HorizontalAlignment="Left" Margin="22,19,0,0" VerticalAlignment="Top" Foreground="#E5FFFFFF" FontSize="18" FontFamily="Arial Black"/>
+                </Grid>
+            </Grid>
+        </materialDesign:Card>
+    </Grid>
+</Page>
+

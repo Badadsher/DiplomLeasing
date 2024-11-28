@@ -1,0 +1,55 @@
+﻿<Page x:Class="Leasing.Pages.AuthPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Leasing.Pages"
+         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AuthPage">
+
+
+    <Grid>
+        <materialDesign:Card Margin="10" UniformCornerRadius="20" Background="#00000000">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="290" />
+                    <ColumnDefinition Width="15*" />
+                </Grid.ColumnDefinitions>
+                <Grid.Resources>
+                    <Style TargetType="materialDesign:PackIcon">
+                        <Setter Property="Width" Value="30"></Setter>
+                        <Setter Property="Height" Value="30"></Setter>
+
+                    </Style>
+                </Grid.Resources>
+                <Grid Grid.Column="0" Background="#FF221835" Margin="-27,0,5,0">
+                    <Ellipse HorizontalAlignment="Left" Height="174" Margin="-37,314,0,0" VerticalAlignment="Top" Width="174" Fill="#19FFFFFF"/>
+                    <Ellipse HorizontalAlignment="Left" Height="174" Margin="72,279,0,0" VerticalAlignment="Top" Width="174" Fill="#19FFFFFF"/>
+                    <Ellipse HorizontalAlignment="Left" Height="174" Margin="191,314,0,0" VerticalAlignment="Top" Width="174" Fill="#19FFFFFF"/>
+                    <Label Content="ДОБРО ПОЖАЛОВАТЬ" HorizontalAlignment="Left" Margin="41,79,0,0" VerticalAlignment="Top" Height="47" Width="289" Foreground="#E5FFFFFF" FontSize="36" FontFamily="Bahnschrift Condensed"/>
+                    <Label HorizontalAlignment="Left" Content="ООО `ОНК`"  Margin="109,126,0,0" VerticalAlignment="Top" Height="47" Width="130" Foreground="#E5FFFFFF" FontSize="28" FontFamily="Bahnschrift Condensed"/>
+
+                </Grid>
+                <Grid Background="White" Name="RenderPages" Grid.ColumnSpan="2" Margin="285,0,0,0">
+                    <PasswordBox x:Name="TxbPassword" HorizontalContentAlignment="Center" Style="{StaticResource MaterialDesignOutlinedPasswordBox}" Margin="150,208,114,174" Background="#4C673AB7" Foreground="White"></PasswordBox>
+                    <TextBox x:Name="TxbLogin" HorizontalContentAlignment="Center" Style="{StaticResource MaterialDesignOutlinedTextBox}" Margin="150,144,114,238" Background="#4C673AB7" FontFamily="Bahnschrift Condensed" Foreground="White"></TextBox>
+                    <Button Content="ЗАРЕГИСТРИРОВАТЬСЯ" Style="{StaticResource MaterialDesignOutlinedButton}" HorizontalAlignment="Left" Margin="230,273,0,0" VerticalAlignment="Top" Width="146" FontSize="10" Click="RegClick"/>
+                    <Button Content="ВХОД" Style="{StaticResource MaterialDesignRaisedButton}" Margin="150,273,265,0" VerticalAlignment="Top" FontSize="10" Click="AuthClick"/>
+                    <Label Content="ВХОД" HorizontalAlignment="Left" Margin="233,87,0,0" VerticalAlignment="Top" Height="46" Width="70" Foreground="#FF6E5894" FontSize="36" FontFamily="Bahnschrift Condensed"/>
+
+                    <materialDesign:PackIcon Kind="Account" Margin="115,153,0,0"/>
+                    <materialDesign:PackIcon Kind="Lock" Margin="115,217,0,0"/>
+
+                    <Button Style="{StaticResource MaterialDesignFloatingActionButton}" HorizontalAlignment="Left"
+   BorderBrush="{x:Null}" Background="{x:Null}" Foreground="Black" x:Name="btnExit" Click="ExitClick" Margin="444,-10,0,384">
+
+                        <materialDesign:PackIcon Kind="Close"/>
+
+                    </Button>
+                </Grid>
+            </Grid>
+        </materialDesign:Card>
+    </Grid>
+</Page>
