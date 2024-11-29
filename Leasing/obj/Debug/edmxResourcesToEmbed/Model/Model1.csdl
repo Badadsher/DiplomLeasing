@@ -23,12 +23,9 @@
     <Property Name="ID" Type="Int32" Nullable="false" />
     <Property Name="ClientID" Type="Int32" />
     <Property Name="StartDate" Type="DateTime" Precision="0" />
-    <Property Name="EndDate" Type="DateTime" Precision="0" />
+    <Property Name="EndDate" Type="DateTime" Nullable="false" Precision="0" />
     <Property Name="Status" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
     <Property Name="CarID" Type="Int32" />
-    <Property Name="CarName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="CarImg" Type="Binary" MaxLength="Max" FixedLength="false" />
-    <Property Name="CarMonthly" Type="Int32" />
     <NavigationProperty Name="LeaseObjects" Relationship="Self.FK_LeaseObjects_Leases" FromRole="Leases" ToRole="LeaseObjects" />
     <NavigationProperty Name="LeaseObjects1" Relationship="Self.FK_Leases_LeaseObjects" FromRole="Leases" ToRole="LeaseObjects" />
     <NavigationProperty Name="Users" Relationship="Self.FK_Leases_Users" FromRole="Leases" ToRole="Users" />

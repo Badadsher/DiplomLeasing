@@ -25,9 +25,6 @@
           <ScalarProperty Name="EndDate" ColumnName="EndDate" />
           <ScalarProperty Name="Status" ColumnName="Status" />
           <ScalarProperty Name="CarID" ColumnName="CarID" />
-          <ScalarProperty Name="CarName" ColumnName="CarName" />
-          <ScalarProperty Name="CarImg" ColumnName="CarImg" />
-          <ScalarProperty Name="CarMonthly" ColumnName="CarMonthly" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -13,6 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using static MaterialDesignThemes.Wpf.Theme;
 
 namespace Leasing.Pages.WorkersPage
 {
@@ -30,18 +32,20 @@ namespace Leasing.Pages.WorkersPage
 
         private void CloseLease(object sender, RoutedEventArgs e)
         {
-            var curobj = DataGR.SelectedItem as Leases;
+            var curobj = DataGR.SelectedItem as LeaseViewModel;
             if(curobj != null)
             {
                 try
                 {
+                    var curlease = AppData.db.Leases.Where(u => u.CarID == curobj.CarID).FirstOrDefault();
                     int carid = (int)curobj.CarID;
                     var curcar = AppData.db.LeaseObjects.FirstOrDefault(u=> u.ID == carid);
                     curcar.LeaseID = null;
-                    AppData.db.Leases.Remove(curobj);
+                    
+                    AppData.db.Leases.Remove(curlease);
                     AppData.db.SaveChanges();
                     MessageBox.Show("Удалено!");
-                    DataGR.ItemsSource = AppData.db.Leases.Where(u => u.ClientID == usid).ToList();
+                    Refresher();
                 }
                 catch(Exception er)
                 {
@@ -53,15 +57,35 @@ namespace Leasing.Pages.WorkersPage
 
         private void Refresh(object sender, RoutedEventArgs e)
         {
-            DataGR.ItemsSource = AppData.db.Leases.Where(u => u.ClientID == usid).ToList();
-            MessageBox.Show("Обновлено!");
+            Refresher();
         }
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            DataGR.ItemsSource = AppData.db.Leases.Where(u => u.ClientID == usid).ToList();
+            Refresher();
         }
 
+
+        private void Refresher()
+        {
+            var query = from lease in AppData.db.Leases
+                        join leaseObject in AppData.db.LeaseObjects
+                        on lease.CarID equals leaseObject.ID
+                        where lease.ClientID == usid
+                        select new LeaseViewModel
+                        {
+
+                            Name = leaseObject.Name,
+                            Images = leaseObject.Images,
+                            MothlyPrice = (int)leaseObject.MothlyPrice,
+                            StartDate = (DateTime)lease.StartDate,
+                            EndDate = lease.EndDate,
+                            Status = lease.Status,
+                            CarID = (int)lease.CarID
+                        };
+
+            DataGR.ItemsSource = query.ToList();
+        }
         private void WorkerPageClick(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new WorkerPage(usid));

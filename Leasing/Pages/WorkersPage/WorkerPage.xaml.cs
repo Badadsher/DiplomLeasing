@@ -41,15 +41,14 @@ namespace Leasing.Pages.WorkersPage
                 var curobj = DataGR.SelectedItem as LeaseObjects;
               
 
+
+
                 Leases newlease = new Leases();
                 newlease.ID = AppData.db.Leases.Any() ? AppData.db.Leases.Max(u => u.ID) + 1 : 1;
                 newlease.ClientID = usid;
                 newlease.StartDate = DateTime.Now.Date;
-                newlease.CarID = curobj.ID;
-                newlease.CarName = curobj.Name;
-                newlease.CarImg = curobj.Images;
-                newlease.CarMonthly = curobj.MothlyPrice;
-               
+
+                newlease.CarID = curobj.ID;           
                 newlease.Status = "В процессе";
                 AppData.db.Leases.Add(newlease);
                 AppData.db.SaveChanges();
@@ -81,7 +80,8 @@ namespace Leasing.Pages.WorkersPage
             NavigationService.Navigate(new AuthPage());
         }
 
-        private void HistoryWorker(object sender, RoutedEventArgs e)
+
+        private void OpenHistory(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new WorkerHistoryPage(usid));
         }

@@ -23,12 +23,9 @@ namespace Leasing.Model
         public int ID { get; set; }
         public Nullable<int> ClientID { get; set; }
         public Nullable<System.DateTime> StartDate { get; set; }
-        public Nullable<System.DateTime> EndDate { get; set; }
+        public System.DateTime EndDate { get; set; }
         public string Status { get; set; }
         public Nullable<int> CarID { get; set; }
-        public string CarName { get; set; }
-        public byte[] CarImg { get; set; }
-        public Nullable<int> CarMonthly { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<LeaseObjects> LeaseObjects { get; set; }

@@ -67,16 +67,16 @@
                     </Button>
                     <DataGrid x:Name="DataGR" Margin="22,56,22,102" AutoGenerateColumns="False">
                         <DataGrid.Columns>
-                            <DataGridTextColumn Header="НАЗВАНИЕ" Width="101" Binding="{Binding СarName}"/>
+                            <DataGridTextColumn Header="НАЗВАНИЕ" Width="101" Binding="{Binding Name}"/>
                             <DataGridTemplateColumn Header="ФОТО">
                                 <DataGridTemplateColumn.CellTemplate>
                                     <DataTemplate>
                                         <Image Width="100" Height="100" 
-                 Source="{Binding CarImg, Converter={StaticResource ByteArrayToImageConverter}}" />
+                 Source="{Binding Images, Converter={StaticResource ByteArrayToImageConverter}}" />
                                     </DataTemplate>
                                 </DataGridTemplateColumn.CellTemplate>
                             </DataGridTemplateColumn>
-                            <DataGridTextColumn Header="ЕЖЕМЕСЯЧНАЯ ПЛАТА" Width="173" Binding="{Binding CarMonthly}"/>
+                            <DataGridTextColumn Header="ЕЖЕМЕСЯЧНАЯ ПЛАТА" Width="173" Binding="{Binding MothlyPrice}"/>
                             <DataGridTextColumn Header="ДАТА НАЧАЛА" Width="122" Binding="{Binding StartDate}"/>
                             <DataGridTextColumn Header="ДАТА КОНЦА" Width="114" Binding="{Binding EndDate}"/>
                             <DataGridTextColumn Header="СТАТУС" Width="80" Binding="{Binding Status}"/>

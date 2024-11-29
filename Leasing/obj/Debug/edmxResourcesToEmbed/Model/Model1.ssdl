@@ -21,12 +21,9 @@
     <Property Name="ID" Type="int" Nullable="false" />
     <Property Name="ClientID" Type="int" />
     <Property Name="StartDate" Type="date" />
-    <Property Name="EndDate" Type="date" />
+    <Property Name="EndDate" Type="date" Nullable="false" />
     <Property Name="Status" Type="nvarchar" MaxLength="60" />
     <Property Name="CarID" Type="int" />
-    <Property Name="CarName" Type="nvarchar" MaxLength="50" />
-    <Property Name="CarImg" Type="varbinary(max)" />
-    <Property Name="CarMonthly" Type="int" />
   </EntityType>
   <EntityType Name="Roles">
     <Key>
