@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Leasing.Pages.AdminsPage"
          xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
         mc:Ignorable="d"
-        Title="EditLease" Loaded="Window_Loaded" ResizeMode="NoResize" Height="700" Width="1000" AllowsTransparency="True" WindowStartupLocation="CenterScreen" WindowStyle="None" Background="Transparent">
+        Title="EditLease" Loaded="Window_Loaded" ResizeMode="NoResize" Height="500" Width="1000" AllowsTransparency="True" WindowStartupLocation="CenterScreen" WindowStyle="None" Background="Transparent">
 
     <Window.Resources>
         <local:ImageConverter x:Key="ByteArrayToImageConverter"/>
@@ -14,10 +14,10 @@
     <Grid >
         <materialDesign:Card Margin="10" UniformCornerRadius="20" >
             <Grid Margin="0,0,0,-21">
-                <Button Style="{StaticResource MaterialDesignFloatingActionButton}" HorizontalAlignment="Left" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="Black" x:Name="CloseButton"   Margin="919,9,0,636" Click="ExitClick" Cursor="Hand">
+                <Button Style="{StaticResource MaterialDesignFloatingActionButton}" HorizontalAlignment="Left" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="Black" x:Name="CloseButton"   Margin="914,10,0,435" Click="ExitClick" Cursor="Hand" RenderTransformOrigin="0.857,0.866">
                     <materialDesign:PackIcon Kind="Close" Foreground="Black" Height="40" Width="39" VerticalAlignment="Center"/>
                 </Button>
-                <Button Content="Изменить" HorizontalAlignment="Left" Margin="797,449,0,0" VerticalAlignment="Top" Click="EditLeaseClick"/>
+                <Button Content="Изменить" HorizontalAlignment="Left" Margin="797,430,0,0" VerticalAlignment="Top" Click="EditLeaseClick"/>
 
 
                 <TextBox x:Name="TxbName" HorizontalContentAlignment="Center"   Style="{StaticResource MaterialDesignOutlinedTextBox}" HorizontalAlignment="Left" Margin="654,69,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="240" Height="52" Background="#FF6F63C5" Foreground="White"/>
@@ -28,11 +28,9 @@
                 <Label Content="Цена машины" HorizontalAlignment="Left" Margin="737,207,0,0" VerticalAlignment="Top" Height="24" Width="74" Foreground="#FF7D32FF" FontSize="14" FontFamily="Bahnschrift Condensed"/>
                 <TextBox x:Name="TxbAvance" HorizontalContentAlignment="Center"   Style="{StaticResource MaterialDesignOutlinedTextBox}" HorizontalAlignment="Left" Margin="654,307,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="240" Height="52" Background="#FF6F63C5" Foreground="White"/>
                 <Label Content="Аванс" HorizontalAlignment="Left" Margin="755,283,0,0" VerticalAlignment="Top" Height="24" Width="38" Foreground="#FF7D32FF" FontSize="14" FontFamily="Bahnschrift Condensed"/>
-                <Button Content="Добавить фото" HorizontalAlignment="Left" Margin="654,449,0,0" VerticalAlignment="Top" Click="AddImg" Background="#FF56AB5B" BorderBrush="#FF56AB5B"/>
-                <Label Content="Айди договора (если есть)" HorizontalAlignment="Left" Margin="710,360,0,0" VerticalAlignment="Top" Height="24" Width="130" Foreground="#FF7D32FF" FontSize="14" FontFamily="Bahnschrift Condensed"/>
-                <TextBox x:Name="TxbDogovor" HorizontalContentAlignment="Center"   Style="{StaticResource MaterialDesignOutlinedTextBox}" HorizontalAlignment="Left" Margin="654,384,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="240" Height="52" Background="#FF6F63C5" Foreground="White"/>
+                <Button Content="Добавить фото" HorizontalAlignment="Left" Margin="654,430,0,0" VerticalAlignment="Top" Click="AddImg" Background="#FF56AB5B" BorderBrush="#FF56AB5B"/>
 
-                <DataGrid x:Name="DataGR" Margin="10,69,352,89" AutoGenerateColumns="False">
+                <DataGrid x:Name="DataGR" Margin="10,69,352,39" AutoGenerateColumns="False">
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="НАЗВАНИЕ" Width="101" Binding="{Binding Name}"/>
                         <DataGridTextColumn Header="CРОК" Width="66" Binding="{Binding MonthCount}"/>
@@ -47,10 +45,14 @@
                             </DataGridTemplateColumn.CellTemplate>
                         </DataGridTemplateColumn>
                         <DataGridTextColumn Header="ПОЛНАЯ ЦЕНА" Width="126" Binding="{Binding AllAmount}"/>
-                        <DataGridTextColumn Header="АЙДИ ДОГОВОРА" Width="126" Binding="{Binding LeaseID}"/>
                     </DataGrid.Columns>
                 </DataGrid>
                 <Label Content="Редактирование объекта для лизинга" HorizontalAlignment="Left" Margin="22,19,0,0" VerticalAlignment="Top" Foreground="#E5000000" FontSize="18" FontFamily="Arial Black"/>
+                <ComboBox x:Name="combob" Style="{StaticResource MaterialDesignOutlinedComboBox}" HorizontalAlignment="Left" Margin="766,370,0,0" VerticalAlignment="Top" Width="120" Height="42">
+                    <ComboBoxItem Content="Активна" Tag="1" />
+                    <ComboBoxItem Content="Удалена" Tag="2" />
+                </ComboBox>
+                <Label Content="Поменять статус" HorizontalAlignment="Left" Margin="659,378,0,0" VerticalAlignment="Top" Height="26" Width="115" Foreground="#FF7D32FF" FontSize="18" FontFamily="Bahnschrift Condensed"/>
             </Grid>
         </materialDesign:Card>
     </Grid>

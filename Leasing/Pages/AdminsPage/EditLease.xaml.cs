@@ -14,6 +14,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using static MaterialDesignThemes.Wpf.Theme;
 
 namespace Leasing.Pages.AdminsPage
 {
@@ -44,7 +45,7 @@ namespace Leasing.Pages.AdminsPage
             {
                 
                 if (!string.IsNullOrEmpty(TxbName.Text) || !string.IsNullOrEmpty(TxbCount.Text) || !string.IsNullOrEmpty(TxbPrice.Text)
-                    || !string.IsNullOrEmpty(TxbAvance.Text) || _imageDatуa != null)
+                    || !string.IsNullOrEmpty(TxbAvance.Text) || _imageDatуa != null || combob.SelectedItem != null)
 
                 {
                    
@@ -57,11 +58,7 @@ namespace Leasing.Pages.AdminsPage
                         if (_imageDatуa != null)
                         {
                             curLeas.Images = _imageDatуa;
-                        }
-                        if (!string.IsNullOrEmpty(TxbDogovor.Text))
-                        {
-                            curLeas.LeaseID = Convert.ToInt32(TxbDogovor.Text);
-                        }
+                        } 
                         if (!string.IsNullOrEmpty(TxbCount.Text))
                         {
                             curLeas.MonthCount = Convert.ToInt32(TxbCount.Text);
@@ -70,7 +67,14 @@ namespace Leasing.Pages.AdminsPage
                         {
                             curLeas.CarPrice = Convert.ToInt32(TxbPrice.Text);
                         }
-
+                        if (combob.SelectedItem != null & combob.SelectedIndex == 0)
+                        {
+                            curLeas.CarStatusID = 1;
+                        }
+                        else if (combob.SelectedItem != null & combob.SelectedIndex == 1)
+                        {
+                            curLeas.CarStatusID = 2;
+                        }
 
 
                         AppData.db.SaveChanges();

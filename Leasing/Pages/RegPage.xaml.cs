@@ -1,6 +1,8 @@
 ﻿using Leasing.Model;
+using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,6 +23,7 @@ namespace Leasing.Pages
     /// </summary>
     public partial class RegPage : Page
     {
+        private byte[] _imageDatуa;
         public RegPage()
         {
             InitializeComponent();
@@ -28,25 +31,28 @@ namespace Leasing.Pages
 
         private void Regclick(object sender, RoutedEventArgs e)
         {
-            try
-            {
-                if (!string.IsNullOrEmpty(TxbLogin.Text) && !string.IsNullOrEmpty(TxbPassword.Password.ToString())
+            if (!string.IsNullOrEmpty(TxbLogin.Text) && !string.IsNullOrEmpty(TxbPassword.Password.ToString())
                    && !string.IsNullOrEmpty(TxbName.Text) && !string.IsNullOrEmpty(TxbSurname.Text) 
                   )
                 {
                     Users people = new Users();
+                    UsersData pepopledata = new UsersData();
 
                     people.ID = AppData.db.Users.Any() ? AppData.db.Users.Max(u => u.ID) + 1 : 1;
                     people.Login = TxbLogin.Text;
                     people.Password = TxbPassword.Password;
                     people.RoleID = 2;
-                    people.Name = TxbName.Text;
-                    people.Surname = TxbSurname.Text;
+                    people.StatusID = 1;
+                    pepopledata.ID = AppData.db.UsersData.Any() ? AppData.db.UsersData.Max(u => u.ID) + 1 : 1;
+                    pepopledata.Name = TxbName.Text;
+                    pepopledata.Surname = TxbSurname.Text;
+                    pepopledata.Photo = _imageDatуa;
                     if (!string.IsNullOrEmpty(TxbPatronymic.Text))
                     {
-                        people.Patronymic = TxbPatronymic.Text;
+                        pepopledata.Patronymic = TxbPatronymic.Text;
                     }
-                    AppData.db.Users.Add(people);
+                AppData.db.UsersData.Add(pepopledata);
+                AppData.db.Users.Add(people);
                     AppData.db.SaveChanges();
                     MessageBox.Show("Пользователь успешно был добавлен в базу");
                 }
@@ -54,11 +60,7 @@ namespace Leasing.Pages
                 {
                     MessageBox.Show("Ошибка, некоторые поля пустые", "Уведомление", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
-            }
-            catch
-            {
-                MessageBox.Show("Ошибка");
-            }
+           
         }
 
         private void AuthClick(object sender, RoutedEventArgs e)
@@ -69,6 +71,20 @@ namespace Leasing.Pages
         private void ExitClick(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
+        }
+
+        private void AddImg(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog
+            {
+                Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp"
+            };
+
+            if (openFileDialog.ShowDialog() == true)
+            {
+                _imageDatуa = File.ReadAllBytes(openFileDialog.FileName);
+                MessageBox.Show("Изображение выбрано.");
+            }
         }
     }
 }

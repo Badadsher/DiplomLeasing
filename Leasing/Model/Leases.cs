@@ -14,12 +14,6 @@ namespace Leasing.Model
     
     public partial class Leases
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Leases()
-        {
-            this.LeaseObjects = new HashSet<LeaseObjects>();
-        }
-    
         public int ID { get; set; }
         public Nullable<int> ClientID { get; set; }
         public Nullable<System.DateTime> StartDate { get; set; }
@@ -27,9 +21,7 @@ namespace Leasing.Model
         public string Status { get; set; }
         public Nullable<int> CarID { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<LeaseObjects> LeaseObjects { get; set; }
-        public virtual LeaseObjects LeaseObjects1 { get; set; }
+        public virtual LeaseObjects LeaseObjects { get; set; }
         public virtual Users Users { get; set; }
     }
 }

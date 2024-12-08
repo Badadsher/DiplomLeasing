@@ -8,6 +8,7 @@ namespace Leasing.Model
 {
     public class LeaseViewModel
     {
+        public int CarId { get; set; } 
         public string Name { get; set; }
         public byte[] Images { get; set; }
         public int MothlyPrice { get; set; }

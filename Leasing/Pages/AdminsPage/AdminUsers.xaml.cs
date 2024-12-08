@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.ConstrainedExecution;
+using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -44,7 +45,7 @@ namespace Leasing.Pages.AdminsPage
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            DataGR.ItemsSource = AppData.db.Users.ToList();
+            Refresher();
         }
 
         private void DeleteClick(object sender, RoutedEventArgs e)
@@ -53,11 +54,12 @@ namespace Leasing.Pages.AdminsPage
             {
                 if (DataGR.SelectedItem != null)
                 {
-                    var cur = DataGR.SelectedItem as Users;
-                    AppData.db.Users.Remove(cur);
+                    var cur = DataGR.SelectedItem as UserView;
+                    var curUS = AppData.db.Users.Where(u => u.ID == cur.Id).FirstOrDefault();
+                    curUS.StatusID = 2;
                     AppData.db.SaveChanges();
-                    MessageBox.Show("Удалено!");
-                    DataGR.ItemsSource = AppData.db.Users.ToList();
+                    MessageBox.Show("Уволен!");
+                    Refresher();
                 }
                 else
                 {
@@ -78,7 +80,30 @@ namespace Leasing.Pages.AdminsPage
 
         private void Refresh(object sender, RoutedEventArgs e)
         {
-            DataGR.ItemsSource = AppData.db.Users.ToList();
+            Refresher();
+        }
+
+        private void Refresher()
+        {
+            var query = from user in AppData.db.Users
+                        join userData in AppData.db.UsersData on user.ID equals userData.ID
+                        join status in AppData.db.StatusTable on user.StatusID equals status.ID
+                        join role in AppData.db.Roles on user.RoleID equals role.ID
+                        select new UserView
+                        {
+                            Id = user.ID,
+                            Name = userData.Name,
+                            Surname = userData.Surname,
+                            Patronymic = userData.Patronymic,
+                            Number = userData.Number,
+                            Photo = userData.Photo,
+                            Login = user.Login,
+                            Password = user.Password,
+                            Status = status.StatusName,
+                            Role = role.RoleName
+                        };
+
+            DataGR.ItemsSource = query.ToList();
             MessageBox.Show("Обновлено");
         }
 

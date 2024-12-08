@@ -6,12 +6,12 @@
         xmlns:local="clr-namespace:Leasing.Pages.AdminsPage"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
         mc:Ignorable="d"
-        Title="AddUser"  ResizeMode="NoResize" Height="500" Width="500" AllowsTransparency="True" WindowStartupLocation="CenterScreen" WindowStyle="None" Background="Transparent">
+        Title="AddUser"  ResizeMode="NoResize" Height="700" Width="500" AllowsTransparency="True" WindowStartupLocation="CenterScreen" WindowStyle="None" Background="Transparent">
     <Grid >
         <materialDesign:Card Margin="10" UniformCornerRadius="20" >
             <Grid Margin="0,0,0,-21">
-                <Button Style="{StaticResource MaterialDesignFloatingActionButton}" HorizontalAlignment="Left" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="Black" x:Name="CloseButton"   Margin="414,2,0,443" Click="ExitClick" Cursor="Hand">
-                    <materialDesign:PackIcon Kind="Close" Foreground="Black" Height="39" Width="39" VerticalAlignment="Center"/>
+                <Button Style="{StaticResource MaterialDesignFloatingActionButton}" HorizontalAlignment="Left" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="Black" x:Name="CloseButton"   Margin="424,2,0,643" Click="ExitClick" Cursor="Hand">
+                    <materialDesign:PackIcon Kind="Close" Foreground="Black" Height="40" Width="38" HorizontalAlignment="Center"/>
                 </Button>
                 <TextBox x:Name="TxbName" HorizontalContentAlignment="Center"   Style="{StaticResource MaterialDesignOutlinedTextBox}" HorizontalAlignment="Center" Margin="0,41,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="240" Height="52" Background="#FF6F63C5" Foreground="White"/>
                 <Label Content="Имя" HorizontalAlignment="Center" Margin="0,18,0,0" VerticalAlignment="Top" Height="24" Width="28" Foreground="#FF7D32FF" FontSize="14" FontFamily="Bahnschrift Condensed"/>
@@ -22,8 +22,11 @@
                 <TextBox x:Name="TxbLogin" HorizontalContentAlignment="Center"   Style="{StaticResource MaterialDesignOutlinedTextBox}" HorizontalAlignment="Center" Margin="0,279,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="240" Height="52" Background="#FF6F63C5" Foreground="White"/>
                 <Label Content="Логин" HorizontalAlignment="Center" Margin="0,255,0,0" VerticalAlignment="Top" Height="24" Width="38" Foreground="#FF7D32FF" FontSize="14" FontFamily="Bahnschrift Condensed"/>
                 <Label Content="Пароль" HorizontalAlignment="Left" Margin="221,331,0,0" VerticalAlignment="Top" Height="24" Width="50" Foreground="#FF7D32FF" FontSize="14" FontFamily="Bahnschrift Condensed"/>
-                <Button Content="Добавить" HorizontalAlignment="Center" Margin="0,429,0,0" VerticalAlignment="Top" Click="AddUserClick"/>
-                <PasswordBox x:Name="TxbPassword" HorizontalContentAlignment="Center" Style="{StaticResource MaterialDesignOutlinedPasswordBox}" Margin="120,355,120,94" Background="#FF6F63C5" Foreground="White"></PasswordBox>
+                <Button Content="Добавить" HorizontalAlignment="Center" Margin="0,579,0,0" VerticalAlignment="Top" Click="AddUserClick" Height="47" Width="172"/>
+                <PasswordBox x:Name="TxbPassword" HorizontalContentAlignment="Center" Style="{StaticResource MaterialDesignOutlinedPasswordBox}" Margin="120,355,120,294" Background="#FF6F63C5" Foreground="White"></PasswordBox>
+                <Label Content="Номер" HorizontalAlignment="Left" Margin="221,417,0,0" VerticalAlignment="Top" Height="24" Width="50" Foreground="#FF7D32FF" FontSize="14" FontFamily="Bahnschrift Condensed"/>
+                <PasswordBox x:Name="TxnNumber" HorizontalContentAlignment="Center" Style="{StaticResource MaterialDesignOutlinedPasswordBox}" Margin="120,441,120,208" Background="#FF6F63C5" Foreground="White"/>
+                <Button Content="Добавить фото" HorizontalAlignment="Center" Margin="0,519,0,0" VerticalAlignment="Top" Click="AddImg" Background="#FF56AB5B" BorderBrush="#FF56AB5B"/>
 
 
             </Grid>

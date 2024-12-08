@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.ConstrainedExecution;
 using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading.Tasks;
@@ -33,16 +34,14 @@ namespace Leasing.Pages.WorkersPage
         private void CloseLease(object sender, RoutedEventArgs e)
         {
             var curobj = DataGR.SelectedItem as LeaseViewModel;
-            if(curobj != null)
+            var cur = AppData.db.Leases.Where(u => u.CarID == curobj.CarID).FirstOrDefault();
+            var curcar = AppData.db.LeaseObjects.Where(u => u.ID == cur.CarID).FirstOrDefault();
+            if (curobj != null)
             {
                 try
                 {
-                    var curlease = AppData.db.Leases.Where(u => u.CarID == curobj.CarID).FirstOrDefault();
-                    int carid = (int)curobj.CarID;
-                    var curcar = AppData.db.LeaseObjects.FirstOrDefault(u=> u.ID == carid);
-                    curcar.LeaseID = null;
-                    
-                    AppData.db.Leases.Remove(curlease);
+                    curcar.CarStatusID = 1;
+                    AppData.db.Leases.Remove(cur);
                     AppData.db.SaveChanges();
                     MessageBox.Show("Удалено!");
                     Refresher();
@@ -74,7 +73,7 @@ namespace Leasing.Pages.WorkersPage
                         where lease.ClientID == usid
                         select new LeaseViewModel
                         {
-
+                            CarId = (int)lease.CarID,
                             Name = leaseObject.Name,
                             Images = leaseObject.Images,
                             MothlyPrice = (int)leaseObject.MothlyPrice,

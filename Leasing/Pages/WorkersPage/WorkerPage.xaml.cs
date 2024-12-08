@@ -31,31 +31,32 @@ namespace Leasing.Pages.WorkersPage
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            DataGR.ItemsSource = AppData.db.LeaseObjects.Where(u => u.LeaseID == null).ToList();
+            Refresher();
         }
 
         private void TakeLease(object sender, RoutedEventArgs e)
         {
             try
             {
-                var curobj = DataGR.SelectedItem as LeaseObjects;
-              
+                var curobj = DataGR.SelectedItem as CarView;
+                var curCAR = AppData.db.LeaseObjects.Where(u => u.ID == curobj.Id).FirstOrDefault();
+                if (curobj != null)
+                {
+                    Leases newlease = new Leases();
+                    newlease.ID = AppData.db.Leases.Any() ? AppData.db.Leases.Max(u => u.ID) + 1 : 1;
+                    newlease.ClientID = usid;
+                    newlease.StartDate = DateTime.Now.Date;
 
+                    newlease.CarID = curCAR.ID;
+                    newlease.Status = "В процессе";
 
+                    curCAR.CarStatusID = 2;
+                    AppData.db.Leases.Add(newlease);
+                    AppData.db.SaveChanges();
+                    MessageBox.Show("Успешно");
+                    Refresher();
 
-                Leases newlease = new Leases();
-                newlease.ID = AppData.db.Leases.Any() ? AppData.db.Leases.Max(u => u.ID) + 1 : 1;
-                newlease.ClientID = usid;
-                newlease.StartDate = DateTime.Now.Date;
-
-                newlease.CarID = curobj.ID;           
-                newlease.Status = "В процессе";
-                AppData.db.Leases.Add(newlease);
-                AppData.db.SaveChanges();
-                curobj.LeaseID = AppData.db.Leases.Max(u => u.ID);
-                AppData.db.SaveChanges();
-                MessageBox.Show("Успешно");
-                DataGR.ItemsSource = AppData.db.LeaseObjects.Where(u => u.LeaseID == null).ToList();
+                }
             }
             catch (Exception ex)
             {
@@ -65,8 +66,7 @@ namespace Leasing.Pages.WorkersPage
 
         private void Refresh(object sender, RoutedEventArgs e)
         {
-            DataGR.ItemsSource = AppData.db.LeaseObjects.Where(u => u.LeaseID == null).ToList();
-            MessageBox.Show("Успешно");
+            Refresher();
         }
 
         private void CloseApp(object sender, RoutedEventArgs e)
@@ -74,7 +74,30 @@ namespace Leasing.Pages.WorkersPage
             Application.Current.Shutdown();
         }
 
-    
+        private void Refresher()
+        {
+            var query = from car in AppData.db.LeaseObjects
+                        join carstatus in AppData.db.CarStatus on car.CarStatusID equals carstatus.ID
+                        where car.CarStatusID != 2
+                        select new CarView
+
+                        {
+                            Id = car.ID,
+                            Name = car.Name,
+                            MonthCount = car.MonthCount,
+                            CarPrice = car.CarPrice,
+                            Avance = (int)car.Avance,
+                            MothlyPrice = (int)car.MothlyPrice,
+                            AllAmount = (int)car.AllAmount,
+                            Images = car.Images,
+                            Status = carstatus.StatusName
+                        };
+
+            DataGR.ItemsSource = query.ToList();
+   
+        }
+
+
         private void ExitToAuthClick(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new AuthPage());

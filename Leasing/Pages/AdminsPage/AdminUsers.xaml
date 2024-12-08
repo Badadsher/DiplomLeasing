@@ -24,14 +24,6 @@
                 </Grid.Resources>
                 <Grid Grid.Column="0" Background="White">
                     <ListView Margin="-13,17,-25,-47">
-                        <ListViewItem Margin="0 0">
-                            <Button Style="{StaticResource MaterialDesignFloatingActionButton}" HorizontalAlignment="Left"
-                             BorderBrush="{x:Null}" Background="{x:Null}" Foreground="Black" Click="LeasesClick">
-                                <StackPanel Margin="0">
-                                    <materialDesign:PackIcon Kind="Car"/>
-                                </StackPanel>
-                            </Button>
-                        </ListViewItem>
 
 
 
@@ -74,10 +66,8 @@ BorderBrush="{x:Null}" Background="{x:Null}" Foreground="Black" Click="DogovorCl
                         <DataGrid.Columns>
                             <DataGridTextColumn Header="ЛОГИН" Width="107" Binding="{Binding Login}"/>
                             <DataGridTextColumn Header="ПАРОЛЬ" Width="105" Binding="{Binding Password}"/>
-                            <DataGridTextColumn Header="ИМЯ" Width="82" Binding="{Binding Name}"/>
-                            <DataGridTextColumn Header="ФАМИЛИЯ" Width="100" Binding="{Binding Surname}"/>
-                            <DataGridTextColumn Header="ОТЧЕСТВО" Width="118" Binding="{Binding Patronymic}"/>
-                            <DataGridTextColumn Header="АЙДИ РОЛИ" Width="111" Binding="{Binding RoleID}"/>
+                            <DataGridTextColumn Header="РОЛЬ" Width="111" Binding="{Binding Role}"/>
+                            <DataGridTextColumn Header="СТАТУС" Width="111" Binding="{Binding Status}"/>
                         </DataGrid.Columns>
                     </DataGrid>
                     <Button Content="УДАЛИТЬ" HorizontalAlignment="Left" Margin="22,352,0,0" VerticalAlignment="Top" Click="DeleteClick"/>

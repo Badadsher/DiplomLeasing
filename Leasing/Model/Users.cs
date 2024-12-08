@@ -23,13 +23,13 @@ namespace Leasing.Model
         public int ID { get; set; }
         public string Login { get; set; }
         public string Password { get; set; }
-        public string Name { get; set; }
-        public string Surname { get; set; }
-        public string Patronymic { get; set; }
         public int RoleID { get; set; }
+        public int StatusID { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Leases> Leases { get; set; }
         public virtual Roles Roles { get; set; }
+        public virtual StatusTable StatusTable { get; set; }
+        public virtual UsersData UsersData { get; set; }
     }
 }

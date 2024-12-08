@@ -38,11 +38,15 @@ namespace Leasing.Pages
 
                     if (CurrentUser != null && CurrentUser.RoleID == 1)
                     {
-                        NavigationService.Navigate(new AdminPage());
+                        NavigationService.Navigate(new AdminUsers());
                     }
                     else if (CurrentUser != null && CurrentUser.RoleID == 2)
                     {
                         NavigationService.Navigate(new WorkerPage(CurrentUser.ID));
+                    }
+                    else if (CurrentUser != null && CurrentUser.RoleID == 3)
+                    {
+                        NavigationService.Navigate(new AdminPage());
                     }
                     else
                     {

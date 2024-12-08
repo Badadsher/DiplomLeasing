@@ -17,11 +17,10 @@ namespace Leasing.Model
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public LeaseObjects()
         {
-            this.Leases1 = new HashSet<Leases>();
+            this.Leases = new HashSet<Leases>();
         }
     
         public int ID { get; set; }
-        public Nullable<int> LeaseID { get; set; }
         public string Name { get; set; }
         public int MonthCount { get; set; }
         public int CarPrice { get; set; }
@@ -29,9 +28,10 @@ namespace Leasing.Model
         public Nullable<int> MothlyPrice { get; set; }
         public Nullable<int> AllAmount { get; set; }
         public byte[] Images { get; set; }
+        public int CarStatusID { get; set; }
     
-        public virtual Leases Leases { get; set; }
+        public virtual CarStatus CarStatus { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Leases> Leases1 { get; set; }
+        public virtual ICollection<Leases> Leases { get; set; }
     }
 }

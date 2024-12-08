@@ -1,6 +1,8 @@
 ﻿using Leasing.Model;
+using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,6 +22,8 @@ namespace Leasing.Pages.AdminsPage
     /// </summary>
     public partial class AddUser : Window
     {
+
+        private byte[] _imageDatуa;
         public AddUser()
         {
             InitializeComponent();
@@ -28,6 +32,20 @@ namespace Leasing.Pages.AdminsPage
         private void ExitClick(object sender, RoutedEventArgs e)
         {
             this.Close();
+        }
+
+        private void AddImg(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog
+            {
+                Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp"
+            };
+
+            if (openFileDialog.ShowDialog() == true)
+            {
+                _imageDatуa = File.ReadAllBytes(openFileDialog.FileName);
+                MessageBox.Show("Изображение выбрано.");
+            }
         }
 
         private void AddUserClick(object sender, RoutedEventArgs e)
@@ -39,18 +57,22 @@ namespace Leasing.Pages.AdminsPage
                  )
                 {
                     Users people = new Users();
-
+                    UsersData pepopledata = new UsersData();
                     people.ID = AppData.db.Users.Any() ? AppData.db.Users.Max(u => u.ID) + 1 : 1;
                     people.Login = TxbLogin.Text;
                     people.Password = TxbPassword.Password;
                     people.RoleID = 2;
-                    people.Name = TxbName.Text;
-                    people.Surname = TxbSurname.Text;
+                    pepopledata.ID = AppData.db.UsersData.Any() ? AppData.db.UsersData.Max(u => u.ID) + 1 : 1;
+                    pepopledata.Name = TxbName.Text;
+                    pepopledata.Surname = TxbSurname.Text;
+                    pepopledata.Photo = _imageDatуa;
                     if (!string.IsNullOrEmpty(TxbPatronymic.Text))
                     {
-                        people.Patronymic = TxbPatronymic.Text;
+                        pepopledata.Patronymic = TxbPatronymic.Text;
                     }
+                    people.StatusID = 1;
                     AppData.db.Users.Add(people);
+                    AppData.db.UsersData.Add(pepopledata);
                     AppData.db.SaveChanges();
                     MessageBox.Show("Пользователь успешно был добавлен в базу");
                     this.Close();
@@ -65,5 +87,7 @@ namespace Leasing.Pages.AdminsPage
                 MessageBox.Show("Ошибка");
             }
         }
+
+      
     }
 }

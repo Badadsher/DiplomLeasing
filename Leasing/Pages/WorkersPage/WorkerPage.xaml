@@ -66,6 +66,7 @@
                         <materialDesign:PackIcon Kind="Close" Foreground="White"/>
                     </Button>
 
+                  
                     <DataGrid x:Name="DataGR" Margin="22,56,22,102" AutoGenerateColumns="False">
                         <DataGrid.Columns>
                             <DataGridTextColumn Header="НАЗВАНИЕ" Width="101" Binding="{Binding Name}"/>
@@ -76,7 +77,7 @@
                                 <DataGridTemplateColumn.CellTemplate>
                                     <DataTemplate>
                                         <Image Width="100" Height="100" 
-                                            Source="{Binding Images, Converter={StaticResource ByteArrayToImageConverter}}" />
+                          Source="{Binding Images, Converter={StaticResource ByteArrayToImageConverter}}" />
                                     </DataTemplate>
                                 </DataGridTemplateColumn.CellTemplate>
                             </DataGridTemplateColumn>

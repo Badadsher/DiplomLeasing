@@ -40,17 +40,32 @@ namespace Leasing.Pages.AdminsPage
                 if (!string.IsNullOrEmpty(TxbStatus.Text) && !string.IsNullOrEmpty(TxbClient.Text) && startdate.HasValue && enddate.HasValue)
 
                 {
-                    Leases leasing = new Leases();
+                    if(Convert.ToInt32(TxbClient.Text) > AppData.db.Users.Max(u => u.ID))
+                    {
+                        MessageBox.Show("Юзера с таким айди нет!");
+                    }
+                    else
+                    {
+                        if (Convert.ToInt32(CarId.Text) > AppData.db.LeaseObjects.Max(u => u.ID))
+                        {
+                            MessageBox.Show("Машины с таким айди нет!");
+                        }
+                        else
+                        {
+                            Leases leasing = new Leases();
 
-                    leasing.ID = AppData.db.LeaseObjects.Any() ? AppData.db.LeaseObjects.Max(u => u.ID) + 1 : 1;
-                    leasing.Status = TxbStatus.Text;
-                    leasing.ClientID = Convert.ToInt32(TxbClient.Text);
-                    leasing.StartDate = startdate.Value.Date;
-                    leasing.EndDate = enddate.Value.Date;
-                    AppData.db.Leases.Add(leasing);
-                    AppData.db.SaveChanges();
-                    MessageBox.Show("Договор лизинга успешно был добавлен в базу");
-                    this.Close();
+                            leasing.ID = AppData.db.LeaseObjects.Any() ? AppData.db.LeaseObjects.Max(u => u.ID) + 1 : 1;
+                            leasing.Status = TxbStatus.Text;
+                            leasing.ClientID = Convert.ToInt32(TxbClient.Text);
+                            leasing.StartDate = startdate.Value.Date;
+                            leasing.EndDate = enddate.Value.Date;
+                            leasing.CarID = Convert.ToInt32(CarId.Text);
+                            AppData.db.Leases.Add(leasing);
+                            AppData.db.SaveChanges();
+                            MessageBox.Show("Договор лизинга успешно был добавлен в базу");
+                            this.Close();
+                        }
+                    }  
                 }
                 else
                 {

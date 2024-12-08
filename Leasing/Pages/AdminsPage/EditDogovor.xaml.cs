@@ -37,7 +37,7 @@ namespace Leasing.Pages.AdminsPage
             {
                 var startdate = datestart.SelectedDate;
                 var enddate = dateend.SelectedDate;
-                if (!string.IsNullOrEmpty(TxbClient.Text) || !string.IsNullOrEmpty(TxbClient.Text) || enddate.HasValue || startdate.HasValue)
+                if (!string.IsNullOrEmpty(TxbClient.Text) || !string.IsNullOrEmpty(TxbClient.Text) || enddate.HasValue || startdate.HasValue || !string.IsNullOrEmpty(TxbCarID.Text))
 
                 {
 
@@ -48,7 +48,11 @@ namespace Leasing.Pages.AdminsPage
                         {
                             curLeasing.ClientID = Convert.ToInt32(TxbClient.Text);
                         }
-                      
+                        if (!string.IsNullOrEmpty(TxbCarID.Text))
+                        {
+                            curLeasing.CarID = Convert.ToInt32(TxbCarID.Text);
+                        }
+
                         if (!string.IsNullOrEmpty(TxbStatus.Text))
                         {
                             curLeasing.Status = TxbStatus.Text;

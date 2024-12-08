@@ -1,20 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="LeasingModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="CarStatus">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="StatusName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="LeaseObjects" Relationship="Self.FK_LeaseObjects_CarStatus" FromRole="CarStatus" ToRole="LeaseObjects" />
+  </EntityType>
   <EntityType Name="LeaseObjects">
     <Key>
       <PropertyRef Name="ID" />
     </Key>
     <Property Name="ID" Type="Int32" Nullable="false" />
-    <Property Name="LeaseID" Type="Int32" />
     <Property Name="Name" Type="String" MaxLength="60" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="MonthCount" Type="Int32" Nullable="false" />
     <Property Name="CarPrice" Type="Int32" Nullable="false" />
     <Property Name="Avance" Type="Int32" annotation:StoreGeneratedPattern="Computed" />
     <Property Name="MothlyPrice" Type="Int32" annotation:StoreGeneratedPattern="Computed" />
     <Property Name="AllAmount" Type="Int32" annotation:StoreGeneratedPattern="Computed" />
-    <Property Name="Images" Type="Binary" MaxLength="Max" FixedLength="false" />
-    <NavigationProperty Name="Leases" Relationship="Self.FK_LeaseObjects_Leases" FromRole="LeaseObjects" ToRole="Leases" />
-    <NavigationProperty Name="Leases1" Relationship="Self.FK_Leases_LeaseObjects" FromRole="LeaseObjects" ToRole="Leases" />
+    <Property Name="Images" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
+    <Property Name="CarStatusID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="CarStatus" Relationship="Self.FK_LeaseObjects_CarStatus" FromRole="LeaseObjects" ToRole="CarStatus" />
+    <NavigationProperty Name="Leases" Relationship="Self.FK_Leases_LeaseObjects" FromRole="LeaseObjects" ToRole="Leases" />
   </EntityType>
   <EntityType Name="Leases">
     <Key>
@@ -26,8 +34,7 @@
     <Property Name="EndDate" Type="DateTime" Nullable="false" Precision="0" />
     <Property Name="Status" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
     <Property Name="CarID" Type="Int32" />
-    <NavigationProperty Name="LeaseObjects" Relationship="Self.FK_LeaseObjects_Leases" FromRole="Leases" ToRole="LeaseObjects" />
-    <NavigationProperty Name="LeaseObjects1" Relationship="Self.FK_Leases_LeaseObjects" FromRole="Leases" ToRole="LeaseObjects" />
+    <NavigationProperty Name="LeaseObjects" Relationship="Self.FK_Leases_LeaseObjects" FromRole="Leases" ToRole="LeaseObjects" />
     <NavigationProperty Name="Users" Relationship="Self.FK_Leases_Users" FromRole="Leases" ToRole="Users" />
   </EntityType>
   <EntityType Name="Roles">
@@ -37,6 +44,14 @@
     <Property Name="ID" Type="Int32" Nullable="false" />
     <Property Name="RoleName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <NavigationProperty Name="Users" Relationship="Self.FK_Users_Roles" FromRole="Roles" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="StatusTable">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="StatusName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Users" Relationship="Self.FK_Users_StatusTable" FromRole="StatusTable" ToRole="Users" />
   </EntityType>
   <EntityType Name="sysdiagrams">
     <Key>
@@ -55,22 +70,34 @@
     <Property Name="ID" Type="Int32" Nullable="false" />
     <Property Name="Login" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="RoleID" Type="Int32" Nullable="false" />
+    <Property Name="StatusID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Leases" Relationship="Self.FK_Leases_Users" FromRole="Users" ToRole="Leases" />
+    <NavigationProperty Name="Roles" Relationship="Self.FK_Users_Roles" FromRole="Users" ToRole="Roles" />
+    <NavigationProperty Name="StatusTable" Relationship="Self.FK_Users_StatusTable" FromRole="Users" ToRole="StatusTable" />
+    <NavigationProperty Name="UsersData" Relationship="Self.FK_UsersData_Users" FromRole="Users" ToRole="UsersData" />
+  </EntityType>
+  <EntityType Name="UsersData">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
     <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="Surname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="Patronymic" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="RoleID" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="Leases" Relationship="Self.FK_Leases_Users" FromRole="Users" ToRole="Leases" />
-    <NavigationProperty Name="Roles" Relationship="Self.FK_Users_Roles" FromRole="Users" ToRole="Roles" />
+    <Property Name="Number" Type="Int64" Nullable="false" />
+    <Property Name="Photo" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
+    <NavigationProperty Name="Users" Relationship="Self.FK_UsersData_Users" FromRole="UsersData" ToRole="Users" />
   </EntityType>
-  <Association Name="FK_LeaseObjects_Leases">
-    <End Role="Leases" Type="Self.Leases" Multiplicity="0..1" />
+  <Association Name="FK_LeaseObjects_CarStatus">
+    <End Role="CarStatus" Type="Self.CarStatus" Multiplicity="1" />
     <End Role="LeaseObjects" Type="Self.LeaseObjects" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="Leases">
+      <Principal Role="CarStatus">
         <PropertyRef Name="ID" />
       </Principal>
       <Dependent Role="LeaseObjects">
-        <PropertyRef Name="LeaseID" />
+        <PropertyRef Name="CarStatusID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -110,14 +137,41 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_Users_StatusTable">
+    <End Role="StatusTable" Type="Self.StatusTable" Multiplicity="1" />
+    <End Role="Users" Type="Self.Users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StatusTable">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Users">
+        <PropertyRef Name="StatusID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UsersData_Users">
+    <End Role="Users" Type="Self.Users" Multiplicity="1" />
+    <End Role="UsersData" Type="Self.UsersData" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="UsersData">
+        <PropertyRef Name="ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <EntityContainer Name="LeasingEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="CarStatus" EntityType="Self.CarStatus" />
     <EntitySet Name="LeaseObjects" EntityType="Self.LeaseObjects" />
     <EntitySet Name="Leases" EntityType="Self.Leases" />
     <EntitySet Name="Roles" EntityType="Self.Roles" />
+    <EntitySet Name="StatusTable" EntityType="Self.StatusTable" />
     <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
     <EntitySet Name="Users" EntityType="Self.Users" />
-    <AssociationSet Name="FK_LeaseObjects_Leases" Association="Self.FK_LeaseObjects_Leases">
-      <End Role="Leases" EntitySet="Leases" />
+    <EntitySet Name="UsersData" EntityType="Self.UsersData" />
+    <AssociationSet Name="FK_LeaseObjects_CarStatus" Association="Self.FK_LeaseObjects_CarStatus">
+      <End Role="CarStatus" EntitySet="CarStatus" />
       <End Role="LeaseObjects" EntitySet="LeaseObjects" />
     </AssociationSet>
     <AssociationSet Name="FK_Leases_LeaseObjects" Association="Self.FK_Leases_LeaseObjects">
@@ -131,6 +185,14 @@
     <AssociationSet Name="FK_Users_Roles" Association="Self.FK_Users_Roles">
       <End Role="Roles" EntitySet="Roles" />
       <End Role="Users" EntitySet="Users" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Users_StatusTable" Association="Self.FK_Users_StatusTable">
+      <End Role="StatusTable" EntitySet="StatusTable" />
+      <End Role="Users" EntitySet="Users" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UsersData_Users" Association="Self.FK_UsersData_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="UsersData" EntitySet="UsersData" />
     </AssociationSet>
   </EntityContainer>
 </Schema>

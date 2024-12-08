@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Leasing.Pages.AdminsPage"
          xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
         mc:Ignorable="d"
-        Title="AddDogovor" ResizeMode="NoResize" Height="450" Width="500" AllowsTransparency="True" WindowStartupLocation="CenterScreen" WindowStyle="None" Background="Transparent">
+        Title="AddDogovor" ResizeMode="NoResize" Height="550" Width="500" AllowsTransparency="True" WindowStartupLocation="CenterScreen" WindowStyle="None" Background="Transparent">
     <Grid >
         <materialDesign:Card Margin="10" UniformCornerRadius="20" >
             <Grid Margin="0,0,0,-21">
@@ -19,9 +19,11 @@
                 <Label Content="Конец лизинга" HorizontalAlignment="Left" Margin="203,179,0,0" VerticalAlignment="Top" Height="24" Width="96" Foreground="#FF7D32FF" FontSize="14" FontFamily="Bahnschrift Condensed"/>
                 <TextBox x:Name="TxbStatus" HorizontalContentAlignment="Center"   Style="{StaticResource MaterialDesignOutlinedTextBox}" HorizontalAlignment="Center" Margin="0,279,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="240" Height="52" Background="#FF6F63C5" Foreground="White"/>
                 <Label Content="Статус" HorizontalAlignment="Center" Margin="0,255,0,0" VerticalAlignment="Top" Height="24" Width="38" Foreground="#FF7D32FF" FontSize="14" FontFamily="Bahnschrift Condensed"/>
-                <Button Content="Добавить" HorizontalAlignment="Center" Margin="0,362,0,0" VerticalAlignment="Top" Click="AddDogovorClick"/>
+                <Button Content="Добавить" HorizontalAlignment="Center" Margin="0,455,0,0" VerticalAlignment="Top" Click="AddDogovorClick"/>
                 <DatePicker x:Name="datestart"  Style="{StaticResource MaterialDesignOutlinedDatePicker}" HorizontalAlignment="Center" Margin="0,127,0,0" VerticalAlignment="Top" Height="45" Width="122"/>
                 <DatePicker x:Name="dateend"  Style="{StaticResource MaterialDesignOutlinedDatePicker}" HorizontalAlignment="Center" Margin="0,208,0,0" VerticalAlignment="Top" Height="45" Width="122"/>
+                <TextBox x:Name="CarId" HorizontalContentAlignment="Center"   Style="{StaticResource MaterialDesignOutlinedTextBox}" HorizontalAlignment="Center" Margin="0,366,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="240" Height="52" Background="#FF6F63C5" Foreground="White"/>
+                <Label Content="Айди машины" HorizontalAlignment="Center" Margin="0,337,0,0" VerticalAlignment="Top" Height="24" Width="72" Foreground="#FF7D32FF" FontSize="14" FontFamily="Bahnschrift Condensed"/>
 
 
             </Grid>

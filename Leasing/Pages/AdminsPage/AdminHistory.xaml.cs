@@ -78,12 +78,14 @@ namespace Leasing.Pages.AdminsPage
 
         private void EditDogovor(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new EditDogovor());
+            Window editdg = new EditDogovor();
+            editdg.Show();
         }
 
         private void AddDogovor(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new AddDogovor());
+            Window adddogovor = new AddDogovor();
+            adddogovor.Show();
         }
 
         private void Page_Loaded(object sender, RoutedEventArgs e)

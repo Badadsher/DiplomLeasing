@@ -1,11 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="Хранилище LeasingModelContainer" CdmEntityContainer="LeasingEntities">
+    <EntitySetMapping Name="CarStatus">
+      <EntityTypeMapping TypeName="LeasingModel.CarStatus">
+        <MappingFragment StoreEntitySet="CarStatus">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="StatusName" ColumnName="StatusName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="LeaseObjects">
       <EntityTypeMapping TypeName="LeasingModel.LeaseObjects">
         <MappingFragment StoreEntitySet="LeaseObjects">
           <ScalarProperty Name="ID" ColumnName="ID" />
-          <ScalarProperty Name="LeaseID" ColumnName="LeaseID" />
           <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="MonthCount" ColumnName="MonthCount" />
           <ScalarProperty Name="CarPrice" ColumnName="CarPrice" />
@@ -13,6 +20,7 @@
           <ScalarProperty Name="MothlyPrice" ColumnName="MothlyPrice" />
           <ScalarProperty Name="AllAmount" ColumnName="AllAmount" />
           <ScalarProperty Name="Images" ColumnName="Images" />
+          <ScalarProperty Name="CarStatusID" ColumnName="CarStatusID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -36,6 +44,14 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="StatusTable">
+      <EntityTypeMapping TypeName="LeasingModel.StatusTable">
+        <MappingFragment StoreEntitySet="StatusTable">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="StatusName" ColumnName="StatusName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="sysdiagrams">
       <EntityTypeMapping TypeName="LeasingModel.sysdiagrams">
         <MappingFragment StoreEntitySet="sysdiagrams">
@@ -53,10 +69,20 @@
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="Login" ColumnName="Login" />
           <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+          <ScalarProperty Name="StatusID" ColumnName="StatusID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UsersData">
+      <EntityTypeMapping TypeName="LeasingModel.UsersData">
+        <MappingFragment StoreEntitySet="UsersData">
+          <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="Surname" ColumnName="Surname" />
           <ScalarProperty Name="Patronymic" ColumnName="Patronymic" />
-          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="Photo" ColumnName="Photo" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

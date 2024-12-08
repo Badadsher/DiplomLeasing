@@ -28,8 +28,20 @@
                     <Ellipse HorizontalAlignment="Left" Height="174" Margin="-37,314,0,0" VerticalAlignment="Top" Width="174" Fill="#19FFFFFF"/>
                     <Ellipse HorizontalAlignment="Left" Height="174" Margin="72,279,0,0" VerticalAlignment="Top" Width="174" Fill="#19FFFFFF"/>
                     <Ellipse HorizontalAlignment="Left" Height="174" Margin="191,314,0,0" VerticalAlignment="Top" Width="174" Fill="#19FFFFFF"/>
-                    <Label Content="ДОБРО ПОЖАЛОВАТЬ" HorizontalAlignment="Left" Margin="41,79,0,0" VerticalAlignment="Top" Height="47" Width="289" Foreground="#E5FFFFFF" FontSize="36" FontFamily="Bahnschrift Condensed"/>
-                    <Label HorizontalAlignment="Left" Content="ООО `ОНК`"  Margin="109,126,0,0" VerticalAlignment="Top" Height="47" Width="130" Foreground="#E5FFFFFF" FontSize="28" FontFamily="Bahnschrift Condensed"/>
+                    <Label Content="ДОБРО ПОЖАЛОВАТЬ" HorizontalAlignment="Left" Margin="38,106,0,0" VerticalAlignment="Top" Height="48" Width="290" Foreground="#E5FFFFFF" FontSize="36" FontFamily="Bahnschrift Condensed"/>
+                    <Rectangle HorizontalAlignment="Left" Height="100" Margin="28,-14,0,0" VerticalAlignment="Top" Width="260" RenderTransformOrigin="0.5,0.5">
+                        <Rectangle.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform Angle="-14.682"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Rectangle.RenderTransform>
+                        <Rectangle.Fill>
+                            <ImageBrush ImageSource="/Images/logo.png"/>
+                        </Rectangle.Fill>
+                    </Rectangle>
 
                 </Grid>
                 <Grid Background="White" Name="RenderPages" Grid.ColumnSpan="2" Margin="285,0,0,0">

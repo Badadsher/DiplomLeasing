@@ -31,8 +31,8 @@ namespace Leasing.Pages.AdminsPage
             var curUser = DataGR.SelectedItem as Users;
             try
             {
-                if (!string.IsNullOrEmpty(TxbName.Text) || !string.IsNullOrEmpty(TxbSurname.Text) || combob.SelectedItem != null
-                    || !string.IsNullOrEmpty(TxbPatronymic.Text) || !string.IsNullOrEmpty(TxbLogin.Text) || !string.IsNullOrEmpty(TxbPassword.Password.ToString()))
+                if ( combob.SelectedItem != null
+                    || !string.IsNullOrEmpty(TxbLogin.Text) || !string.IsNullOrEmpty(TxbPassword.Password.ToString()))
                 {
 
 
@@ -44,22 +44,7 @@ namespace Leasing.Pages.AdminsPage
                         if (!string.IsNullOrEmpty(TxbPassword.Password.ToString()))
                     {
                         curUser.Password = TxbPassword.Password;
-                    }
-                      
-                        if (!string.IsNullOrEmpty(TxbName.Text))
-                    {
-                        curUser.Name = TxbName.Text;
-                    }
-                       
-                        if (!string.IsNullOrEmpty(TxbSurname.Text))
-                    {
-                        curUser.Surname = TxbSurname.Text;
-                    }
-                       
-                        if (!string.IsNullOrEmpty(TxbPatronymic.Text))
-                    {
-                        curUser.Patronymic = TxbPatronymic.Text;
-                    }
+                    }    
                       
                         if(combob.SelectedItem != null & combob.SelectedIndex == 0)
                     {

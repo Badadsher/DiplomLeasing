@@ -47,7 +47,7 @@ namespace Leasing.Pages.AdminsPage
             try
             {
                 if (!string.IsNullOrEmpty(TxbName.Text) && !string.IsNullOrEmpty(TxbCount.Text) && !string.IsNullOrEmpty(TxbPrice.Text)
-                    && !string.IsNullOrEmpty(TxbAvance.Text) && !string.IsNullOrEmpty(TxbMouthly.Text) && !string.IsNullOrEmpty(TxbAllPrice.Text) && _imageDatуa != null)
+                    && !string.IsNullOrEmpty(TxbAvance.Text) && !string.IsNullOrEmpty(TxbMouthly.Text) &&  _imageDatуa != null)
                  
                 {
                     LeaseObjects lease = new LeaseObjects();
@@ -59,11 +59,7 @@ namespace Leasing.Pages.AdminsPage
                     lease.CarPrice = Convert.ToInt32(TxbPrice.Text);
                     lease.Avance = Convert.ToInt32(TxbAvance.Text);
                     lease.MothlyPrice = Convert.ToInt32(TxbMouthly.Text);
-                    lease.AllAmount = Convert.ToInt32(TxbAllPrice.Text);
-                    if (!string.IsNullOrEmpty(TxbDogovor.Text))
-                    {
-                        lease.LeaseID = Convert.ToInt32(TxbDogovor.Text);
-                    }
+                    lease.CarStatusID = 1;
                     AppData.db.LeaseObjects.Add(lease);
                     AppData.db.SaveChanges();
                     MessageBox.Show("Машина для лизинга была добавлена в базу");

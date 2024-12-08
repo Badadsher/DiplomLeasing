@@ -28,7 +28,7 @@ namespace Leasing.Pages.AdminsPage
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            DataGR.ItemsSource = AppData.db.LeaseObjects.ToList();
+            Refresher();
         }
 
         private void ExitClick(object sender, RoutedEventArgs e)
@@ -46,12 +46,11 @@ namespace Leasing.Pages.AdminsPage
             {
                 if (DataGR.SelectedItem != null)
                 {
-                    var cur = DataGR.SelectedItem as LeaseObjects;
-                    AppData.db.LeaseObjects.Remove(cur);
+                    var cur = DataGR.SelectedItem as CarView;
+                    var curcar = AppData.db.LeaseObjects.Where(u => u.ID == cur.Id).FirstOrDefault();
+                    curcar.CarStatusID = 2;
                     AppData.db.SaveChanges();
-                    DataGR.ItemsSource = AppData.db.LeaseObjects.ToList();
-                   
-                    MessageBox.Show("Удалено");
+                    Refresher();
                 }
                 else
                 {
@@ -71,8 +70,27 @@ namespace Leasing.Pages.AdminsPage
 
         private void Refresh(object sender, RoutedEventArgs e)
         {
-            DataGR.ItemsSource = AppData.db.LeaseObjects.ToList();
-            MessageBox.Show("Обновлено");
+            Refresher();
+        }
+        private void Refresher()
+        {
+            var query = from car in AppData.db.LeaseObjects
+                        join carstatus in AppData.db.CarStatus on car.CarStatusID equals carstatus.ID
+                        select new CarView
+                        
+                        {
+                           Id = car.ID,
+                           Name = car.Name,
+                           MonthCount = car.MonthCount,
+                           CarPrice = car.CarPrice,
+                           Avance = (int)car.Avance,
+                           MothlyPrice = (int)car.MothlyPrice,
+                           AllAmount = (int)car.AllAmount,
+                           Images = car.Images,
+                           Status = carstatus.StatusName
+                        };
+
+            DataGR.ItemsSource = query.ToList();
         }
 
 

@@ -7,20 +7,21 @@
          xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
         mc:Ignorable="d"
         Title="EditDogovor" Loaded="Window_Loaded"
-    ResizeMode="NoResize" Height="500" Width="1000" AllowsTransparency="True" WindowStartupLocation="CenterScreen" WindowStyle="None" Background="Transparent">
+    ResizeMode="NoResize" Height="550" Width="1000" AllowsTransparency="True" WindowStartupLocation="CenterScreen" WindowStyle="None" Background="Transparent">
     <Grid >
         <materialDesign:Card Margin="10" UniformCornerRadius="20" >
             <Grid Margin="0,0,0,-21">
                 <Button Style="{StaticResource MaterialDesignFloatingActionButton}" HorizontalAlignment="Left" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="Black" x:Name="CloseButton"   Margin="914,0,0,445" Click="ExitClick" Cursor="Hand">
                     <materialDesign:PackIcon Kind="Close" Foreground="Black" Height="39" Width="39" VerticalAlignment="Center"/>
                 </Button>
-                <Button Content="Изменить" HorizontalAlignment="Left" Margin="764,395,0,0" VerticalAlignment="Top" Click="EditDogovorClick"/>
+                <Button Content="Изменить" HorizontalAlignment="Left" Margin="764,469,0,0" VerticalAlignment="Top" Click="EditDogovorClick"/>
                 <DataGrid x:Name="DataGR" Margin="22,72,388,86" AutoGenerateColumns="False">
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="Айди клиента" Width="101" Binding="{Binding ClientID}"/>
                         <DataGridTextColumn Header="Дата начала" Width="66" Binding="{Binding StartDate}"/>
                         <DataGridTextColumn Header="Дата окончания" Width="112" Binding="{Binding EndDate}"/>
                         <DataGridTextColumn Header="Статус" Width="75" Binding="{Binding Status}"/>
+                        <DataGridTextColumn Header="Айди машины" Width="130" Binding="{Binding CarID}"/>
                     </DataGrid.Columns>
                 </DataGrid>
                 <TextBox x:Name="TxbClient" HorizontalContentAlignment="Center"   Style="{StaticResource MaterialDesignOutlinedTextBox}" HorizontalAlignment="Left" Margin="693,84,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="240" Height="52" Background="#FF6F63C5" Foreground="White"/>
@@ -32,6 +33,8 @@
                 <DatePicker x:Name="datestart"  Style="{StaticResource MaterialDesignOutlinedDatePicker}" HorizontalAlignment="Left" Margin="752,170,0,0" VerticalAlignment="Top" Height="44" Width="122"/>
                 <DatePicker x:Name="dateend"  Style="{StaticResource MaterialDesignOutlinedDatePicker}" HorizontalAlignment="Left" Margin="752,250,0,0" VerticalAlignment="Top" Height="46" Width="122"/>
                 <Label Content="Редактирование активного договора лизинга" HorizontalAlignment="Left" Margin="22,19,0,0" VerticalAlignment="Top" Foreground="#E5000000" FontSize="18" FontFamily="Arial Black"/>
+                <TextBox x:Name="TxbCarID" HorizontalContentAlignment="Center"   Style="{StaticResource MaterialDesignOutlinedTextBox}" HorizontalAlignment="Left" Margin="693,402,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="240" Height="52" Background="#FF6F63C5" Foreground="White"/>
+                <Label Content="Айди машины" HorizontalAlignment="Left" Margin="794,378,0,0" VerticalAlignment="Top" Height="24" Width="38" Foreground="#FF7D32FF" FontSize="14" FontFamily="Bahnschrift Condensed"/>
 
             </Grid>
         </materialDesign:Card>

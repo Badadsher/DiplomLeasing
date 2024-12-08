@@ -1,18 +1,25 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="Хранилище LeasingModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="CarStatus">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="StatusName" Type="nvarchar" MaxLength="50" />
+  </EntityType>
   <EntityType Name="LeaseObjects">
     <Key>
       <PropertyRef Name="ID" />
     </Key>
     <Property Name="ID" Type="int" Nullable="false" />
-    <Property Name="LeaseID" Type="int" />
     <Property Name="Name" Type="nvarchar" MaxLength="60" Nullable="false" />
     <Property Name="MonthCount" Type="int" Nullable="false" />
     <Property Name="CarPrice" Type="int" Nullable="false" />
     <Property Name="Avance" Type="int" StoreGeneratedPattern="Computed" />
     <Property Name="MothlyPrice" Type="int" StoreGeneratedPattern="Computed" />
     <Property Name="AllAmount" Type="int" StoreGeneratedPattern="Computed" />
-    <Property Name="Images" Type="varbinary(max)" />
+    <Property Name="Images" Type="varbinary(max)" Nullable="false" />
+    <Property Name="CarStatusID" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="Leases">
     <Key>
@@ -32,6 +39,13 @@
     <Property Name="ID" Type="int" Nullable="false" />
     <Property Name="RoleName" Type="nvarchar" MaxLength="50" Nullable="false" />
   </EntityType>
+  <EntityType Name="StatusTable">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="StatusName" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
   <EntityType Name="sysdiagrams">
     <Key>
       <PropertyRef Name="diagram_id" />
@@ -49,20 +63,29 @@
     <Property Name="ID" Type="int" Nullable="false" />
     <Property Name="Login" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="Password" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="RoleID" Type="int" Nullable="false" />
+    <Property Name="StatusID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UsersData">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
     <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="Surname" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="Patronymic" Type="nvarchar" MaxLength="50" />
-    <Property Name="RoleID" Type="int" Nullable="false" />
+    <Property Name="Number" Type="bigint" Nullable="false" />
+    <Property Name="Photo" Type="varbinary(max)" Nullable="false" />
   </EntityType>
-  <Association Name="FK_LeaseObjects_Leases">
-    <End Role="Leases" Type="Self.Leases" Multiplicity="0..1" />
+  <Association Name="FK_LeaseObjects_CarStatus">
+    <End Role="CarStatus" Type="Self.CarStatus" Multiplicity="1" />
     <End Role="LeaseObjects" Type="Self.LeaseObjects" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="Leases">
+      <Principal Role="CarStatus">
         <PropertyRef Name="ID" />
       </Principal>
       <Dependent Role="LeaseObjects">
-        <PropertyRef Name="LeaseID" />
+        <PropertyRef Name="CarStatusID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -102,14 +125,41 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_Users_StatusTable">
+    <End Role="StatusTable" Type="Self.StatusTable" Multiplicity="1" />
+    <End Role="Users" Type="Self.Users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StatusTable">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Users">
+        <PropertyRef Name="StatusID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UsersData_Users">
+    <End Role="Users" Type="Self.Users" Multiplicity="1" />
+    <End Role="UsersData" Type="Self.UsersData" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="UsersData">
+        <PropertyRef Name="ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <EntityContainer Name="Хранилище LeasingModelContainer">
+    <EntitySet Name="CarStatus" EntityType="Self.CarStatus" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="LeaseObjects" EntityType="Self.LeaseObjects" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Leases" EntityType="Self.Leases" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Roles" EntityType="Self.Roles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="StatusTable" EntityType="Self.StatusTable" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
-    <AssociationSet Name="FK_LeaseObjects_Leases" Association="Self.FK_LeaseObjects_Leases">
-      <End Role="Leases" EntitySet="Leases" />
+    <EntitySet Name="UsersData" EntityType="Self.UsersData" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_LeaseObjects_CarStatus" Association="Self.FK_LeaseObjects_CarStatus">
+      <End Role="CarStatus" EntitySet="CarStatus" />
       <End Role="LeaseObjects" EntitySet="LeaseObjects" />
     </AssociationSet>
     <AssociationSet Name="FK_Leases_LeaseObjects" Association="Self.FK_Leases_LeaseObjects">
@@ -123,6 +173,14 @@
     <AssociationSet Name="FK_Users_Roles" Association="Self.FK_Users_Roles">
       <End Role="Roles" EntitySet="Roles" />
       <End Role="Users" EntitySet="Users" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Users_StatusTable" Association="Self.FK_Users_StatusTable">
+      <End Role="StatusTable" EntitySet="StatusTable" />
+      <End Role="Users" EntitySet="Users" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UsersData_Users" Association="Self.FK_UsersData_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="UsersData" EntitySet="UsersData" />
     </AssociationSet>
   </EntityContainer>
 </Schema>
