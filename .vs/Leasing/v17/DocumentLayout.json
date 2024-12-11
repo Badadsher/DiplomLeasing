@@ -3,12 +3,76 @@
   "WorkspaceRootPath": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{D31AD4DB-D9C6-4EFF-91E5-354B933EC5DE}|Leasing\\Leasing.csproj|C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\leasing\\pages\\adminspage\\edituser.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D31AD4DB-D9C6-4EFF-91E5-354B933EC5DE}|Leasing\\Leasing.csproj|solutionrelative:leasing\\pages\\adminspage\\edituser.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D31AD4DB-D9C6-4EFF-91E5-354B933EC5DE}|Leasing\\Leasing.csproj|C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\leasing\\pages\\adminspage\\edituser.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{D31AD4DB-D9C6-4EFF-91E5-354B933EC5DE}|Leasing\\Leasing.csproj|solutionrelative:leasing\\pages\\adminspage\\edituser.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D31AD4DB-D9C6-4EFF-91E5-354B933EC5DE}|Leasing\\Leasing.csproj|C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\leasing\\pages\\adminspage\\profilewindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D31AD4DB-D9C6-4EFF-91E5-354B933EC5DE}|Leasing\\Leasing.csproj|solutionrelative:leasing\\pages\\adminspage\\profilewindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D31AD4DB-D9C6-4EFF-91E5-354B933EC5DE}|Leasing\\Leasing.csproj|C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\leasing\\pages\\regpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D31AD4DB-D9C6-4EFF-91E5-354B933EC5DE}|Leasing\\Leasing.csproj|solutionrelative:leasing\\pages\\regpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D31AD4DB-D9C6-4EFF-91E5-354B933EC5DE}|Leasing\\Leasing.csproj|C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\leasing\\pages\\authpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D31AD4DB-D9C6-4EFF-91E5-354B933EC5DE}|Leasing\\Leasing.csproj|solutionrelative:leasing\\pages\\authpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D31AD4DB-D9C6-4EFF-91E5-354B933EC5DE}|Leasing\\Leasing.csproj|C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\leasing\\pages\\authpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{D31AD4DB-D9C6-4EFF-91E5-354B933EC5DE}|Leasing\\Leasing.csproj|solutionrelative:leasing\\pages\\authpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D31AD4DB-D9C6-4EFF-91E5-354B933EC5DE}|Leasing\\Leasing.csproj|c:\\users\\heisenberg\\downloads\\leasingapp\\leasing\\leasing\\pages\\adminspage\\profilewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{D31AD4DB-D9C6-4EFF-91E5-354B933EC5DE}|Leasing\\Leasing.csproj|solutionrelative:leasing\\pages\\adminspage\\profilewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D31AD4DB-D9C6-4EFF-91E5-354B933EC5DE}|Leasing\\Leasing.csproj|C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\leasing\\pages\\adminspage\\adminusers.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{D31AD4DB-D9C6-4EFF-91E5-354B933EC5DE}|Leasing\\Leasing.csproj|solutionrelative:leasing\\pages\\adminspage\\adminusers.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D31AD4DB-D9C6-4EFF-91E5-354B933EC5DE}|Leasing\\Leasing.csproj|C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\leasing\\pages\\adminspage\\adminhistory.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{D31AD4DB-D9C6-4EFF-91E5-354B933EC5DE}|Leasing\\Leasing.csproj|solutionrelative:leasing\\pages\\adminspage\\adminhistory.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D31AD4DB-D9C6-4EFF-91E5-354B933EC5DE}|Leasing\\Leasing.csproj|C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\leasing\\pages\\adminspage\\adminpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{D31AD4DB-D9C6-4EFF-91E5-354B933EC5DE}|Leasing\\Leasing.csproj|solutionrelative:leasing\\pages\\adminspage\\adminpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{D31AD4DB-D9C6-4EFF-91E5-354B933EC5DE}|Leasing\\Leasing.csproj|C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\leasing\\pages\\adminspage\\editlease.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{D31AD4DB-D9C6-4EFF-91E5-354B933EC5DE}|Leasing\\Leasing.csproj|solutionrelative:leasing\\pages\\adminspage\\editlease.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D31AD4DB-D9C6-4EFF-91E5-354B933EC5DE}|Leasing\\Leasing.csproj|C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\leasing\\pages\\adminspage\\addleas.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D31AD4DB-D9C6-4EFF-91E5-354B933EC5DE}|Leasing\\Leasing.csproj|solutionrelative:leasing\\pages\\adminspage\\addleas.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D31AD4DB-D9C6-4EFF-91E5-354B933EC5DE}|Leasing\\Leasing.csproj|C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\leasing\\pages\\adminspage\\editlease.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D31AD4DB-D9C6-4EFF-91E5-354B933EC5DE}|Leasing\\Leasing.csproj|solutionrelative:leasing\\pages\\adminspage\\editlease.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D31AD4DB-D9C6-4EFF-91E5-354B933EC5DE}|Leasing\\Leasing.csproj|C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\leasing\\pages\\adminspage\\adminusers.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D31AD4DB-D9C6-4EFF-91E5-354B933EC5DE}|Leasing\\Leasing.csproj|solutionrelative:leasing\\pages\\adminspage\\adminusers.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D31AD4DB-D9C6-4EFF-91E5-354B933EC5DE}|Leasing\\Leasing.csproj|C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\leasing\\pages\\adminspage\\editdogovor.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D31AD4DB-D9C6-4EFF-91E5-354B933EC5DE}|Leasing\\Leasing.csproj|solutionrelative:leasing\\pages\\adminspage\\editdogovor.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D31AD4DB-D9C6-4EFF-91E5-354B933EC5DE}|Leasing\\Leasing.csproj|C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\leasing\\pages\\workerspage\\workerpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D31AD4DB-D9C6-4EFF-91E5-354B933EC5DE}|Leasing\\Leasing.csproj|solutionrelative:leasing\\pages\\workerspage\\workerpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D31AD4DB-D9C6-4EFF-91E5-354B933EC5DE}|Leasing\\Leasing.csproj|C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\leasing\\pages\\adminspage\\editdogovor.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{D31AD4DB-D9C6-4EFF-91E5-354B933EC5DE}|Leasing\\Leasing.csproj|solutionrelative:leasing\\pages\\adminspage\\editdogovor.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D31AD4DB-D9C6-4EFF-91E5-354B933EC5DE}|Leasing\\Leasing.csproj|C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\leasing\\pages\\adminspage\\adminpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D31AD4DB-D9C6-4EFF-91E5-354B933EC5DE}|Leasing\\Leasing.csproj|solutionrelative:leasing\\pages\\adminspage\\adminpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D31AD4DB-D9C6-4EFF-91E5-354B933EC5DE}|Leasing\\Leasing.csproj|C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\leasing\\pages\\adminspage\\adddogovor.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{D31AD4DB-D9C6-4EFF-91E5-354B933EC5DE}|Leasing\\Leasing.csproj|solutionrelative:leasing\\pages\\adminspage\\adddogovor.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D31AD4DB-D9C6-4EFF-91E5-354B933EC5DE}|Leasing\\Leasing.csproj|C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\leasing\\pages\\adminspage\\addleas.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -19,60 +83,24 @@
       "RelativeMoniker": "D:0:0:{D31AD4DB-D9C6-4EFF-91E5-354B933EC5DE}|Leasing\\Leasing.csproj|solutionrelative:leasing\\pages\\adminspage\\adduser.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D31AD4DB-D9C6-4EFF-91E5-354B933EC5DE}|Leasing\\Leasing.csproj|C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\leasing\\pages\\authpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D31AD4DB-D9C6-4EFF-91E5-354B933EC5DE}|Leasing\\Leasing.csproj|solutionrelative:leasing\\pages\\authpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D31AD4DB-D9C6-4EFF-91E5-354B933EC5DE}|Leasing\\Leasing.csproj|C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\leasing\\pages\\adminspage\\adminpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{D31AD4DB-D9C6-4EFF-91E5-354B933EC5DE}|Leasing\\Leasing.csproj|solutionrelative:leasing\\pages\\adminspage\\adminpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D31AD4DB-D9C6-4EFF-91E5-354B933EC5DE}|Leasing\\Leasing.csproj|C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\leasing\\pages\\adminspage\\adminhistory.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{D31AD4DB-D9C6-4EFF-91E5-354B933EC5DE}|Leasing\\Leasing.csproj|solutionrelative:leasing\\pages\\adminspage\\adminhistory.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D31AD4DB-D9C6-4EFF-91E5-354B933EC5DE}|Leasing\\Leasing.csproj|C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\leasing\\pages\\adminspage\\adminusers.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{D31AD4DB-D9C6-4EFF-91E5-354B933EC5DE}|Leasing\\Leasing.csproj|solutionrelative:leasing\\pages\\adminspage\\adminusers.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{D31AD4DB-D9C6-4EFF-91E5-354B933EC5DE}|Leasing\\Leasing.csproj|C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\leasing\\pages\\adminspage\\addleas.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D31AD4DB-D9C6-4EFF-91E5-354B933EC5DE}|Leasing\\Leasing.csproj|solutionrelative:leasing\\pages\\adminspage\\addleas.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D31AD4DB-D9C6-4EFF-91E5-354B933EC5DE}|Leasing\\Leasing.csproj|C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\leasing\\pages\\workerspage\\workerpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{D31AD4DB-D9C6-4EFF-91E5-354B933EC5DE}|Leasing\\Leasing.csproj|solutionrelative:leasing\\pages\\workerspage\\workerpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D31AD4DB-D9C6-4EFF-91E5-354B933EC5DE}|Leasing\\Leasing.csproj|c:\\users\\heisenberg\\downloads\\leasingapp\\leasing\\leasing\\model\\unitedclassusers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D31AD4DB-D9C6-4EFF-91E5-354B933EC5DE}|Leasing\\Leasing.csproj|C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\leasing\\model\\unitedclassusers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D31AD4DB-D9C6-4EFF-91E5-354B933EC5DE}|Leasing\\Leasing.csproj|solutionrelative:leasing\\model\\unitedclassusers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D31AD4DB-D9C6-4EFF-91E5-354B933EC5DE}|Leasing\\Leasing.csproj|C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\leasing\\pages\\regpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D31AD4DB-D9C6-4EFF-91E5-354B933EC5DE}|Leasing\\Leasing.csproj|solutionrelative:leasing\\pages\\regpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D31AD4DB-D9C6-4EFF-91E5-354B933EC5DE}|Leasing\\Leasing.csproj|C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\leasing\\pages\\adminspage\\adduser.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D31AD4DB-D9C6-4EFF-91E5-354B933EC5DE}|Leasing\\Leasing.csproj|solutionrelative:leasing\\pages\\adminspage\\adduser.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D31AD4DB-D9C6-4EFF-91E5-354B933EC5DE}|Leasing\\Leasing.csproj|C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\leasing\\pages\\adminspage\\adminusers.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D31AD4DB-D9C6-4EFF-91E5-354B933EC5DE}|Leasing\\Leasing.csproj|solutionrelative:leasing\\pages\\adminspage\\adminusers.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D31AD4DB-D9C6-4EFF-91E5-354B933EC5DE}|Leasing\\Leasing.csproj|C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\leasing\\pages\\adminspage\\edituser.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D31AD4DB-D9C6-4EFF-91E5-354B933EC5DE}|Leasing\\Leasing.csproj|solutionrelative:leasing\\pages\\adminspage\\edituser.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D31AD4DB-D9C6-4EFF-91E5-354B933EC5DE}|Leasing\\Leasing.csproj|C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\leasing\\pages\\adminspage\\editlease.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D31AD4DB-D9C6-4EFF-91E5-354B933EC5DE}|Leasing\\Leasing.csproj|solutionrelative:leasing\\pages\\adminspage\\editlease.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D31AD4DB-D9C6-4EFF-91E5-354B933EC5DE}|Leasing\\Leasing.csproj|C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\leasing\\pages\\adminspage\\adminpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D31AD4DB-D9C6-4EFF-91E5-354B933EC5DE}|Leasing\\Leasing.csproj|solutionrelative:leasing\\pages\\adminspage\\adminpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D31AD4DB-D9C6-4EFF-91E5-354B933EC5DE}|Leasing\\Leasing.csproj|c:\\users\\heisenberg\\downloads\\leasingapp\\leasing\\leasing\\pages\\adminspage\\adminhistory.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D31AD4DB-D9C6-4EFF-91E5-354B933EC5DE}|Leasing\\Leasing.csproj|C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\leasing\\pages\\adminspage\\adminhistory.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D31AD4DB-D9C6-4EFF-91E5-354B933EC5DE}|Leasing\\Leasing.csproj|solutionrelative:leasing\\pages\\adminspage\\adminhistory.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D31AD4DB-D9C6-4EFF-91E5-354B933EC5DE}|Leasing\\Leasing.csproj|C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\leasing\\pages\\workerspage\\workerpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D31AD4DB-D9C6-4EFF-91E5-354B933EC5DE}|Leasing\\Leasing.csproj|solutionrelative:leasing\\pages\\workerspage\\workerpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D31AD4DB-D9C6-4EFF-91E5-354B933EC5DE}|Leasing\\Leasing.csproj|C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\leasing\\pages\\workerspage\\workerhistorypage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -83,20 +111,12 @@
       "RelativeMoniker": "D:0:0:{D31AD4DB-D9C6-4EFF-91E5-354B933EC5DE}|Leasing\\Leasing.csproj|solutionrelative:leasing\\model\\unitedclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D31AD4DB-D9C6-4EFF-91E5-354B933EC5DE}|Leasing\\Leasing.csproj|c:\\users\\heisenberg\\downloads\\leasingapp\\leasing\\leasing\\model\\unitedclasscars.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D31AD4DB-D9C6-4EFF-91E5-354B933EC5DE}|Leasing\\Leasing.csproj|C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\leasing\\model\\unitedclasscars.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D31AD4DB-D9C6-4EFF-91E5-354B933EC5DE}|Leasing\\Leasing.csproj|solutionrelative:leasing\\model\\unitedclasscars.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D31AD4DB-D9C6-4EFF-91E5-354B933EC5DE}|Leasing\\Leasing.csproj|C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\leasing\\pages\\regpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{D31AD4DB-D9C6-4EFF-91E5-354B933EC5DE}|Leasing\\Leasing.csproj|solutionrelative:leasing\\pages\\regpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D31AD4DB-D9C6-4EFF-91E5-354B933EC5DE}|Leasing\\Leasing.csproj|C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\leasing\\pages\\adminspage\\edituser.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{D31AD4DB-D9C6-4EFF-91E5-354B933EC5DE}|Leasing\\Leasing.csproj|solutionrelative:leasing\\pages\\adminspage\\edituser.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D31AD4DB-D9C6-4EFF-91E5-354B933EC5DE}|Leasing\\Leasing.csproj|C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\leasing\\pages\\adminspage\\editdogovor.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D31AD4DB-D9C6-4EFF-91E5-354B933EC5DE}|Leasing\\Leasing.csproj|solutionrelative:leasing\\pages\\adminspage\\editdogovor.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D31AD4DB-D9C6-4EFF-91E5-354B933EC5DE}|Leasing\\Leasing.csproj|C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\leasing\\model\\appdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -111,7 +131,7 @@
       "RelativeMoniker": "D:0:0:{D31AD4DB-D9C6-4EFF-91E5-354B933EC5DE}|Leasing\\Leasing.csproj|solutionrelative:leasing\\pages\\adminspage\\adddogovor.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D31AD4DB-D9C6-4EFF-91E5-354B933EC5DE}|Leasing\\Leasing.csproj|c:\\users\\heisenberg\\downloads\\leasingapp\\leasing\\leasing\\model\\model1.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
+      "AbsoluteMoniker": "D:0:0:{D31AD4DB-D9C6-4EFF-91E5-354B933EC5DE}|Leasing\\Leasing.csproj|C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\leasing\\model\\model1.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
       "RelativeMoniker": "D:0:0:{D31AD4DB-D9C6-4EFF-91E5-354B933EC5DE}|Leasing\\Leasing.csproj|solutionrelative:leasing\\model\\model1.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|"
     },
     {
@@ -119,15 +139,7 @@
       "RelativeMoniker": "D:0:0:{D31AD4DB-D9C6-4EFF-91E5-354B933EC5DE}|Leasing\\Leasing.csproj|solutionrelative:leasing\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D31AD4DB-D9C6-4EFF-91E5-354B933EC5DE}|Leasing\\Leasing.csproj|C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\leasing\\pages\\adminspage\\editdogovor.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{D31AD4DB-D9C6-4EFF-91E5-354B933EC5DE}|Leasing\\Leasing.csproj|solutionrelative:leasing\\pages\\adminspage\\editdogovor.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D31AD4DB-D9C6-4EFF-91E5-354B933EC5DE}|Leasing\\Leasing.csproj|C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\leasing\\pages\\adminspage\\adddogovor.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{D31AD4DB-D9C6-4EFF-91E5-354B933EC5DE}|Leasing\\Leasing.csproj|solutionrelative:leasing\\pages\\adminspage\\adddogovor.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D31AD4DB-D9C6-4EFF-91E5-354B933EC5DE}|Leasing\\Leasing.csproj|c:\\users\\heisenberg\\downloads\\leasingapp\\leasing\\leasing\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D31AD4DB-D9C6-4EFF-91E5-354B933EC5DE}|Leasing\\Leasing.csproj|C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\leasing\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D31AD4DB-D9C6-4EFF-91E5-354B933EC5DE}|Leasing\\Leasing.csproj|solutionrelative:leasing\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -136,10 +148,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{D31AD4DB-D9C6-4EFF-91E5-354B933EC5DE}|Leasing\\Leasing.csproj|C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\leasing\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{D31AD4DB-D9C6-4EFF-91E5-354B933EC5DE}|Leasing\\Leasing.csproj|solutionrelative:leasing\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D31AD4DB-D9C6-4EFF-91E5-354B933EC5DE}|Leasing\\Leasing.csproj|C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\leasing\\pages\\authpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{D31AD4DB-D9C6-4EFF-91E5-354B933EC5DE}|Leasing\\Leasing.csproj|solutionrelative:leasing\\pages\\authpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Heisenberg\\AppData\\Local\\Temp\\.vsdbgsrc\\c824721cd7d9c028e31d9faa77b348c59e49e6a99818a102ec7b7f9254f84219\\PropertyPathWorker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -163,18 +171,95 @@
       "DocumentGroups": [
         {
           "DockedWidth": 266,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ProfileWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\Pages\\AdminsPage\\ProfileWindow.xaml.cs",
+              "RelativeDocumentMoniker": "Leasing\\Pages\\AdminsPage\\ProfileWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\Pages\\AdminsPage\\ProfileWindow.xaml.cs",
+              "RelativeToolTip": "Leasing\\Pages\\AdminsPage\\ProfileWindow.xaml.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAAuwCcAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T22:06:54.989Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "EditDogovor.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\Pages\\AdminsPage\\EditDogovor.xaml.cs",
+              "RelativeDocumentMoniker": "Leasing\\Pages\\AdminsPage\\EditDogovor.xaml.cs",
+              "ToolTip": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\Pages\\AdminsPage\\EditDogovor.xaml.cs",
+              "RelativeToolTip": "Leasing\\Pages\\AdminsPage\\EditDogovor.xaml.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAAowCYAAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-27T23:17:43.809Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "AdminPage.xaml",
-              "DocumentMoniker": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\Pages\\AdminsPage\\AdminPage.xaml",
-              "RelativeDocumentMoniker": "Leasing\\Pages\\AdminsPage\\AdminPage.xaml",
-              "ToolTip": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\Pages\\AdminsPage\\AdminPage.xaml",
-              "RelativeToolTip": "Leasing\\Pages\\AdminsPage\\AdminPage.xaml",
+              "Title": "AuthPage.xaml",
+              "DocumentMoniker": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\Pages\\AuthPage.xaml",
+              "RelativeDocumentMoniker": "Leasing\\Pages\\AuthPage.xaml",
+              "ToolTip": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\Pages\\AuthPage.xaml",
+              "RelativeToolTip": "Leasing\\Pages\\AuthPage.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-11-27T19:22:48.103Z",
+              "WhenOpened": "2024-11-27T20:16:47.78Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AuthPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\Pages\\AuthPage.xaml.cs",
+              "RelativeDocumentMoniker": "Leasing\\Pages\\AuthPage.xaml.cs",
+              "ToolTip": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\Pages\\AuthPage.xaml.cs",
+              "RelativeToolTip": "Leasing\\Pages\\AuthPage.xaml.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAAAACwAAABHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-27T19:51:01.172Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "RegPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\Pages\\RegPage.xaml.cs",
+              "RelativeDocumentMoniker": "Leasing\\Pages\\RegPage.xaml.cs",
+              "ToolTip": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\Pages\\RegPage.xaml.cs",
+              "RelativeToolTip": "Leasing\\Pages\\RegPage.xaml.cs",
+              "ViewState": "AQIAAB8AAAAAAAAAAAA1wCoAAAA7AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-27T19:51:13.959Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EditUser.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\Pages\\AdminsPage\\EditUser.xaml.cs",
+              "RelativeDocumentMoniker": "Leasing\\Pages\\AdminsPage\\EditUser.xaml.cs",
+              "ToolTip": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\Pages\\AdminsPage\\EditUser.xaml.cs",
+              "RelativeToolTip": "Leasing\\Pages\\AdminsPage\\EditUser.xaml.cs",
+              "ViewState": "AQIAACQAAAAAAAAAAAAgwC4AAAA+AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-27T20:20:24.424Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "EditUser.xaml",
+              "DocumentMoniker": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\Pages\\AdminsPage\\EditUser.xaml",
+              "RelativeDocumentMoniker": "Leasing\\Pages\\AdminsPage\\EditUser.xaml",
+              "ToolTip": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\Pages\\AdminsPage\\EditUser.xaml",
+              "RelativeToolTip": "Leasing\\Pages\\AdminsPage\\EditUser.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-11-27T20:17:33.092Z",
               "EditorCaption": ""
             },
             {
@@ -191,7 +276,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "AdminHistory.xaml",
               "DocumentMoniker": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\Pages\\AdminsPage\\AdminHistory.xaml",
               "RelativeDocumentMoniker": "Leasing\\Pages\\AdminsPage\\AdminHistory.xaml",
@@ -203,57 +288,68 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "AuthPage.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\Pages\\AuthPage.xaml.cs",
-              "RelativeDocumentMoniker": "Leasing\\Pages\\AuthPage.xaml.cs",
-              "ToolTip": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\Pages\\AuthPage.xaml.cs",
-              "RelativeToolTip": "Leasing\\Pages\\AuthPage.xaml.cs",
-              "ViewState": "AQIAABUAAAAAAAAAAAAnwDAAAAASAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T19:51:01.172Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AddLeas.xaml",
-              "DocumentMoniker": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\Pages\\AdminsPage\\AddLeas.xaml",
-              "RelativeDocumentMoniker": "Leasing\\Pages\\AdminsPage\\AddLeas.xaml",
-              "ToolTip": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\Pages\\AdminsPage\\AddLeas.xaml",
-              "RelativeToolTip": "Leasing\\Pages\\AdminsPage\\AddLeas.xaml",
+              "DocumentIndex": 6,
+              "Title": "ProfileWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\Pages\\AdminsPage\\ProfileWindow.xaml",
+              "RelativeDocumentMoniker": "Leasing\\Pages\\AdminsPage\\ProfileWindow.xaml",
+              "ToolTip": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\Pages\\AdminsPage\\ProfileWindow.xaml",
+              "RelativeToolTip": "Leasing\\Pages\\AdminsPage\\ProfileWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-11-27T21:09:20.37Z",
+              "WhenOpened": "2024-12-11T22:05:44.489Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 9,
+              "Title": "AdminPage.xaml",
+              "DocumentMoniker": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\Pages\\AdminsPage\\AdminPage.xaml",
+              "RelativeDocumentMoniker": "Leasing\\Pages\\AdminsPage\\AdminPage.xaml",
+              "ToolTip": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\Pages\\AdminsPage\\AdminPage.xaml",
+              "RelativeToolTip": "Leasing\\Pages\\AdminsPage\\AdminPage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-11-27T19:22:48.103Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
               "Title": "AddUser.xaml",
               "DocumentMoniker": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\Pages\\AdminsPage\\AddUser.xaml",
               "RelativeDocumentMoniker": "Leasing\\Pages\\AdminsPage\\AddUser.xaml",
               "ToolTip": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\Pages\\AdminsPage\\AddUser.xaml",
               "RelativeToolTip": "Leasing\\Pages\\AdminsPage\\AddUser.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-11-27T19:54:02.3Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-27T19:54:02.3Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AddLeas.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\Pages\\AdminsPage\\AddLeas.xaml.cs",
-              "RelativeDocumentMoniker": "Leasing\\Pages\\AdminsPage\\AddLeas.xaml.cs",
-              "ToolTip": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\Pages\\AdminsPage\\AddLeas.xaml.cs",
-              "RelativeToolTip": "Leasing\\Pages\\AdminsPage\\AddLeas.xaml.cs",
-              "ViewState": "AQIAADoAAAAAAAAAAAAYwFAAAAAMAAAA",
+              "DocumentIndex": 12,
+              "Title": "AdminUsers.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\Pages\\AdminsPage\\AdminUsers.xaml.cs",
+              "RelativeDocumentMoniker": "Leasing\\Pages\\AdminsPage\\AdminUsers.xaml.cs",
+              "ToolTip": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\Pages\\AdminsPage\\AdminUsers.xaml.cs",
+              "RelativeToolTip": "Leasing\\Pages\\AdminsPage\\AdminUsers.xaml.cs",
+              "ViewState": "AQIAAF8AAAAAAAAAAAAuwHwAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T21:20:05.191Z",
+              "WhenOpened": "2024-11-27T19:20:44.994Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 11,
+              "Title": "EditLease.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\Pages\\AdminsPage\\EditLease.xaml.cs",
+              "RelativeDocumentMoniker": "Leasing\\Pages\\AdminsPage\\EditLease.xaml.cs",
+              "ToolTip": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\Pages\\AdminsPage\\EditLease.xaml.cs",
+              "RelativeToolTip": "Leasing\\Pages\\AdminsPage\\EditLease.xaml.cs",
+              "ViewState": "AQIAAGQAAAAAAAAAAAAcwGIAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-27T22:17:30.151Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "EditLease.xaml",
               "DocumentMoniker": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\Pages\\AdminsPage\\EditLease.xaml",
               "RelativeDocumentMoniker": "Leasing\\Pages\\AdminsPage\\EditLease.xaml",
@@ -265,136 +361,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "WorkerPage.xaml",
-              "DocumentMoniker": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\Pages\\WorkersPage\\WorkerPage.xaml",
-              "RelativeDocumentMoniker": "Leasing\\Pages\\WorkersPage\\WorkerPage.xaml",
-              "ToolTip": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\Pages\\WorkersPage\\WorkerPage.xaml",
-              "RelativeToolTip": "Leasing\\Pages\\WorkersPage\\WorkerPage.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-11-27T22:51:02.49Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "UnitedClassUsers.cs",
-              "DocumentMoniker": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\Model\\UnitedClassUsers.cs",
-              "RelativeDocumentMoniker": "Leasing\\Model\\UnitedClassUsers.cs",
-              "ToolTip": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\Model\\UnitedClassUsers.cs",
-              "RelativeToolTip": "Leasing\\Model\\UnitedClassUsers.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-08T20:16:50.847Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "RegPage.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\Pages\\RegPage.xaml.cs",
-              "RelativeDocumentMoniker": "Leasing\\Pages\\RegPage.xaml.cs",
-              "ToolTip": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\Pages\\RegPage.xaml.cs",
-              "RelativeToolTip": "Leasing\\Pages\\RegPage.xaml.cs",
-              "ViewState": "AQIAAB8AAAAAAAAAAAAgwCoAAAA7AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T19:51:13.959Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "AddUser.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\Pages\\AdminsPage\\AddUser.xaml.cs",
-              "RelativeDocumentMoniker": "Leasing\\Pages\\AdminsPage\\AddUser.xaml.cs",
-              "ToolTip": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\Pages\\AdminsPage\\AddUser.xaml.cs",
-              "RelativeToolTip": "Leasing\\Pages\\AdminsPage\\AddUser.xaml.cs",
-              "ViewState": "AQIAACcAAAAAAAAAAAAwwEwAAABQAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T20:04:53.023Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "AdminUsers.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\Pages\\AdminsPage\\AdminUsers.xaml.cs",
-              "RelativeDocumentMoniker": "Leasing\\Pages\\AdminsPage\\AdminUsers.xaml.cs",
-              "ToolTip": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\Pages\\AdminsPage\\AdminUsers.xaml.cs",
-              "RelativeToolTip": "Leasing\\Pages\\AdminsPage\\AdminUsers.xaml.cs",
-              "ViewState": "AQIAACsAAAAAAAAAAAAQwD0AAAAgAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T19:20:44.994Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "EditUser.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\Pages\\AdminsPage\\EditUser.xaml.cs",
-              "RelativeDocumentMoniker": "Leasing\\Pages\\AdminsPage\\EditUser.xaml.cs",
-              "ToolTip": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\Pages\\AdminsPage\\EditUser.xaml.cs",
-              "RelativeToolTip": "Leasing\\Pages\\AdminsPage\\EditUser.xaml.cs",
-              "ViewState": "AQIAABoAAAAAAAAAAAAAAC0AAAArAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T20:20:24.424Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "AdminPage.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\Pages\\AdminsPage\\AdminPage.xaml.cs",
-              "RelativeDocumentMoniker": "Leasing\\Pages\\AdminsPage\\AdminPage.xaml.cs",
-              "ToolTip": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\Pages\\AdminsPage\\AdminPage.xaml.cs",
-              "RelativeToolTip": "Leasing\\Pages\\AdminsPage\\AdminPage.xaml.cs",
-              "ViewState": "AQIAADUAAAAAAAAAAAAvwFwAAAAwAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T19:20:38.859Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "EditLease.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\Pages\\AdminsPage\\EditLease.xaml.cs",
-              "RelativeDocumentMoniker": "Leasing\\Pages\\AdminsPage\\EditLease.xaml.cs",
-              "ToolTip": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\Pages\\AdminsPage\\EditLease.xaml.cs",
-              "RelativeToolTip": "Leasing\\Pages\\AdminsPage\\EditLease.xaml.cs",
-              "ViewState": "AQIAACUAAAAAAAAAAAAwwC8AAAByAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T22:17:30.151Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "WorkerPage.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\Pages\\WorkersPage\\WorkerPage.xaml.cs",
-              "RelativeDocumentMoniker": "Leasing\\Pages\\WorkersPage\\WorkerPage.xaml.cs",
-              "ToolTip": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\Pages\\WorkersPage\\WorkerPage.xaml.cs",
-              "RelativeToolTip": "Leasing\\Pages\\WorkersPage\\WorkerPage.xaml.cs",
-              "ViewState": "AQIAACoAAAAAAAAAAAAcwDgAAAAgAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-28T13:07:37.871Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "UnitedClassCars.cs",
-              "DocumentMoniker": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\Model\\UnitedClassCars.cs",
-              "RelativeDocumentMoniker": "Leasing\\Model\\UnitedClassCars.cs",
-              "ToolTip": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\Model\\UnitedClassCars.cs",
-              "RelativeToolTip": "Leasing\\Model\\UnitedClassCars.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAYAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-08T20:49:15.28Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 26,
               "Title": "UnitedClass.cs",
               "DocumentMoniker": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\Model\\UnitedClass.cs",
               "RelativeDocumentMoniker": "Leasing\\Model\\UnitedClass.cs",
@@ -402,98 +369,11 @@
               "RelativeToolTip": "Leasing\\Model\\UnitedClass.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-29T16:08:22.847Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-29T16:08:22.847Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "AdminHistory.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\Pages\\AdminsPage\\AdminHistory.xaml.cs",
-              "RelativeDocumentMoniker": "Leasing\\Pages\\AdminsPage\\AdminHistory.xaml.cs",
-              "ToolTip": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\Pages\\AdminsPage\\AdminHistory.xaml.cs",
-              "RelativeToolTip": "Leasing\\Pages\\AdminsPage\\AdminHistory.xaml.cs",
-              "ViewState": "AQIAACkAAAAAAAAAAAAIwFEAAAASAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T22:55:25.354Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "WorkerHistoryPage.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\Pages\\WorkersPage\\WorkerHistoryPage.xaml.cs",
-              "RelativeDocumentMoniker": "Leasing\\Pages\\WorkersPage\\WorkerHistoryPage.xaml.cs",
-              "ToolTip": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\Pages\\WorkersPage\\WorkerHistoryPage.xaml.cs",
-              "RelativeToolTip": "Leasing\\Pages\\WorkersPage\\WorkerHistoryPage.xaml.cs",
-              "ViewState": "AQIAADgAAAAAAAAAAAA3wCoAAAAmAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-28T13:51:05.396Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "RegPage.xaml",
-              "DocumentMoniker": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\Pages\\RegPage.xaml",
-              "RelativeDocumentMoniker": "Leasing\\Pages\\RegPage.xaml",
-              "ToolTip": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\Pages\\RegPage.xaml",
-              "RelativeToolTip": "Leasing\\Pages\\RegPage.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-11-27T19:59:28.442Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "WorkerHistoryPage.xaml",
-              "DocumentMoniker": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\Pages\\WorkersPage\\WorkerHistoryPage.xaml",
-              "RelativeDocumentMoniker": "Leasing\\Pages\\WorkersPage\\WorkerHistoryPage.xaml",
-              "ToolTip": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\Pages\\WorkersPage\\WorkerHistoryPage.xaml",
-              "RelativeToolTip": "Leasing\\Pages\\WorkersPage\\WorkerHistoryPage.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-11-28T13:39:12.019Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "AppData.cs",
-              "DocumentMoniker": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\Model\\AppData.cs",
-              "RelativeDocumentMoniker": "Leasing\\Model\\AppData.cs",
-              "ToolTip": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\Model\\AppData.cs",
-              "RelativeToolTip": "Leasing\\Model\\AppData.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-28T13:36:08.871Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "AddDogovor.xaml",
-              "DocumentMoniker": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\Pages\\AdminsPage\\AddDogovor.xaml",
-              "RelativeDocumentMoniker": "Leasing\\Pages\\AdminsPage\\AddDogovor.xaml",
-              "ToolTip": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\Pages\\AdminsPage\\AddDogovor.xaml",
-              "RelativeToolTip": "Leasing\\Pages\\AdminsPage\\AddDogovor.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-11-27T23:04:10.046Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "AuthPage.xaml",
-              "DocumentMoniker": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\Pages\\AuthPage.xaml",
-              "RelativeDocumentMoniker": "Leasing\\Pages\\AuthPage.xaml",
-              "ToolTip": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\Pages\\AuthPage.xaml",
-              "RelativeToolTip": "Leasing\\Pages\\AuthPage.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-11-27T20:16:47.78Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 38,
               "Title": "ImageConverterer.cs",
               "DocumentMoniker": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\Pages\\WorkersPage\\ImageConverterer.cs",
               "RelativeDocumentMoniker": "Leasing\\Pages\\WorkersPage\\ImageConverterer.cs",
@@ -505,7 +385,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 40,
               "Title": "FrameworkTemplate.cs",
               "DocumentMoniker": "C:\\Users\\Heisenberg\\AppData\\Local\\Temp\\.vsdbgsrc\\5bd1382993348c832e1a36c46eef8a3066055294d59d9915c9d91b46481b75d6\\FrameworkTemplate.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\5bd1382993348c832e1a36c46eef8a3066055294d59d9915c9d91b46481b75d6\\FrameworkTemplate.cs",
@@ -518,32 +398,239 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "EditUser.xaml",
-              "DocumentMoniker": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\Pages\\AdminsPage\\EditUser.xaml",
-              "RelativeDocumentMoniker": "Leasing\\Pages\\AdminsPage\\EditUser.xaml",
-              "ToolTip": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\Pages\\AdminsPage\\EditUser.xaml",
-              "RelativeToolTip": "Leasing\\Pages\\AdminsPage\\EditUser.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-11-27T20:17:33.092Z",
-              "EditorCaption": ""
+              "DocumentIndex": 14,
+              "Title": "WorkerPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\Pages\\WorkersPage\\WorkerPage.xaml.cs",
+              "RelativeDocumentMoniker": "Leasing\\Pages\\WorkersPage\\WorkerPage.xaml.cs",
+              "ToolTip": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\Pages\\WorkersPage\\WorkerPage.xaml.cs",
+              "RelativeToolTip": "Leasing\\Pages\\WorkersPage\\WorkerPage.xaml.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAIwBsAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-28T13:07:37.871Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "EditDogovor.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\Pages\\AdminsPage\\EditDogovor.xaml.cs",
-              "RelativeDocumentMoniker": "Leasing\\Pages\\AdminsPage\\EditDogovor.xaml.cs",
-              "ToolTip": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\Pages\\AdminsPage\\EditDogovor.xaml.cs",
-              "RelativeToolTip": "Leasing\\Pages\\AdminsPage\\EditDogovor.xaml.cs",
-              "ViewState": "AQIAABQAAAAAAAAAAAAgwCcAAAC1AAAA",
+              "DocumentIndex": 15,
+              "Title": "EditDogovor.xaml",
+              "DocumentMoniker": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\Pages\\AdminsPage\\EditDogovor.xaml",
+              "RelativeDocumentMoniker": "Leasing\\Pages\\AdminsPage\\EditDogovor.xaml",
+              "ToolTip": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\Pages\\AdminsPage\\EditDogovor.xaml",
+              "RelativeToolTip": "Leasing\\Pages\\AdminsPage\\EditDogovor.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-11-27T23:04:18.056Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "AdminPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\Pages\\AdminsPage\\AdminPage.xaml.cs",
+              "RelativeDocumentMoniker": "Leasing\\Pages\\AdminsPage\\AdminPage.xaml.cs",
+              "ToolTip": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\Pages\\AdminsPage\\AdminPage.xaml.cs",
+              "RelativeToolTip": "Leasing\\Pages\\AdminsPage\\AdminPage.xaml.cs",
+              "ViewState": "AQIAACMAAAAAAAAAAAAwwDEAAABlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T23:17:43.809Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-27T19:20:38.859Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "AdminHistory.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\Pages\\AdminsPage\\AdminHistory.xaml.cs",
+              "RelativeDocumentMoniker": "Leasing\\Pages\\AdminsPage\\AdminHistory.xaml.cs",
+              "ToolTip": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\Pages\\AdminsPage\\AdminHistory.xaml.cs",
+              "RelativeToolTip": "Leasing\\Pages\\AdminsPage\\AdminHistory.xaml.cs",
+              "ViewState": "AQIAACkAAAAAAAAAAAAIwFEAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-27T22:55:25.354Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "WorkerHistoryPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\Pages\\WorkersPage\\WorkerHistoryPage.xaml.cs",
+              "RelativeDocumentMoniker": "Leasing\\Pages\\WorkersPage\\WorkerHistoryPage.xaml.cs",
+              "ToolTip": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\Pages\\WorkersPage\\WorkerHistoryPage.xaml.cs",
+              "RelativeToolTip": "Leasing\\Pages\\WorkersPage\\WorkerHistoryPage.xaml.cs",
+              "ViewState": "AQIAADgAAAAAAAAAAAA3wCoAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-28T13:51:05.396Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "RegPage.xaml",
+              "DocumentMoniker": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\Pages\\RegPage.xaml",
+              "RelativeDocumentMoniker": "Leasing\\Pages\\RegPage.xaml",
+              "ToolTip": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\Pages\\RegPage.xaml",
+              "RelativeToolTip": "Leasing\\Pages\\RegPage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-11-27T19:59:28.442Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "WorkerHistoryPage.xaml",
+              "DocumentMoniker": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\Pages\\WorkersPage\\WorkerHistoryPage.xaml",
+              "RelativeDocumentMoniker": "Leasing\\Pages\\WorkersPage\\WorkerHistoryPage.xaml",
+              "ToolTip": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\Pages\\WorkersPage\\WorkerHistoryPage.xaml",
+              "RelativeToolTip": "Leasing\\Pages\\WorkersPage\\WorkerHistoryPage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-11-28T13:39:12.019Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "AppData.cs",
+              "DocumentMoniker": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\Model\\AppData.cs",
+              "RelativeDocumentMoniker": "Leasing\\Model\\AppData.cs",
+              "ToolTip": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\Model\\AppData.cs",
+              "RelativeToolTip": "Leasing\\Model\\AppData.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-28T13:36:08.871Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "AddDogovor.xaml",
+              "DocumentMoniker": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\Pages\\AdminsPage\\AddDogovor.xaml",
+              "RelativeDocumentMoniker": "Leasing\\Pages\\AdminsPage\\AddDogovor.xaml",
+              "ToolTip": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\Pages\\AdminsPage\\AddDogovor.xaml",
+              "RelativeToolTip": "Leasing\\Pages\\AdminsPage\\AddDogovor.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-11-27T23:04:10.046Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "AddLeas.xaml",
+              "DocumentMoniker": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\Pages\\AdminsPage\\AddLeas.xaml",
+              "RelativeDocumentMoniker": "Leasing\\Pages\\AdminsPage\\AddLeas.xaml",
+              "ToolTip": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\Pages\\AdminsPage\\AddLeas.xaml",
+              "RelativeToolTip": "Leasing\\Pages\\AdminsPage\\AddLeas.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-11-27T21:09:20.37Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "UnitedClassCars.cs",
+              "DocumentMoniker": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\Model\\UnitedClassCars.cs",
+              "RelativeDocumentMoniker": "Leasing\\Model\\UnitedClassCars.cs",
+              "ToolTip": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\Model\\UnitedClassCars.cs",
+              "RelativeToolTip": "Leasing\\Model\\UnitedClassCars.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-08T20:49:15.28Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\App.xaml.cs",
+              "RelativeDocumentMoniker": "Leasing\\App.xaml.cs",
+              "ToolTip": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\App.xaml.cs",
+              "RelativeToolTip": "Leasing\\App.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-08T20:02:58.434Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "Leasing\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\MainWindow.xaml",
+              "RelativeToolTip": "Leasing\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-11-27T19:22:37.589Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "AddDogovor.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\Pages\\AdminsPage\\AddDogovor.xaml.cs",
+              "RelativeDocumentMoniker": "Leasing\\Pages\\AdminsPage\\AddDogovor.xaml.cs",
+              "ToolTip": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\Pages\\AdminsPage\\AddDogovor.xaml.cs",
+              "RelativeToolTip": "Leasing\\Pages\\AdminsPage\\AddDogovor.xaml.cs",
+              "ViewState": "AQIAAB0AAAAAAAAAAAAIwEMAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-27T23:08:18.452Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 32,
+              "Title": "Model1.edmx [Diagram1]",
+              "DocumentMoniker": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\Model\\Model1.edmx",
+              "RelativeDocumentMoniker": "Leasing\\Model\\Model1.edmx",
+              "ToolTip": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\Model\\Model1.edmx [Diagram1]",
+              "RelativeToolTip": "Leasing\\Model\\Model1.edmx [Diagram1]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001116|",
+              "WhenOpened": "2024-12-08T20:54:58.72Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "App.config",
+              "DocumentMoniker": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\App.config",
+              "RelativeDocumentMoniker": "Leasing\\App.config",
+              "ToolTip": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\App.config",
+              "RelativeToolTip": "Leasing\\App.config",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAADSAQAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2024-11-28T13:33:55.718Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "AddLeas.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\Pages\\AdminsPage\\AddLeas.xaml.cs",
+              "RelativeDocumentMoniker": "Leasing\\Pages\\AdminsPage\\AddLeas.xaml.cs",
+              "ToolTip": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\Pages\\AdminsPage\\AddLeas.xaml.cs",
+              "RelativeToolTip": "Leasing\\Pages\\AdminsPage\\AddLeas.xaml.cs",
+              "ViewState": "AQIAADoAAAAAAAAAAAAYwFAAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-27T21:20:05.191Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "WorkerPage.xaml",
+              "DocumentMoniker": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\Pages\\WorkersPage\\WorkerPage.xaml",
+              "RelativeDocumentMoniker": "Leasing\\Pages\\WorkersPage\\WorkerPage.xaml",
+              "ToolTip": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\Pages\\WorkersPage\\WorkerPage.xaml",
+              "RelativeToolTip": "Leasing\\Pages\\WorkersPage\\WorkerPage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-11-27T22:51:02.49Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "UnitedClassUsers.cs",
+              "DocumentMoniker": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\Model\\UnitedClassUsers.cs",
+              "RelativeDocumentMoniker": "Leasing\\Model\\UnitedClassUsers.cs",
+              "ToolTip": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\Model\\UnitedClassUsers.cs",
+              "RelativeToolTip": "Leasing\\Model\\UnitedClassUsers.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-08T20:16:50.847Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "AddUser.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\Pages\\AdminsPage\\AddUser.xaml.cs",
+              "RelativeDocumentMoniker": "Leasing\\Pages\\AdminsPage\\AddUser.xaml.cs",
+              "ToolTip": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\Pages\\AdminsPage\\AddUser.xaml.cs",
+              "RelativeToolTip": "Leasing\\Pages\\AdminsPage\\AddUser.xaml.cs",
+              "ViewState": "AQIAACcAAAAAAAAAAAAwwEwAAABQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-27T20:04:53.023Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
               "Title": "NavigationService.cs",
               "DocumentMoniker": "C:\\Users\\Heisenberg\\AppData\\Local\\Temp\\.vsdbgsrc\\b202e958bb04cfade5e67ad24f9352af194ebbde46e4c3ce26a3e0ac00ab14bd\\NavigationService.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\b202e958bb04cfade5e67ad24f9352af194ebbde46e4c3ce26a3e0ac00ab14bd\\NavigationService.cs",
@@ -556,82 +643,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "App.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\App.xaml.cs",
-              "RelativeDocumentMoniker": "Leasing\\App.xaml.cs",
-              "ToolTip": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\App.xaml.cs",
-              "RelativeToolTip": "Leasing\\App.xaml.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-08T20:02:58.434Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "MainWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\MainWindow.xaml",
-              "RelativeDocumentMoniker": "Leasing\\MainWindow.xaml",
-              "ToolTip": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\MainWindow.xaml",
-              "RelativeToolTip": "Leasing\\MainWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-11-27T19:22:37.589Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "AddDogovor.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\Pages\\AdminsPage\\AddDogovor.xaml.cs",
-              "RelativeDocumentMoniker": "Leasing\\Pages\\AdminsPage\\AddDogovor.xaml.cs",
-              "ToolTip": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\Pages\\AdminsPage\\AddDogovor.xaml.cs",
-              "RelativeToolTip": "Leasing\\Pages\\AdminsPage\\AddDogovor.xaml.cs",
-              "ViewState": "AQIAAB0AAAAAAAAAAAAIwEMAAAAVAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T23:08:18.452Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "Model1.edmx [Diagram1]",
-              "DocumentMoniker": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\Model\\Model1.edmx",
-              "RelativeDocumentMoniker": "Leasing\\Model\\Model1.edmx",
-              "ToolTip": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\Model\\Model1.edmx [Diagram1]",
-              "RelativeToolTip": "Leasing\\Model\\Model1.edmx [Diagram1]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001116|",
-              "WhenOpened": "2024-12-08T20:54:58.72Z",
-              "EditorCaption": " [Diagram1]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "App.config",
-              "DocumentMoniker": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\App.config",
-              "RelativeDocumentMoniker": "Leasing\\App.config",
-              "ToolTip": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\App.config",
-              "RelativeToolTip": "Leasing\\App.config",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAADSAQAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2024-11-28T13:33:55.718Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "EditDogovor.xaml",
-              "DocumentMoniker": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\Pages\\AdminsPage\\EditDogovor.xaml",
-              "RelativeDocumentMoniker": "Leasing\\Pages\\AdminsPage\\EditDogovor.xaml",
-              "ToolTip": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\Pages\\AdminsPage\\EditDogovor.xaml",
-              "RelativeToolTip": "Leasing\\Pages\\AdminsPage\\EditDogovor.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-11-27T23:04:18.056Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 39,
               "Title": "ImageConverter.cs",
               "DocumentMoniker": "C:\\Users\\Heisenberg\\Downloads\\LeasingApp\\Leasing\\Leasing\\Pages\\AdminsPage\\ImageConverter.cs",
               "RelativeDocumentMoniker": "Leasing\\Pages\\AdminsPage\\ImageConverter.cs",
@@ -643,7 +655,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 37,
               "Title": "PropertyPathWorker.cs",
               "DocumentMoniker": "C:\\Users\\Heisenberg\\AppData\\Local\\Temp\\.vsdbgsrc\\c824721cd7d9c028e31d9faa77b348c59e49e6a99818a102ec7b7f9254f84219\\PropertyPathWorker.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\c824721cd7d9c028e31d9faa77b348c59e49e6a99818a102ec7b7f9254f84219\\PropertyPathWorker.cs",

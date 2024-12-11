@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Leasing.Pages.AdminsPage"
          xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
         mc:Ignorable="d"
-        Title="EditLease" Loaded="Window_Loaded" ResizeMode="NoResize" Height="500" Width="1000" AllowsTransparency="True" WindowStartupLocation="CenterScreen" WindowStyle="None" Background="Transparent">
+        Title="EditLease" Loaded="Window_Loaded" ResizeMode="NoResize" Height="500" Width="1100" AllowsTransparency="True" WindowStartupLocation="CenterScreen" WindowStyle="None" Background="Transparent">
 
     <Window.Resources>
         <local:ImageConverter x:Key="ByteArrayToImageConverter"/>
@@ -14,23 +14,23 @@
     <Grid >
         <materialDesign:Card Margin="10" UniformCornerRadius="20" >
             <Grid Margin="0,0,0,-21">
-                <Button Style="{StaticResource MaterialDesignFloatingActionButton}" HorizontalAlignment="Left" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="Black" x:Name="CloseButton"   Margin="914,10,0,435" Click="ExitClick" Cursor="Hand" RenderTransformOrigin="0.857,0.866">
+                <Button Style="{StaticResource MaterialDesignFloatingActionButton}" HorizontalAlignment="Left" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="Black" x:Name="CloseButton"   Margin="1005,5,0,440" Click="ExitClick" Cursor="Hand" RenderTransformOrigin="0.857,0.866">
                     <materialDesign:PackIcon Kind="Close" Foreground="Black" Height="40" Width="39" VerticalAlignment="Center"/>
                 </Button>
-                <Button Content="Изменить" HorizontalAlignment="Left" Margin="797,430,0,0" VerticalAlignment="Top" Click="EditLeaseClick"/>
+                <Button Content="Изменить" HorizontalAlignment="Left" Margin="956,439,0,0" VerticalAlignment="Top" Click="EditLeaseClick"/>
 
 
-                <TextBox x:Name="TxbName" HorizontalContentAlignment="Center"   Style="{StaticResource MaterialDesignOutlinedTextBox}" HorizontalAlignment="Left" Margin="654,69,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="240" Height="52" Background="#FF6F63C5" Foreground="White"/>
-                <Label Content="Название" HorizontalAlignment="Left" Margin="749,40,0,0" VerticalAlignment="Top" Height="24" Width="62" Foreground="#FF7D32FF" FontSize="14" FontFamily="Bahnschrift Condensed"/>
-                <TextBox x:Name="TxbCount" HorizontalContentAlignment="Center"   Style="{StaticResource MaterialDesignOutlinedTextBox}" HorizontalAlignment="Left" Margin="654,150,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="240" Height="52" Background="#FF6F63C5" Foreground="White"/>
-                <Label Content="Кол-во месяцев лизинга" HorizontalAlignment="Left" Margin="715,121,0,0" VerticalAlignment="Top" Height="24" Width="124" Foreground="#FF7D32FF" FontSize="14" FontFamily="Bahnschrift Condensed"/>
-                <TextBox x:Name="TxbPrice" HorizontalContentAlignment="Center"   Style="{StaticResource MaterialDesignOutlinedTextBox}" HorizontalAlignment="Left" Margin="654,231,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="240" Height="52" Background="#FF6F63C5" Foreground="White"/>
-                <Label Content="Цена машины" HorizontalAlignment="Left" Margin="737,207,0,0" VerticalAlignment="Top" Height="24" Width="74" Foreground="#FF7D32FF" FontSize="14" FontFamily="Bahnschrift Condensed"/>
-                <TextBox x:Name="TxbAvance" HorizontalContentAlignment="Center"   Style="{StaticResource MaterialDesignOutlinedTextBox}" HorizontalAlignment="Left" Margin="654,307,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="240" Height="52" Background="#FF6F63C5" Foreground="White"/>
-                <Label Content="Аванс" HorizontalAlignment="Left" Margin="755,283,0,0" VerticalAlignment="Top" Height="24" Width="38" Foreground="#FF7D32FF" FontSize="14" FontFamily="Bahnschrift Condensed"/>
-                <Button Content="Добавить фото" HorizontalAlignment="Left" Margin="654,430,0,0" VerticalAlignment="Top" Click="AddImg" Background="#FF56AB5B" BorderBrush="#FF56AB5B"/>
+                <TextBox x:Name="TxbName" HorizontalContentAlignment="Center"   Style="{StaticResource MaterialDesignOutlinedTextBox}" HorizontalAlignment="Left" Margin="813,78,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="240" Height="52" Background="#FF6F63C5" Foreground="White"/>
+                <Label Content="Название" HorizontalAlignment="Left" Margin="908,49,0,0" VerticalAlignment="Top" Height="24" Width="62" Foreground="#FF7D32FF" FontSize="14" FontFamily="Bahnschrift Condensed"/>
+                <TextBox x:Name="TxbCount" HorizontalContentAlignment="Center"   Style="{StaticResource MaterialDesignOutlinedTextBox}" HorizontalAlignment="Left" Margin="813,159,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="240" Height="52" Background="#FF6F63C5" Foreground="White"/>
+                <Label Content="Кол-во месяцев лизинга" HorizontalAlignment="Left" Margin="874,130,0,0" VerticalAlignment="Top" Height="24" Width="124" Foreground="#FF7D32FF" FontSize="14" FontFamily="Bahnschrift Condensed"/>
+                <TextBox x:Name="TxbPrice" HorizontalContentAlignment="Center"   Style="{StaticResource MaterialDesignOutlinedTextBox}" HorizontalAlignment="Left" Margin="813,240,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="240" Height="52" Background="#FF6F63C5" Foreground="White"/>
+                <Label Content="Цена машины" HorizontalAlignment="Left" Margin="896,216,0,0" VerticalAlignment="Top" Height="24" Width="74" Foreground="#FF7D32FF" FontSize="14" FontFamily="Bahnschrift Condensed"/>
+                <TextBox x:Name="TxbAvance" HorizontalContentAlignment="Center"   Style="{StaticResource MaterialDesignOutlinedTextBox}" HorizontalAlignment="Left" Margin="813,316,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="240" Height="52" Background="#FF6F63C5" Foreground="White"/>
+                <Label Content="Аванс" HorizontalAlignment="Left" Margin="914,292,0,0" VerticalAlignment="Top" Height="24" Width="38" Foreground="#FF7D32FF" FontSize="14" FontFamily="Bahnschrift Condensed"/>
+                <Button Content="Добавить фото" HorizontalAlignment="Left" Margin="813,439,0,0" VerticalAlignment="Top" Click="AddImg" Background="#FF56AB5B" BorderBrush="#FF56AB5B"/>
 
-                <DataGrid x:Name="DataGR" Margin="10,69,352,39" AutoGenerateColumns="False">
+                <DataGrid x:Name="DataGR" Margin="10,69,304,39" AutoGenerateColumns="False">
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="НАЗВАНИЕ" Width="101" Binding="{Binding Name}"/>
                         <DataGridTextColumn Header="CРОК" Width="66" Binding="{Binding MonthCount}"/>
@@ -45,14 +45,15 @@
                             </DataGridTemplateColumn.CellTemplate>
                         </DataGridTemplateColumn>
                         <DataGridTextColumn Header="ПОЛНАЯ ЦЕНА" Width="126" Binding="{Binding AllAmount}"/>
+                        <DataGridTextColumn Header="Статус" Width="126" Binding="{Binding Status}"/>
                     </DataGrid.Columns>
                 </DataGrid>
                 <Label Content="Редактирование объекта для лизинга" HorizontalAlignment="Left" Margin="22,19,0,0" VerticalAlignment="Top" Foreground="#E5000000" FontSize="18" FontFamily="Arial Black"/>
-                <ComboBox x:Name="combob" Style="{StaticResource MaterialDesignOutlinedComboBox}" HorizontalAlignment="Left" Margin="766,370,0,0" VerticalAlignment="Top" Width="120" Height="42">
+                <ComboBox x:Name="combob" Style="{StaticResource MaterialDesignOutlinedComboBox}" HorizontalAlignment="Left" Margin="925,379,0,0" VerticalAlignment="Top" Width="120" Height="42">
                     <ComboBoxItem Content="Активна" Tag="1" />
                     <ComboBoxItem Content="Удалена" Tag="2" />
                 </ComboBox>
-                <Label Content="Поменять статус" HorizontalAlignment="Left" Margin="659,378,0,0" VerticalAlignment="Top" Height="26" Width="115" Foreground="#FF7D32FF" FontSize="18" FontFamily="Bahnschrift Condensed"/>
+                <Label Content="Поменять статус" HorizontalAlignment="Left" Margin="818,387,0,0" VerticalAlignment="Top" Height="26" Width="115" Foreground="#FF7D32FF" FontSize="18" FontFamily="Bahnschrift Condensed"/>
             </Grid>
         </materialDesign:Card>
     </Grid>

@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Runtime.ConstrainedExecution;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -31,7 +32,28 @@ namespace Leasing.Pages.AdminsPage
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            DataGR.ItemsSource = AppData.db.LeaseObjects.ToList();
+          
+            Refresher();
+        }
+        private void Refresher()
+        {
+            var query = from car in AppData.db.LeaseObjects
+                        join carstatus in AppData.db.CarStatus on car.CarStatusID equals carstatus.ID
+                        select new CarView
+
+                        {
+                            Id = car.ID,
+                            Name = car.Name,
+                            MonthCount = car.MonthCount,
+                            CarPrice = car.CarPrice,
+                            Avance = (int)car.Avance,
+                            MothlyPrice = (int)car.MothlyPrice,
+                            AllAmount = (int)car.AllAmount,
+                            Images = car.Images,
+                            Status = carstatus.StatusName
+                        };
+
+            DataGR.ItemsSource = query.ToList();
         }
 
         private void ExitClick(object sender, RoutedEventArgs e)
@@ -49,34 +71,35 @@ namespace Leasing.Pages.AdminsPage
 
                 {
                    
-                    var curLeas = DataGR.SelectedItem as LeaseObjects;
-                    if (curLeas != null){
+                    var curCarView = DataGR.SelectedItem as CarView;
+                    var curcar = AppData.db.LeaseObjects.Where(u => u.ID == curCarView.Id).FirstOrDefault();
+                    if (curcar != null){
                         if (!string.IsNullOrEmpty(TxbName.Text))
                         {
-                            curLeas.Name = TxbName.Text;
+                            curcar.Name = TxbName.Text;
                         }
                         if (_imageDatуa != null)
                         {
-                            curLeas.Images = _imageDatуa;
+                            curcar.Images = _imageDatуa;
                         } 
                         if (!string.IsNullOrEmpty(TxbCount.Text))
                         {
-                            curLeas.MonthCount = Convert.ToInt32(TxbCount.Text);
+                            curcar.MonthCount = Convert.ToInt32(TxbCount.Text);
                         }
                         if (!string.IsNullOrEmpty(TxbPrice.Text))
                         {
-                            curLeas.CarPrice = Convert.ToInt32(TxbPrice.Text);
+                            curcar.CarPrice = Convert.ToInt32(TxbPrice.Text);
                         }
                         if (combob.SelectedItem != null & combob.SelectedIndex == 0)
                         {
-                            curLeas.CarStatusID = 1;
+                            curcar.CarStatusID = 1;
                         }
                         else if (combob.SelectedItem != null & combob.SelectedIndex == 1)
                         {
-                            curLeas.CarStatusID = 2;
+                            curcar.CarStatusID = 2;
                         }
 
-
+                        Refresher();
                         AppData.db.SaveChanges();
                         MessageBox.Show("Изменения внесены!");
                         this.Close();

@@ -1,0 +1,25 @@
+﻿<Window x:Class="Leasing.Pages.AdminsPage.ProfileWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Leasing.Pages.AdminsPage"
+                 xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
+        mc:Ignorable="d"
+        Title="ProfileWindow" Height="357" Width="595" Loaded="Window_Loaded" ResizeMode="NoResize"  AllowsTransparency="True" WindowStartupLocation="CenterScreen" WindowStyle="None" Background="Transparent">
+    <Grid >
+        <materialDesign:Card Margin="10" UniformCornerRadius="20" >
+            <Grid Margin="0,0,0,-21">
+                <Button Style="{StaticResource MaterialDesignFloatingActionButton}" HorizontalAlignment="Left" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="Black" x:Name="CloseButton"   Margin="509,10,0,292"   Cursor="Hand" Click="ExitClick">
+                    <materialDesign:PackIcon Kind="Close" Foreground="Black" Height="39" Width="39" VerticalAlignment="Center"/>
+                </Button>
+                <Image x:Name="myImage" HorizontalAlignment="Left"  Stretch="Fill" Height="181" Margin="38,81,0,0" VerticalAlignment="Top" Width="261"/>
+                <Label x:Name="nameLabel" Content="Имя" HorizontalAlignment="Left" Margin="312,81,0,0" VerticalAlignment="Top" Foreground="#E5000000" FontSize="18" FontFamily="Arial Black" Height="47" Width="251"/>
+                <Label x:Name="surnameLabel" Content="Фамилия" HorizontalAlignment="Left" Margin="312,128,0,0" VerticalAlignment="Top" Foreground="#E5000000" FontSize="18" FontFamily="Arial Black" Height="47" Width="251"/>
+                <Label x:Name="patronymicLabel" Content="Отчество" HorizontalAlignment="Left" Margin="312,179,0,0" VerticalAlignment="Top" Foreground="#E5000000" FontSize="18" FontFamily="Arial Black" Height="47" Width="251"/>
+                <Label x:Name="numberLabel" Content="Номер" HorizontalAlignment="Left" Margin="312,227,0,0" VerticalAlignment="Top" Foreground="#E5000000" FontSize="18" FontFamily="Arial Black" Height="47" Width="251"/>
+
+            </Grid>
+        </materialDesign:Card>
+    </Grid>
+</Window>

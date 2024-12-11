@@ -24,7 +24,8 @@
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="ЛОГИН" Width="107" Binding="{Binding Login}"/>
                         <DataGridTextColumn Header="ПАРОЛЬ" Width="105" Binding="{Binding Password}"/>
-                        <DataGridTextColumn Header="РОЛЬ" Width="111" Binding="{Binding RoleID}"/>
+                        <DataGridTextColumn Header="РОЛЬ" Width="111" Binding="{Binding Role}"/>
+                        <DataGridTextColumn Header="СТАТУС" Width="111" Binding="{Binding Status}"/>
                     </DataGrid.Columns>
                 </DataGrid>
                 <ComboBox x:Name="combob" Style="{StaticResource MaterialDesignOutlinedComboBox}" HorizontalAlignment="Left" Margin="772,116,0,0" VerticalAlignment="Top" Width="120" Height="42">
@@ -33,7 +34,11 @@
                 </ComboBox>
                 <Label Content="Поменять роль" HorizontalAlignment="Left" Margin="677,124,0,0" VerticalAlignment="Top" Height="26" Width="99" Foreground="#FF7D32FF" FontSize="18" FontFamily="Bahnschrift Condensed"/>
                 <Label Content="Редактирование пользователя" HorizontalAlignment="Left" Margin="22,19,0,0" VerticalAlignment="Top" Foreground="#E5000000" FontSize="18" FontFamily="Arial Black"/>
-
+                <ComboBox x:Name="statusbox" Style="{StaticResource MaterialDesignOutlinedComboBox}" HorizontalAlignment="Left" Margin="772,58,0,0" VerticalAlignment="Top" Width="120" Height="42">
+                    <ComboBoxItem Content="Работает" Tag="1" />
+                    <ComboBoxItem Content="Уволен" Tag="2" />
+                </ComboBox>
+                <Label Content="Поменять статус" HorizontalAlignment="Left" Margin="663,66,0,0" VerticalAlignment="Top" Height="26" Width="108" Foreground="#FF7D32FF" FontSize="18" FontFamily="Bahnschrift Condensed"/>
             </Grid>
         </materialDesign:Card>
     </Grid>

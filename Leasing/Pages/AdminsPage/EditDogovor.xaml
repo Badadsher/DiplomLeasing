@@ -15,11 +15,11 @@
                     <materialDesign:PackIcon Kind="Close" Foreground="Black" Height="39" Width="39" VerticalAlignment="Center"/>
                 </Button>
                 <Button Content="Изменить" HorizontalAlignment="Left" Margin="764,469,0,0" VerticalAlignment="Top" Click="EditDogovorClick"/>
-                <DataGrid x:Name="DataGR" Margin="22,72,388,86" AutoGenerateColumns="False">
+                <DataGrid x:Name="DataGR" Margin="22,72,315,86" AutoGenerateColumns="False">
                     <DataGrid.Columns>
-                        <DataGridTextColumn Header="Айди клиента" Width="101" Binding="{Binding ClientID}"/>
-                        <DataGridTextColumn Header="Дата начала" Width="66" Binding="{Binding StartDate}"/>
-                        <DataGridTextColumn Header="Дата окончания" Width="112" Binding="{Binding EndDate}"/>
+                        <DataGridTextColumn Header="Айди клиента" Width="121" Binding="{Binding ClientID}"/>
+                        <DataGridTextColumn Header="Дата начала" Width="116" Binding="{Binding StartDate}"/>
+                        <DataGridTextColumn Header="Дата окончания" Width="132" Binding="{Binding EndDate}"/>
                         <DataGridTextColumn Header="Статус" Width="75" Binding="{Binding Status}"/>
                         <DataGridTextColumn Header="Айди машины" Width="130" Binding="{Binding CarID}"/>
                     </DataGrid.Columns>
@@ -28,14 +28,16 @@
                 <Label Content="Айди клиента" HorizontalAlignment="Left" Margin="777,60,0,0" VerticalAlignment="Top" Height="24" Width="72" Foreground="#FF7D32FF" FontSize="14" FontFamily="Bahnschrift Condensed"/>
                 <Label Content="Начала лизинга" HorizontalAlignment="Left" Margin="772,140,0,0" VerticalAlignment="Top" Height="24" Width="96" Foreground="#FF7D32FF" FontSize="14" FontFamily="Bahnschrift Condensed"/>
                 <Label Content="Конец лизинга" HorizontalAlignment="Left" Margin="776,222,0,0" VerticalAlignment="Top" Height="24" Width="96" Foreground="#FF7D32FF" FontSize="14" FontFamily="Bahnschrift Condensed"/>
-                <TextBox x:Name="TxbStatus" HorizontalContentAlignment="Center"   Style="{StaticResource MaterialDesignOutlinedTextBox}" HorizontalAlignment="Left" Margin="693,322,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="240" Height="52" Background="#FF6F63C5" Foreground="White"/>
                 <Label Content="Статус" HorizontalAlignment="Left" Margin="794,298,0,0" VerticalAlignment="Top" Height="24" Width="38" Foreground="#FF7D32FF" FontSize="14" FontFamily="Bahnschrift Condensed"/>
                 <DatePicker x:Name="datestart"  Style="{StaticResource MaterialDesignOutlinedDatePicker}" HorizontalAlignment="Left" Margin="752,170,0,0" VerticalAlignment="Top" Height="44" Width="122"/>
                 <DatePicker x:Name="dateend"  Style="{StaticResource MaterialDesignOutlinedDatePicker}" HorizontalAlignment="Left" Margin="752,250,0,0" VerticalAlignment="Top" Height="46" Width="122"/>
                 <Label Content="Редактирование активного договора лизинга" HorizontalAlignment="Left" Margin="22,19,0,0" VerticalAlignment="Top" Foreground="#E5000000" FontSize="18" FontFamily="Arial Black"/>
                 <TextBox x:Name="TxbCarID" HorizontalContentAlignment="Center"   Style="{StaticResource MaterialDesignOutlinedTextBox}" HorizontalAlignment="Left" Margin="693,402,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="240" Height="52" Background="#FF6F63C5" Foreground="White"/>
-                <Label Content="Айди машины" HorizontalAlignment="Left" Margin="794,378,0,0" VerticalAlignment="Top" Height="24" Width="38" Foreground="#FF7D32FF" FontSize="14" FontFamily="Bahnschrift Condensed"/>
-
+                <Label Content="Айди машины" HorizontalAlignment="Left" Margin="776,374,0,0" VerticalAlignment="Top" Height="24" Width="78" Foreground="#FF7D32FF" FontSize="14" FontFamily="Bahnschrift Condensed"/>
+                <ComboBox x:Name="combob" Style="{StaticResource MaterialDesignOutlinedComboBox}" HorizontalAlignment="Left" Margin="754,327,0,0" VerticalAlignment="Top" Width="120" Height="42">
+                    <ComboBoxItem Content="В процессе" Tag="1" />
+                    <ComboBoxItem Content="Закончен" Tag="2" />
+                </ComboBox>
             </Grid>
         </materialDesign:Card>
     </Grid>

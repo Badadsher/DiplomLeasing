@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.ConstrainedExecution;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -28,33 +29,41 @@ namespace Leasing.Pages.AdminsPage
 
         private void EditUserClick(object sender, RoutedEventArgs e)
         {
-            var curUser = DataGR.SelectedItem as Users;
+            var curUser = DataGR.SelectedItem as UserView;
+            var curUS = AppData.db.Users.Where(u => u.ID == curUser.Id).FirstOrDefault();
             try
             {
-                if ( combob.SelectedItem != null
-                    || !string.IsNullOrEmpty(TxbLogin.Text) || !string.IsNullOrEmpty(TxbPassword.Password.ToString()))
+                if ( combob.SelectedItem != null || !string.IsNullOrEmpty(TxbLogin.Text) || !string.IsNullOrEmpty(TxbPassword.Password.ToString()) || statusbox.SelectedItem != null) 
                 {
 
 
                     if (!string.IsNullOrEmpty(TxbLogin.Text))
                     {
-                        curUser.Login = TxbLogin.Text;
+                        curUS.Login = TxbLogin.Text;
                     }
                       
                         if (!string.IsNullOrEmpty(TxbPassword.Password.ToString()))
                     {
-                        curUser.Password = TxbPassword.Password;
+                        curUS.Password = TxbPassword.Password;
                     }    
                       
                         if(combob.SelectedItem != null & combob.SelectedIndex == 0)
                     {
-                        curUser.RoleID = 1;
+                        curUS.RoleID = 1;
                     }
                         else if(combob.SelectedItem != null & combob.SelectedIndex == 1)
                     {
-                        curUser.RoleID = 2;
+                        curUS.RoleID = 2;
                     }
-                       
+                    if (statusbox.SelectedItem != null & statusbox.SelectedIndex == 0)
+                    {
+                        curUS.StatusID = 1;
+                    }
+                    else if (statusbox.SelectedItem != null & statusbox.SelectedIndex == 1)
+                    {
+                        curUS.StatusID = 2;
+                    }
+
 
                     AppData.db.SaveChanges();
                         MessageBox.Show("Изменения внесены!");
@@ -78,7 +87,29 @@ namespace Leasing.Pages.AdminsPage
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            DataGR.ItemsSource = AppData.db.Users.ToList();
+            Refresher();
+        }
+        private void Refresher()
+        {
+            var query = from user in AppData.db.Users
+                        join userData in AppData.db.UsersData on user.ID equals userData.ID
+                        join status in AppData.db.StatusTable on user.StatusID equals status.ID
+                        join role in AppData.db.Roles on user.RoleID equals role.ID
+                        select new UserView
+                        {
+                            Id = user.ID,
+                            Name = userData.Name,
+                            Surname = userData.Surname,
+                            Patronymic = userData.Patronymic,
+                            Number = userData.Number,
+                            Photo = userData.Photo,
+                            Login = user.Login,
+                            Password = user.Password,
+                            Status = status.StatusName,
+                            Role = role.RoleName
+                        };
+
+            DataGR.ItemsSource = query.ToList();
         }
     }
 }

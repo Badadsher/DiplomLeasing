@@ -24,6 +24,7 @@ C:\Users\Heisenberg\Downloads\LeasingApp\Leasing\Leasing\obj\Debug\Pages\AdminsP
 C:\Users\Heisenberg\Downloads\LeasingApp\Leasing\Leasing\obj\Debug\Pages\AdminsPage\EditDogovor.g.cs
 C:\Users\Heisenberg\Downloads\LeasingApp\Leasing\Leasing\obj\Debug\Pages\AdminsPage\EditLease.g.cs
 C:\Users\Heisenberg\Downloads\LeasingApp\Leasing\Leasing\obj\Debug\Pages\AdminsPage\EditUser.g.cs
+C:\Users\Heisenberg\Downloads\LeasingApp\Leasing\Leasing\obj\Debug\Pages\AdminsPage\ProfileWindow.g.cs
 C:\Users\Heisenberg\Downloads\LeasingApp\Leasing\Leasing\obj\Debug\Pages\AuthPage.g.cs
 C:\Users\Heisenberg\Downloads\LeasingApp\Leasing\Leasing\obj\Debug\Pages\RegPage.g.cs
 C:\Users\Heisenberg\Downloads\LeasingApp\Leasing\Leasing\obj\Debug\Pages\WorkersPage\WorkerHistoryPage.g.cs
@@ -44,6 +45,7 @@ C:\Users\Heisenberg\Downloads\LeasingApp\Leasing\Leasing\obj\Debug\Pages\AdminsP
 C:\Users\Heisenberg\Downloads\LeasingApp\Leasing\Leasing\obj\Debug\Pages\AdminsPage\EditDogovor.baml
 C:\Users\Heisenberg\Downloads\LeasingApp\Leasing\Leasing\obj\Debug\Pages\AdminsPage\EditLease.baml
 C:\Users\Heisenberg\Downloads\LeasingApp\Leasing\Leasing\obj\Debug\Pages\AdminsPage\EditUser.baml
+C:\Users\Heisenberg\Downloads\LeasingApp\Leasing\Leasing\obj\Debug\Pages\AdminsPage\ProfileWindow.baml
 C:\Users\Heisenberg\Downloads\LeasingApp\Leasing\Leasing\obj\Debug\Pages\AuthPage.baml
 C:\Users\Heisenberg\Downloads\LeasingApp\Leasing\Leasing\obj\Debug\Pages\RegPage.baml
 C:\Users\Heisenberg\Downloads\LeasingApp\Leasing\Leasing\obj\Debug\Pages\WorkersPage\WorkerHistoryPage.baml

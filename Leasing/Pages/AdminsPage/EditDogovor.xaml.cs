@@ -37,7 +37,7 @@ namespace Leasing.Pages.AdminsPage
             {
                 var startdate = datestart.SelectedDate;
                 var enddate = dateend.SelectedDate;
-                if (!string.IsNullOrEmpty(TxbClient.Text) || !string.IsNullOrEmpty(TxbClient.Text) || enddate.HasValue || startdate.HasValue || !string.IsNullOrEmpty(TxbCarID.Text))
+                if (!string.IsNullOrEmpty(TxbClient.Text) || !string.IsNullOrEmpty(TxbClient.Text) || enddate.HasValue || startdate.HasValue || !string.IsNullOrEmpty(TxbCarID.Text) || combob.SelectedItem != null)
 
                 {
 
@@ -53,9 +53,13 @@ namespace Leasing.Pages.AdminsPage
                             curLeasing.CarID = Convert.ToInt32(TxbCarID.Text);
                         }
 
-                        if (!string.IsNullOrEmpty(TxbStatus.Text))
+                        if (combob.SelectedItem != null & combob.SelectedIndex == 0)
                         {
-                            curLeasing.Status = TxbStatus.Text;
+                            curLeasing.Status = "В процессе";
+                        }
+                        else if (combob.SelectedItem != null & combob.SelectedIndex == 1)
+                        {
+                            curLeasing.Status = "Закончен";
                         }
                         if (enddate.HasValue)
                         {

@@ -104,7 +104,7 @@ namespace Leasing.Pages.AdminsPage
                         };
 
             DataGR.ItemsSource = query.ToList();
-            MessageBox.Show("Обновлено");
+          
         }
 
         private void AddClick(object sender, RoutedEventArgs e)
@@ -116,6 +116,14 @@ namespace Leasing.Pages.AdminsPage
         private void DogovorClick(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new AdminHistory());
+        }
+
+        private void OpenProfile(object sender, MouseButtonEventArgs e)
+        {
+            var cur = DataGR.SelectedItem as UserView;
+            int profileid = cur.Id;
+            Window profileWindow = new ProfileWindow(profileid);
+            profileWindow.Show();
         }
     }
 }
