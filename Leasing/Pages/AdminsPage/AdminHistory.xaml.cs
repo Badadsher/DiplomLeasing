@@ -72,25 +72,66 @@ namespace Leasing.Pages.AdminsPage
 
         private void Refresh(object sender, RoutedEventArgs e)
         {
-            DataGR.ItemsSource = AppData.db.Leases.ToList();
-            MessageBox.Show("Обновлено");
+            Refresher();
         }
+
+
 
         private void EditDogovor(object sender, RoutedEventArgs e)
         {
-            Window editdg = new EditDogovor();
-            editdg.Show();
+            DarkOverlay.Visibility = Visibility.Visible;
+            Window editdg = new EditDogovor
+            {
+                Owner = Window.GetWindow(this), // Установите владельца окна
+                WindowStartupLocation = WindowStartupLocation.CenterOwner
+            };
+            editdg.ShowDialog();
+            DarkOverlay.Visibility = Visibility.Collapsed;
         }
 
         private void AddDogovor(object sender, RoutedEventArgs e)
         {
-            Window adddogovor = new AddDogovor();
-            adddogovor.Show();
+            DarkOverlay.Visibility = Visibility.Visible;
+            Window adddogovor = new AddDogovor
+            {
+                Owner = Window.GetWindow(this), // Установите владельца окна
+                WindowStartupLocation = WindowStartupLocation.CenterOwner
+            };
+            adddogovor.ShowDialog();
+            DarkOverlay.Visibility = Visibility.Collapsed;
         }
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            DataGR.ItemsSource = AppData.db.Leases.ToList();
+            Refresher();
+        }
+        private void Refresher()
+        {
+            var query = from lease in AppData.db.Leases
+                        join leaseObject in AppData.db.LeaseObjects
+
+                        on lease.CarID equals leaseObject.ID
+                        join leasestus in AppData.db.LeaseStatus
+                        on lease.StatusID equals leasestus.ID
+                        select new LeaseViewModel
+                        {
+                            CarId = (int)lease.CarID,
+                            Name = leaseObject.Name,
+                            Images = leaseObject.Images,
+                            MothlyPrice = (int)leaseObject.MothlyPrice,
+                            StartDate = lease.StartDate,
+                            EndDate = lease.EndDate,
+                            Status = leasestus.StatusLeaseName,
+                            CarID = (int)lease.CarID,
+                            ClientID = lease.ClientID
+                        };
+
+            DataGR.ItemsSource = query.ToList();
+        }
+
+        private void OpenLeaseObjects(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new AdminPageLeasesAdd());
         }
     }
 }

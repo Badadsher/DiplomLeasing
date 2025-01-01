@@ -37,7 +37,7 @@ namespace Leasing.Pages.AdminsPage
             {
                 var startdate = datestart.SelectedDate;
                 var enddate = dateend.SelectedDate;
-                if (!string.IsNullOrEmpty(TxbStatus.Text) && !string.IsNullOrEmpty(TxbClient.Text) && startdate.HasValue && enddate.HasValue)
+                if (combob.SelectedItem != null && !string.IsNullOrEmpty(TxbClient.Text) && startdate.HasValue && enddate.HasValue)
 
                 {
                     if(Convert.ToInt32(TxbClient.Text) > AppData.db.Users.Max(u => u.ID))
@@ -55,7 +55,16 @@ namespace Leasing.Pages.AdminsPage
                             Leases leasing = new Leases();
 
                             leasing.ID = AppData.db.LeaseObjects.Any() ? AppData.db.LeaseObjects.Max(u => u.ID) + 1 : 1;
-                            leasing.Status = TxbStatus.Text;
+
+                            if (combob.SelectedItem != null & combob.SelectedIndex == 0)
+                            {
+                                leasing.StatusID = 1;
+                            }
+                            else if (combob.SelectedItem != null & combob.SelectedIndex == 1)
+                            {
+                                leasing.StatusID = 2;
+                            }
+                      
                             leasing.ClientID = Convert.ToInt32(TxbClient.Text);
                             leasing.StartDate = startdate.Value.Date;
                             leasing.EndDate = enddate.Value.Date;

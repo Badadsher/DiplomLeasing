@@ -31,11 +31,18 @@
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="int" Nullable="false" />
-          <Property Name="ClientID" Type="int" />
-          <Property Name="StartDate" Type="date" />
-          <Property Name="EndDate" Type="date" Nullable="false" />
-          <Property Name="Status" Type="nvarchar" MaxLength="60" />
-          <Property Name="CarID" Type="int" />
+          <Property Name="ClientID" Type="int" Nullable="false" />
+          <Property Name="StartDate" Type="date" Nullable="false" />
+          <Property Name="EndDate" Type="date" />
+          <Property Name="StatusID" Type="int" Nullable="false" />
+          <Property Name="CarID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="LeaseStatus">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="StatusLeaseName" Type="nvarchar" MaxLength="50" Nullable="false" />
         </EntityType>
         <EntityType Name="Roles">
           <Key>
@@ -95,7 +102,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Leases_LeaseObjects">
-          <End Role="LeaseObjects" Type="Self.LeaseObjects" Multiplicity="0..1" />
+          <End Role="LeaseObjects" Type="Self.LeaseObjects" Multiplicity="1" />
           <End Role="Leases" Type="Self.Leases" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="LeaseObjects">
@@ -106,8 +113,20 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_Leases_LeaseStatus">
+          <End Role="LeaseStatus" Type="Self.LeaseStatus" Multiplicity="1" />
+          <End Role="Leases" Type="Self.Leases" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LeaseStatus">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Leases">
+              <PropertyRef Name="StatusID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_Leases_Users">
-          <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+          <End Role="Users" Type="Self.Users" Multiplicity="1" />
           <End Role="Leases" Type="Self.Leases" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Users">
@@ -158,6 +177,7 @@
           <EntitySet Name="CarStatus" EntityType="Self.CarStatus" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="LeaseObjects" EntityType="Self.LeaseObjects" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Leases" EntityType="Self.Leases" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LeaseStatus" EntityType="Self.LeaseStatus" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Roles" EntityType="Self.Roles" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="StatusTable" EntityType="Self.StatusTable" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
@@ -169,6 +189,10 @@
           </AssociationSet>
           <AssociationSet Name="FK_Leases_LeaseObjects" Association="Self.FK_Leases_LeaseObjects">
             <End Role="LeaseObjects" EntitySet="LeaseObjects" />
+            <End Role="Leases" EntitySet="Leases" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Leases_LeaseStatus" Association="Self.FK_Leases_LeaseStatus">
+            <End Role="LeaseStatus" EntitySet="LeaseStatus" />
             <End Role="Leases" EntitySet="Leases" />
           </AssociationSet>
           <AssociationSet Name="FK_Leases_Users" Association="Self.FK_Leases_Users">
@@ -222,13 +246,22 @@
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" />
-          <Property Name="ClientID" Type="Int32" />
-          <Property Name="StartDate" Type="DateTime" Precision="0" />
-          <Property Name="EndDate" Type="DateTime" Nullable="false" Precision="0" />
-          <Property Name="Status" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
-          <Property Name="CarID" Type="Int32" />
+          <Property Name="ClientID" Type="Int32" Nullable="false" />
+          <Property Name="StartDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="EndDate" Type="DateTime" Precision="0" />
+          <Property Name="StatusID" Type="Int32" Nullable="false" />
+          <Property Name="CarID" Type="Int32" Nullable="false" />
           <NavigationProperty Name="LeaseObjects" Relationship="Self.FK_Leases_LeaseObjects" FromRole="Leases" ToRole="LeaseObjects" />
+          <NavigationProperty Name="LeaseStatus" Relationship="Self.FK_Leases_LeaseStatus" FromRole="Leases" ToRole="LeaseStatus" />
           <NavigationProperty Name="Users" Relationship="Self.FK_Leases_Users" FromRole="Leases" ToRole="Users" />
+        </EntityType>
+        <EntityType Name="LeaseStatus">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="StatusLeaseName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Leases" Relationship="Self.FK_Leases_LeaseStatus" FromRole="LeaseStatus" ToRole="Leases" />
         </EntityType>
         <EntityType Name="Roles">
           <Key>
@@ -295,7 +328,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Leases_LeaseObjects">
-          <End Role="LeaseObjects" Type="Self.LeaseObjects" Multiplicity="0..1" />
+          <End Role="LeaseObjects" Type="Self.LeaseObjects" Multiplicity="1" />
           <End Role="Leases" Type="Self.Leases" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="LeaseObjects">
@@ -306,8 +339,20 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_Leases_LeaseStatus">
+          <End Role="LeaseStatus" Type="Self.LeaseStatus" Multiplicity="1" />
+          <End Role="Leases" Type="Self.Leases" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LeaseStatus">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Leases">
+              <PropertyRef Name="StatusID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_Leases_Users">
-          <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+          <End Role="Users" Type="Self.Users" Multiplicity="1" />
           <End Role="Leases" Type="Self.Leases" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Users">
@@ -358,6 +403,7 @@
           <EntitySet Name="CarStatus" EntityType="Self.CarStatus" />
           <EntitySet Name="LeaseObjects" EntityType="Self.LeaseObjects" />
           <EntitySet Name="Leases" EntityType="Self.Leases" />
+          <EntitySet Name="LeaseStatus" EntityType="Self.LeaseStatus" />
           <EntitySet Name="Roles" EntityType="Self.Roles" />
           <EntitySet Name="StatusTable" EntityType="Self.StatusTable" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
@@ -369,6 +415,10 @@
           </AssociationSet>
           <AssociationSet Name="FK_Leases_LeaseObjects" Association="Self.FK_Leases_LeaseObjects">
             <End Role="LeaseObjects" EntitySet="LeaseObjects" />
+            <End Role="Leases" EntitySet="Leases" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Leases_LeaseStatus" Association="Self.FK_Leases_LeaseStatus">
+            <End Role="LeaseStatus" EntitySet="LeaseStatus" />
             <End Role="Leases" EntitySet="Leases" />
           </AssociationSet>
           <AssociationSet Name="FK_Leases_Users" Association="Self.FK_Leases_Users">
@@ -424,8 +474,16 @@
                 <ScalarProperty Name="ClientID" ColumnName="ClientID" />
                 <ScalarProperty Name="StartDate" ColumnName="StartDate" />
                 <ScalarProperty Name="EndDate" ColumnName="EndDate" />
-                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="StatusID" ColumnName="StatusID" />
                 <ScalarProperty Name="CarID" ColumnName="CarID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LeaseStatus">
+            <EntityTypeMapping TypeName="LeasingModel.LeaseStatus">
+              <MappingFragment StoreEntitySet="LeaseStatus">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="StatusLeaseName" ColumnName="StatusLeaseName" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

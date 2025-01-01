@@ -69,7 +69,10 @@ namespace Leasing.Pages.WorkersPage
         {
             var query = from lease in AppData.db.Leases
                         join leaseObject in AppData.db.LeaseObjects
+
                         on lease.CarID equals leaseObject.ID
+                        join leasestus in AppData.db.LeaseStatus
+                        on lease.StatusID equals leasestus.ID
                         where lease.ClientID == usid
                         select new LeaseViewModel
                         {
@@ -77,9 +80,9 @@ namespace Leasing.Pages.WorkersPage
                             Name = leaseObject.Name,
                             Images = leaseObject.Images,
                             MothlyPrice = (int)leaseObject.MothlyPrice,
-                            StartDate = (DateTime)lease.StartDate,
+                            StartDate = lease.StartDate,
                             EndDate = lease.EndDate,
-                            Status = lease.Status,
+                            Status = leasestus.StatusLeaseName,
                             CarID = (int)lease.CarID
                         };
 

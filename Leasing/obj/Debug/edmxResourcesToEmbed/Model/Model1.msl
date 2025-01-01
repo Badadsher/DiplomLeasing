@@ -31,8 +31,16 @@
           <ScalarProperty Name="ClientID" ColumnName="ClientID" />
           <ScalarProperty Name="StartDate" ColumnName="StartDate" />
           <ScalarProperty Name="EndDate" ColumnName="EndDate" />
-          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="StatusID" ColumnName="StatusID" />
           <ScalarProperty Name="CarID" ColumnName="CarID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LeaseStatus">
+      <EntityTypeMapping TypeName="LeasingModel.LeaseStatus">
+        <MappingFragment StoreEntitySet="LeaseStatus">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="StatusLeaseName" ColumnName="StatusLeaseName" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

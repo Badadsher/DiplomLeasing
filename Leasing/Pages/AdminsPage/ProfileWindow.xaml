@@ -6,19 +6,29 @@
         xmlns:local="clr-namespace:Leasing.Pages.AdminsPage"
                  xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
         mc:Ignorable="d"
-        Title="ProfileWindow" Height="357" Width="595" Loaded="Window_Loaded" ResizeMode="NoResize"  AllowsTransparency="True" WindowStartupLocation="CenterScreen" WindowStyle="None" Background="Transparent">
-    <Grid >
-        <materialDesign:Card Margin="10" UniformCornerRadius="20" >
+        Title="ProfileWindow" IsEnabled="True" Height="357" Width="595" Loaded="Window_Loaded" ResizeMode="NoResize"  AllowsTransparency="True" WindowStartupLocation="CenterScreen" WindowStyle="None" Background="Transparent">
+    <Grid>
+        <materialDesign:Card Margin="10" UniformCornerRadius="20">
             <Grid Margin="0,0,0,-21">
-                <Button Style="{StaticResource MaterialDesignFloatingActionButton}" HorizontalAlignment="Left" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="Black" x:Name="CloseButton"   Margin="509,10,0,292"   Cursor="Hand" Click="ExitClick">
+                <Button Style="{StaticResource MaterialDesignFloatingActionButton}" 
+                    HorizontalAlignment="Left" 
+                    BorderBrush="{x:Null}" 
+                    Background="{x:Null}" 
+                    Foreground="Black" 
+                    x:Name="CloseButton" 
+                    Margin="509,10,0,292" 
+                    Cursor="Hand" 
+                    Click="ExitClick">
                     <materialDesign:PackIcon Kind="Close" Foreground="Black" Height="39" Width="39" VerticalAlignment="Center"/>
                 </Button>
-                <Image x:Name="myImage" HorizontalAlignment="Left"  Stretch="Fill" Height="181" Margin="38,81,0,0" VerticalAlignment="Top" Width="261"/>
-                <Label x:Name="nameLabel" Content="Имя" HorizontalAlignment="Left" Margin="312,81,0,0" VerticalAlignment="Top" Foreground="#E5000000" FontSize="18" FontFamily="Arial Black" Height="47" Width="251"/>
-                <Label x:Name="surnameLabel" Content="Фамилия" HorizontalAlignment="Left" Margin="312,128,0,0" VerticalAlignment="Top" Foreground="#E5000000" FontSize="18" FontFamily="Arial Black" Height="47" Width="251"/>
-                <Label x:Name="patronymicLabel" Content="Отчество" HorizontalAlignment="Left" Margin="312,179,0,0" VerticalAlignment="Top" Foreground="#E5000000" FontSize="18" FontFamily="Arial Black" Height="47" Width="251"/>
-                <Label x:Name="numberLabel" Content="Номер" HorizontalAlignment="Left" Margin="312,227,0,0" VerticalAlignment="Top" Foreground="#E5000000" FontSize="18" FontFamily="Arial Black" Height="47" Width="251"/>
-
+                <!-- Изображение с фиксированной шириной и высотой -->
+                <Grid HorizontalAlignment="Left" Margin="38,81,0,0" VerticalAlignment="Top">
+                    <Image x:Name="myImage" Width="200" Height="150" Stretch="UniformToFill" />
+                </Grid>
+                <Label x:Name="nameLabel" Content="Имя" HorizontalAlignment="Left" Margin="262,64,0,0" VerticalAlignment="Top" Foreground="#E5000000" FontSize="18" FontFamily="Arial Black" Height="47" Width="303"/>
+                <Label x:Name="surnameLabel" Content="Фамилия" HorizontalAlignment="Left" Margin="262,111,0,0" VerticalAlignment="Top" Foreground="#E5000000" FontSize="18" FontFamily="Arial Black" Height="47" Width="303"/>
+                <Label x:Name="patronymicLabel" Content="Отчество" HorizontalAlignment="Left" Margin="262,162,0,0" VerticalAlignment="Top" Foreground="#E5000000" FontSize="18" FontFamily="Arial Black" Height="47" Width="303"/>
+                <Label x:Name="numberLabel" Content="Номер" HorizontalAlignment="Left" Margin="262,210,0,0" VerticalAlignment="Top" Foreground="#E5000000" FontSize="18" FontFamily="Arial Black" Height="47" Width="303"/>
             </Grid>
         </materialDesign:Card>
     </Grid>

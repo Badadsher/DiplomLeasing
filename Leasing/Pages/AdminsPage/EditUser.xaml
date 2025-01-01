@@ -20,7 +20,7 @@
                 <Label Content="Пароль" HorizontalAlignment="Left" Margin="772,252,0,0" VerticalAlignment="Top" Height="24" Width="50" Foreground="#FF7D32FF" FontSize="14" FontFamily="Bahnschrift Condensed"/>
                 <Button Content="Изменить" HorizontalAlignment="Left" Margin="744,348,0,0" VerticalAlignment="Top" Click="EditUserClick" Cursor="Hand"/>
                 <PasswordBox x:Name="TxbPassword" HorizontalContentAlignment="Center" Style="{StaticResource MaterialDesignOutlinedPasswordBox}" Margin="672,276,68,173" Background="#FF6F63C5" Foreground="White"></PasswordBox>
-                <DataGrid x:Name="DataGR" Margin="10,58,341,101" AutoGenerateColumns="False" Background="#FFE2E2E2">
+                <DataGrid x:Name="DataGR" Margin="10,58,341,101" AutoGenerateColumns="False" Background="#FFE2E2E2" HorizontalScrollBarVisibility="Disabled">
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="ЛОГИН" Width="107" Binding="{Binding Login}"/>
                         <DataGridTextColumn Header="ПАРОЛЬ" Width="105" Binding="{Binding Password}"/>
@@ -28,13 +28,13 @@
                         <DataGridTextColumn Header="СТАТУС" Width="111" Binding="{Binding Status}"/>
                     </DataGrid.Columns>
                 </DataGrid>
-                <ComboBox x:Name="combob" Style="{StaticResource MaterialDesignOutlinedComboBox}" HorizontalAlignment="Left" Margin="772,116,0,0" VerticalAlignment="Top" Width="120" Height="42">
+                <ComboBox x:Name="combob" Style="{StaticResource MaterialDesignOutlinedComboBox}" HorizontalAlignment="Left" Margin="772,111,0,0" VerticalAlignment="Top" Width="120" Height="55">
                     <ComboBoxItem Content="Админ" Tag="1" />
                     <ComboBoxItem Content="Рабочий" Tag="2" />
                 </ComboBox>
                 <Label Content="Поменять роль" HorizontalAlignment="Left" Margin="677,124,0,0" VerticalAlignment="Top" Height="26" Width="99" Foreground="#FF7D32FF" FontSize="18" FontFamily="Bahnschrift Condensed"/>
                 <Label Content="Редактирование пользователя" HorizontalAlignment="Left" Margin="22,19,0,0" VerticalAlignment="Top" Foreground="#E5000000" FontSize="18" FontFamily="Arial Black"/>
-                <ComboBox x:Name="statusbox" Style="{StaticResource MaterialDesignOutlinedComboBox}" HorizontalAlignment="Left" Margin="772,58,0,0" VerticalAlignment="Top" Width="120" Height="42">
+                <ComboBox x:Name="statusbox" Style="{StaticResource MaterialDesignOutlinedComboBox}" HorizontalAlignment="Left" Margin="772,50,0,0" VerticalAlignment="Top" Width="120" Height="55">
                     <ComboBoxItem Content="Работает" Tag="1" />
                     <ComboBoxItem Content="Уволен" Tag="2" />
                 </ComboBox>

@@ -48,7 +48,7 @@ namespace Leasing.Pages.WorkersPage
                     newlease.StartDate = DateTime.Now.Date;
 
                     newlease.CarID = curCAR.ID;
-                    newlease.Status = "В процессе";
+                    newlease.StatusID = 1;
 
                     curCAR.CarStatusID = 2;
                     AppData.db.Leases.Add(newlease);

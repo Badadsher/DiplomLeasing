@@ -15,13 +15,14 @@ namespace Leasing.Model
     public partial class Leases
     {
         public int ID { get; set; }
-        public Nullable<int> ClientID { get; set; }
-        public Nullable<System.DateTime> StartDate { get; set; }
-        public System.DateTime EndDate { get; set; }
-        public string Status { get; set; }
-        public Nullable<int> CarID { get; set; }
+        public int ClientID { get; set; }
+        public System.DateTime StartDate { get; set; }
+        public Nullable<System.DateTime> EndDate { get; set; }
+        public int StatusID { get; set; }
+        public int CarID { get; set; }
     
         public virtual LeaseObjects LeaseObjects { get; set; }
+        public virtual LeaseStatus LeaseStatus { get; set; }
         public virtual Users Users { get; set; }
     }
 }

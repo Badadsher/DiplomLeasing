@@ -104,11 +104,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\AdminsPage\AdminPageLeasesAdd.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Pages\AdminsPage\AdminPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\AdminsPage\AdminUsers.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\AdminsPage\CarWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -156,6 +164,9 @@
     <Compile Include="Model\Leases.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Model\LeaseStatus.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Model\Model1.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -182,6 +193,7 @@
     </Compile>
     <Compile Include="Model\UnitedClass.cs" />
     <Compile Include="Model\UnitedClassCars.cs" />
+    <Compile Include="Model\UnitedClassLeases.cs" />
     <Compile Include="Model\UnitedClassUsers.cs" />
     <Compile Include="Model\Users.cs">
       <DependentUpon>Model1.tt</DependentUpon>
@@ -201,11 +213,17 @@
     <Compile Include="Pages\AdminsPage\AdminHistory.xaml.cs">
       <DependentUpon>AdminHistory.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\AdminsPage\AdminPageLeasesAdd.xaml.cs">
+      <DependentUpon>AdminPageLeasesAdd.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\AdminsPage\AdminPage.xaml.cs">
       <DependentUpon>AdminPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\AdminsPage\AdminUsers.xaml.cs">
       <DependentUpon>AdminUsers.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AdminsPage\CarWindow.xaml.cs">
+      <DependentUpon>CarWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\AdminsPage\EditDogovor.xaml.cs">
       <DependentUpon>EditDogovor.xaml</DependentUpon>
@@ -270,10 +288,10 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\logo.png" />
+    <Resource Include="Image1.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Image1.png" />
+    <Resource Include="Images\newLogo.png" />
     <Content Include="Model\Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model1.edmx</DependentUpon>

@@ -40,28 +40,28 @@ namespace Leasing.Pages.AdminsPage
             NavigationService.Navigate(new AuthPage());
         }
 
-        private void DeleteClick(object sender, RoutedEventArgs e)
-        {
-            try
-            {
-                if (DataGR.SelectedItem != null)
-                {
-                    var cur = DataGR.SelectedItem as CarView;
-                    var curcar = AppData.db.LeaseObjects.Where(u => u.ID == cur.Id).FirstOrDefault();
-                    curcar.CarStatusID = 2;
-                    AppData.db.SaveChanges();
-                    Refresher();
-                }
-                else
-                {
-                    MessageBox.Show("Выберите объект для удаления");
-                }
-            }
-            catch (Exception er)
-            {
-                MessageBox.Show(er.Message);
-            }
-        }
+       // private void deleteclick(object sender, routedeventargs e)
+      //  {
+        //    try
+        //    {
+         //       if (datagr.selecteditem != null)
+           //     {
+           //         var cur = datagr.selecteditem as carview;
+           //         var curcar = appdata.db.leaseobjects.where(u => u.id == cur.id).firstordefault();
+            //        curcar.carstatusid = 2;
+            //        appdata.db.savechanges();
+            //        refresher();
+           //     }
+            //    else
+            //    {
+           //         messagebox.show("выберите объект для удаления");
+           //     }
+       //     }
+      //      catch (exception er)
+        //    {
+       //         messagebox.show(er.message);
+        //    }
+        //}
 
         private void UsersClick(object sender, RoutedEventArgs e)
         {
@@ -90,25 +90,63 @@ namespace Leasing.Pages.AdminsPage
                            Status = carstatus.StatusName
                         };
 
-            DataGR.ItemsSource = query.ToList();
+            CardContainer.ItemsSource = query.ToList();
         }
 
 
         private void AddCar(object sender, RoutedEventArgs e)
         {
-            Window addleaser = new AddLeas();
-            addleaser.Show();
+            DarkOverlay.Visibility = Visibility.Visible;
+            Window addleaser = new AddLeas
+            {
+                Owner = Window.GetWindow(this), // Установите владельца окна
+                WindowStartupLocation = WindowStartupLocation.CenterOwner
+            };
+            addleaser.ShowDialog();
+            DarkOverlay.Visibility = Visibility.Collapsed;
+
+
         }
 
         private void EditLease(object sender, RoutedEventArgs e)
         {
-            Window editcar = new EditLease();
-            editcar.Show();
+            DarkOverlay.Visibility = Visibility.Visible;
+            Window editcar = new EditLease
+            {
+                Owner = Window.GetWindow(this), // Установите владельца окна
+                WindowStartupLocation = WindowStartupLocation.CenterOwner
+            };
+            editcar.ShowDialog();
+            DarkOverlay.Visibility = Visibility.Collapsed;
         }
 
         private void DogovorClick(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new AdminHistory());
+        }
+
+        private void OpenCarCard(object sender, MouseButtonEventArgs e)
+        {
+            // Получаем источник события
+            var border = sender as Border;
+            if (border != null)
+            {
+                // Получаем DataContext из элемента
+                var cur = border.DataContext as CarView;
+                if (cur != null)
+                {
+                    int cared = cur.Id;
+                    DarkOverlay.Visibility = Visibility.Visible;
+                    Window profileWindow = new CarWindow(cared)
+                    {
+                        Owner = Window.GetWindow(this), // Установите владельца окна
+                        WindowStartupLocation = WindowStartupLocation.CenterOwner
+                    };
+                    profileWindow.ShowDialog();
+                    DarkOverlay.Visibility = Visibility.Collapsed;
+                }
+            }
+
         }
     }
 }

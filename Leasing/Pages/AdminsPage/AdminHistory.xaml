@@ -6,11 +6,11 @@
       xmlns:local="clr-namespace:Leasing.Pages.AdminsPage"
        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="450" d:DesignWidth="820"
       Title="AdminHistory" Loaded="Page_Loaded">
 
     <Grid>
-        <materialDesign:Card Margin="10" UniformCornerRadius="20" Background="#00000000">
+        <materialDesign:Card x:Name="MainCard" Margin="10" UniformCornerRadius="20" Background="#00000000">
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="1*" />
@@ -44,7 +44,14 @@
                                 </StackPanel>
                             </Button>
                         </ListViewItem>
-
+                        <ListViewItem Margin="0 0">
+                            <Button Style="{StaticResource MaterialDesignFloatingActionButton}" HorizontalAlignment="Left"
+      BorderBrush="{x:Null}" Background="{x:Null}" Foreground="Black" Click="OpenLeaseObjects">
+                                <StackPanel Margin="0">
+                                    <materialDesign:PackIcon Kind="Car"/>
+                                </StackPanel>
+                            </Button>
+                        </ListViewItem>
 
                         <ListViewItem Margin="0 0 0 0">
                             <Button Style="{StaticResource MaterialDesignFloatingActionButton}" HorizontalAlignment="Left"
@@ -62,24 +69,39 @@
                     <Button Style="{StaticResource MaterialDesignFloatingActionButton}" HorizontalAlignment="Left" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="Black" x:Name="CloseButton"   Margin="679,-5,0,379" Click="ExitClick" Cursor="Hand">
                         <materialDesign:PackIcon Kind="Close" Foreground="White"/>
                     </Button>
-                    <DataGrid x:Name="DataGR" Margin="22,56,22,102" AutoGenerateColumns="False">
+                    <DataGrid x:Name="DataGR" Margin="22,56,11,102" AutoGenerateColumns="False" HorizontalScrollBarVisibility="Disabled">
                         <DataGrid.Columns>
                             <DataGridTextColumn Header="Айди клиента" Width="120" Binding="{Binding ClientID}"/>
                             <DataGridTextColumn Header="Айди машины" Width="120" Binding="{Binding CarID}"/>
-                            <DataGridTextColumn Header="Дата начала" Width="116" Binding="{Binding StartDate}"/>
-                            <DataGridTextColumn Header="Дата окончания" Width="132" Binding="{Binding EndDate}"/>
-                            <DataGridTextColumn Header="Статус" Width="75" Binding="{Binding Status}"/>
+                            <DataGridTextColumn Header="Дата начала" Width="186" Binding="{Binding StartDate}"/>
+                            <DataGridTextColumn Header="Дата окончания" Width="185" Binding="{Binding EndDate}"/>
+                            <DataGridTextColumn Header="Статус" Width="115" Binding="{Binding Status}"/>
                         </DataGrid.Columns>
                     </DataGrid>
-                    <Button Content="УДАЛИТЬ" HorizontalAlignment="Left" Margin="22,352,0,0" VerticalAlignment="Top" Click="DeleteClick" Cursor="Hand"/>
-                    <Button Content="РЕДАКТИРОВАТЬ" HorizontalAlignment="Left" Margin="137,352,0,0" VerticalAlignment="Top" Click="EditDogovor"/>
+                    <Button Content="РЕДАКТИРОВАТЬ" HorizontalAlignment="Left" Margin="20,352,0,0" VerticalAlignment="Top" Click="EditDogovor"/>
                     <Button Content="ДОБАВИТЬ" HorizontalAlignment="Left" Margin="603,352,0,0" VerticalAlignment="Top" Click="AddDogovor"/>
                     <Button Content="ОБНОВИТЬ" HorizontalAlignment="Left" Margin="479,352,0,0" VerticalAlignment="Top" Click="Refresh"/>
                     <Ellipse HorizontalAlignment="Left" Height="200" Margin="-23,-149,0,0" VerticalAlignment="Top" Width="233" Fill="#19FFFFFF"/>
-                    <Label Content="Все активные лизинги" HorizontalAlignment="Left" Margin="22,19,0,0" VerticalAlignment="Top" Foreground="#E5FFFFFF" FontSize="18" FontFamily="Arial Black"/>
+                    <Rectangle HorizontalAlignment="Left" Height="54" Margin="11,1,0,0" VerticalAlignment="Top" Width="80" RenderTransformOrigin="0.5,0.5">
+                        <Rectangle.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform Angle="0.914"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Rectangle.RenderTransform>
+                        <Rectangle.Fill>
+                            <ImageBrush ImageSource="/Images/newLogo.png"/>
+                        </Rectangle.Fill>
+                    </Rectangle>
+                    <Label Content="Все лизинги" HorizontalAlignment="Center" Margin="0,18,0,0" VerticalAlignment="Top" Foreground="#E5FFFFFF" FontSize="18" FontFamily="Arial Black"/>
                 </Grid>
             </Grid>
         </materialDesign:Card>
+        <Border x:Name="DarkOverlay" Background="#80000000" Visibility="Collapsed"
+      HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+      Margin="{Binding Margin, ElementName=MainCard}" />
     </Grid>
 </Page>
 

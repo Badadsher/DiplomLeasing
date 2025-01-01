@@ -4,17 +4,19 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="1c98d31988b745d2b322dbd24152fb91" Name="Diagram1">
-        <EntityTypeShape EntityType="LeasingModel.CarStatus" Width="1.5" PointX="0.75" PointY="8.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="LeasingModel.LeaseObjects" Width="1.5" PointX="3" PointY="8" IsExpanded="true" />
+      <Diagram DiagramId="08a9c72b5834450e97e6852b5d38cb42" Name="Diagram1">
+        <EntityTypeShape EntityType="LeasingModel.CarStatus" Width="1.5" PointX="0.75" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="LeasingModel.LeaseObjects" Width="1.5" PointX="3" PointY="6.875" IsExpanded="true" />
         <EntityTypeShape EntityType="LeasingModel.Leases" Width="1.5" PointX="5.25" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="LeasingModel.LeaseStatus" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="LeasingModel.Roles" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
         <EntityTypeShape EntityType="LeasingModel.StatusTable" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="LeasingModel.sysdiagrams" Width="1.5" PointX="7.75" PointY="1.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="LeasingModel.Users" Width="1.5" PointX="3" PointY="3.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="LeasingModel.UsersData" Width="1.5" PointX="5.25" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="LeasingModel.sysdiagrams" Width="1.5" PointX="7.75" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="LeasingModel.Users" Width="1.5" PointX="3" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="LeasingModel.UsersData" Width="1.5" PointX="5.25" PointY="6.875" IsExpanded="true" />
         <AssociationConnector Association="LeasingModel.FK_LeaseObjects_CarStatus" ManuallyRouted="false" />
         <AssociationConnector Association="LeasingModel.FK_Leases_LeaseObjects" ManuallyRouted="false" />
+        <AssociationConnector Association="LeasingModel.FK_Leases_LeaseStatus" ManuallyRouted="false" />
         <AssociationConnector Association="LeasingModel.FK_Leases_Users" ManuallyRouted="false" />
         <AssociationConnector Association="LeasingModel.FK_Users_Roles" ManuallyRouted="false" />
         <AssociationConnector Association="LeasingModel.FK_Users_StatusTable" ManuallyRouted="false" />

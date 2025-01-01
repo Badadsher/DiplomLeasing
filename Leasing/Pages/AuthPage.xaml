@@ -29,24 +29,24 @@
                     <Ellipse HorizontalAlignment="Left" Height="174" Margin="72,279,0,0" VerticalAlignment="Top" Width="174" Fill="#19FFFFFF"/>
                     <Ellipse HorizontalAlignment="Left" Height="174" Margin="191,314,0,0" VerticalAlignment="Top" Width="174" Fill="#19FFFFFF"/>
                     <Label Content="ДОБРО ПОЖАЛОВАТЬ" HorizontalAlignment="Left" Margin="38,34,0,0" VerticalAlignment="Top" Height="48" Width="290" Foreground="#E5FFFFFF" FontSize="36" FontFamily="Bahnschrift Condensed"/>
-                    <Rectangle HorizontalAlignment="Left" Height="54" Margin="-2,376,0,0" VerticalAlignment="Top" Width="138" RenderTransformOrigin="0.5,0.5">
+                    <Rectangle HorizontalAlignment="Left" Height="54" Margin="122,376,0,0" VerticalAlignment="Top" Width="80" RenderTransformOrigin="0.5,0.5">
                         <Rectangle.RenderTransform>
                             <TransformGroup>
                                 <ScaleTransform/>
                                 <SkewTransform/>
-                                <RotateTransform Angle="-9.432"/>
+                                <RotateTransform Angle="0.914"/>
                                 <TranslateTransform/>
                             </TransformGroup>
                         </Rectangle.RenderTransform>
                         <Rectangle.Fill>
-                            <ImageBrush ImageSource="/Images/logo.png"/>
+                            <ImageBrush ImageSource="/Images/newLogo.png"/>
                         </Rectangle.Fill>
                     </Rectangle>
 
                 </Grid>
                 <Grid Background="White" Name="RenderPages" Grid.ColumnSpan="2" Margin="285,0,0,0">
-                    <PasswordBox x:Name="TxbPassword" HorizontalContentAlignment="Center" Style="{StaticResource MaterialDesignOutlinedPasswordBox}" Margin="150,208,114,174" Background="#4C673AB7" Foreground="White"></PasswordBox>
-                    <TextBox x:Name="TxbLogin" HorizontalContentAlignment="Center" Style="{StaticResource MaterialDesignOutlinedTextBox}" Margin="150,144,114,238" Background="#4C673AB7" FontFamily="Bahnschrift Condensed" Foreground="White"></TextBox>
+                    <PasswordBox x:Name="TxbPassword" HorizontalContentAlignment="Center" Style="{StaticResource MaterialDesignOutlinedPasswordBox}" Margin="150,208,114,174" Background="#4C673AB7" Foreground="#FF673AB7"></PasswordBox>
+                    <TextBox x:Name="TxbLogin" HorizontalContentAlignment="Center" Style="{StaticResource MaterialDesignOutlinedTextBox}" Margin="150,144,114,238" Background="#4C673AB7" FontFamily="Bahnschrift Condensed" Foreground="#FF673AB7"></TextBox>
                     <Button Content="ЗАРЕГИСТРИРОВАТЬСЯ" Style="{StaticResource MaterialDesignOutlinedButton}" HorizontalAlignment="Left" Margin="230,273,0,0" VerticalAlignment="Top" Width="146" FontSize="10" Click="RegClick"/>
                     <Button Content="ВХОД" Style="{StaticResource MaterialDesignRaisedButton}" Margin="150,273,265,0" VerticalAlignment="Top" FontSize="10" Click="AuthClick"/>
                     <Label Content="ВХОД" HorizontalAlignment="Left" Margin="233,87,0,0" VerticalAlignment="Top" Height="46" Width="70" Foreground="#FF6E5894" FontSize="36" FontFamily="Bahnschrift Condensed"/>

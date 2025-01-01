@@ -48,34 +48,18 @@ namespace Leasing.Pages.AdminsPage
             Refresher();
         }
 
-        private void DeleteClick(object sender, RoutedEventArgs e)
-        {
-            try
-            {
-                if (DataGR.SelectedItem != null)
-                {
-                    var cur = DataGR.SelectedItem as UserView;
-                    var curUS = AppData.db.Users.Where(u => u.ID == cur.Id).FirstOrDefault();
-                    curUS.StatusID = 2;
-                    AppData.db.SaveChanges();
-                    MessageBox.Show("Уволен!");
-                    Refresher();
-                }
-                else
-                {
-                    MessageBox.Show("Выберите объект для удаления");
-                }
-            }
-            catch(Exception er) {
-                MessageBox.Show(er.Message);
-            }
-           
-        }
+   
 
         private void EditUser(object sender, RoutedEventArgs e)
         {
-            Window edithorUserWindow = new EditUser();
-            edithorUserWindow.Show();
+            DarkOverlay.Visibility = Visibility.Visible;
+            Window edithorUserWindow = new EditUser
+            {
+                Owner = Window.GetWindow(this), // Установите владельца окна
+                WindowStartupLocation = WindowStartupLocation.CenterOwner
+            };
+            edithorUserWindow.ShowDialog();
+            DarkOverlay.Visibility = Visibility.Collapsed;
         }
 
         private void Refresh(object sender, RoutedEventArgs e)
@@ -85,6 +69,7 @@ namespace Leasing.Pages.AdminsPage
 
         private void Refresher()
         {
+            DataGR.Items.Clear();
             var query = from user in AppData.db.Users
                         join userData in AppData.db.UsersData on user.ID equals userData.ID
                         join status in AppData.db.StatusTable on user.StatusID equals status.ID
@@ -109,8 +94,14 @@ namespace Leasing.Pages.AdminsPage
 
         private void AddClick(object sender, RoutedEventArgs e)
         {
-            Window adderUserWindow = new AddUser();
-            adderUserWindow.Show();
+            DarkOverlay.Visibility = Visibility.Visible;
+            Window adderUserWindow = new AddUser
+            {
+                Owner = Window.GetWindow(this), // Установите владельца окна
+                WindowStartupLocation = WindowStartupLocation.CenterOwner
+            };
+            adderUserWindow.ShowDialog();
+            DarkOverlay.Visibility = Visibility.Collapsed;
         }
 
         private void DogovorClick(object sender, RoutedEventArgs e)
@@ -120,10 +111,49 @@ namespace Leasing.Pages.AdminsPage
 
         private void OpenProfile(object sender, MouseButtonEventArgs e)
         {
+
             var cur = DataGR.SelectedItem as UserView;
             int profileid = cur.Id;
-            Window profileWindow = new ProfileWindow(profileid);
-            profileWindow.Show();
+            DarkOverlay.Visibility = Visibility.Visible;
+            Window profileWindow = new ProfileWindow(profileid)
+            {
+                Owner = Window.GetWindow(this), // Установите владельца окна
+                WindowStartupLocation = WindowStartupLocation.CenterOwner
+            };
+            profileWindow.ShowDialog();
+            DarkOverlay.Visibility = Visibility.Collapsed;
+
+
+        }
+
+        private void OpenPageLeases(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new AdminPageLeasesAdd());
+        }
+        private void DataGR_PreviewMouseRightButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            // Найти строку DataGrid под курсором
+            var row = FindVisualParent<DataGridRow>((DependencyObject)e.OriginalSource);
+            if (row != null)
+            {
+                // Установить строку как выбранную
+                DataGR.SelectedItem = row.Item;
+            }
+        }
+
+        private T FindVisualParent<T>(DependencyObject child) where T : DependencyObject
+        {
+            // Поиск родительского элемента указанного типа
+            while (child != null)
+            {
+                if (child is T parent)
+                {
+                    return parent;
+                }
+                child = VisualTreeHelper.GetParent(child);
+            }
+            return null;
         }
     }
+
 }

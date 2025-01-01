@@ -30,7 +30,7 @@
                 <Label Content="Аванс" HorizontalAlignment="Left" Margin="914,292,0,0" VerticalAlignment="Top" Height="24" Width="38" Foreground="#FF7D32FF" FontSize="14" FontFamily="Bahnschrift Condensed"/>
                 <Button Content="Добавить фото" HorizontalAlignment="Left" Margin="813,439,0,0" VerticalAlignment="Top" Click="AddImg" Background="#FF56AB5B" BorderBrush="#FF56AB5B"/>
 
-                <DataGrid x:Name="DataGR" Margin="10,69,304,39" AutoGenerateColumns="False">
+                <DataGrid x:Name="DataGR" Margin="10,69,304,39" AutoGenerateColumns="False" HorizontalScrollBarVisibility="Disabled">
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="НАЗВАНИЕ" Width="101" Binding="{Binding Name}"/>
                         <DataGridTextColumn Header="CРОК" Width="66" Binding="{Binding MonthCount}"/>
@@ -45,11 +45,11 @@
                             </DataGridTemplateColumn.CellTemplate>
                         </DataGridTemplateColumn>
                         <DataGridTextColumn Header="ПОЛНАЯ ЦЕНА" Width="126" Binding="{Binding AllAmount}"/>
-                        <DataGridTextColumn Header="Статус" Width="126" Binding="{Binding Status}"/>
+                        <DataGridTextColumn Header="СТАТУС" Width="126" Binding="{Binding Status}"/>
                     </DataGrid.Columns>
                 </DataGrid>
                 <Label Content="Редактирование объекта для лизинга" HorizontalAlignment="Left" Margin="22,19,0,0" VerticalAlignment="Top" Foreground="#E5000000" FontSize="18" FontFamily="Arial Black"/>
-                <ComboBox x:Name="combob" Style="{StaticResource MaterialDesignOutlinedComboBox}" HorizontalAlignment="Left" Margin="925,379,0,0" VerticalAlignment="Top" Width="120" Height="42">
+                <ComboBox x:Name="combob" Style="{StaticResource MaterialDesignOutlinedComboBox}" HorizontalAlignment="Left" Margin="926,374,0,0" VerticalAlignment="Top" Width="120" Height="55">
                     <ComboBoxItem Content="Активна" Tag="1" />
                     <ComboBoxItem Content="Удалена" Tag="2" />
                 </ComboBox>

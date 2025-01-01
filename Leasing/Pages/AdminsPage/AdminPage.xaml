@@ -6,15 +6,15 @@
       xmlns:local="clr-namespace:Leasing.Pages.AdminsPage"
       xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
-      Title="AdminPage" Loaded="Page_Loaded">
+      d:DesignHeight="450"
+      Title="AdminPage" Loaded="Page_Loaded" Width="835">
 
     <Page.Resources>
         <local:ImageConverter x:Key="ByteArrayToImageConverter"/>
     </Page.Resources>
 
     <Grid>
-        <materialDesign:Card Margin="10" UniformCornerRadius="20" Background="#00000000">
+        <materialDesign:Card x:Name="MainCard" Margin="10" UniformCornerRadius="20" Background="#00000000">
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="1*" />
@@ -27,7 +27,10 @@
                     </Style>
                 </Grid.Resources>
                 <Grid Grid.Column="0" Background="White">
+
                     <ListView Margin="-13,17,-25,-47">
+
+
                         <ListViewItem Margin="0 0">
                             <Button Style="{StaticResource MaterialDesignFloatingActionButton}" HorizontalAlignment="Left"
                              BorderBrush="{x:Null}" Background="{x:Null}" Foreground="Black">
@@ -35,9 +38,11 @@
                                     <materialDesign:PackIcon Kind="Car"/>
                                 </StackPanel>
                             </Button>
+
+
                         </ListViewItem>
 
-                       
+
 
 
                         <ListViewItem Margin="0 0 0 0">
@@ -56,33 +61,57 @@
                     <Button Style="{StaticResource MaterialDesignFloatingActionButton}" HorizontalAlignment="Left" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="Black" x:Name="CloseButton"   Margin="679,-5,0,379" Click="ExitClick" Cursor="Hand">
                         <materialDesign:PackIcon Kind="Close" Foreground="White"/>
                     </Button>
-                    <DataGrid x:Name="DataGR" Margin="14,56,18,102" AutoGenerateColumns="False" HorizontalScrollBarVisibility="Disabled">
-                        <DataGrid.Columns>
-                            <DataGridTextColumn Header="НАЗВАНИЕ" Width="101" Binding="{Binding Name}"/>
-                            <DataGridTextColumn Header="CРОК" Width="66" Binding="{Binding MonthCount}"/>
-                            <DataGridTextColumn Header="СТОИМОСТЬ" Width="112" Binding="{Binding CarPrice}"/>
-                            <DataGridTextColumn Header="АВАНС" Width="75" Binding="{Binding Avance}"/>
-                            <DataGridTemplateColumn Header="ФОТО">
-                                <DataGridTemplateColumn.CellTemplate>
-                                    <DataTemplate>
-                                        <Image Width="100" Height="100" 
-                                            Source="{Binding Images, Converter={StaticResource ByteArrayToImageConverter}}" />
-                                    </DataTemplate>
-                                </DataGridTemplateColumn.CellTemplate>
-                            </DataGridTemplateColumn>
-                            <DataGridTextColumn Header="ПОЛНАЯ ЦЕНА" Width="126" Binding="{Binding AllAmount}"/>
-                            <DataGridTextColumn Header="CТАТУС" Width="126" Binding="{Binding Status}"/>
-                        </DataGrid.Columns>
-                    </DataGrid>
-                    <Button Content="УДАЛИТЬ" HorizontalAlignment="Left" Margin="22,352,0,0" VerticalAlignment="Top" Click="DeleteClick" Cursor="Hand"/>
-                    <Button Content="РЕДАКТИРОВАТЬ" HorizontalAlignment="Left" Margin="137,352,0,0" VerticalAlignment="Top" Click="EditLease"/>
+
+                    <ScrollViewer VerticalScrollBarVisibility="Auto" Margin="14,56,39,83">
+                        <ItemsControl Name="CardContainer" Margin="10">
+                            <ItemsControl.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <WrapPanel Orientation="Horizontal" ItemWidth="220" ItemHeight="350" />
+                                </ItemsPanelTemplate>
+                            </ItemsControl.ItemsPanel>
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <Border BorderBrush="Gray" BorderThickness="1" Margin="10" CornerRadius="10" Background="White" Padding="10" MouseRightButtonDown="OpenCarCard" >
+                                        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                                            <!-- Изображение с фиксированной рамкой -->
+                                            <Grid Height="180" Width="200">
+                                                <Image Source="{Binding Images}" Stretch="UniformToFill" />
+                                            </Grid>
+                                            <!-- Центрированный текст -->
+                                            <TextBlock Text="{Binding Name}" FontWeight="Bold" FontSize="16" TextAlignment="Center" Margin="0,5" />
+                                            <TextBlock Text="Price:" FontWeight="SemiBold" FontSize="14" TextAlignment="Center" Margin="0,5" />
+                                            <TextBlock Text="{Binding CarPrice}" FontSize="14" TextAlignment="Center" Margin="0,5" />
+                                        </StackPanel>
+                                    </Border>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </ScrollViewer>
+                    <!-- Фон для полосы прокрутки -->
+                    <Button Content="РЕДАКТИРОВАТЬ" HorizontalAlignment="Left" Margin="14,352,0,0" VerticalAlignment="Top" Click="EditLease"/>
                     <Button Content="ДОБАВИТЬ" HorizontalAlignment="Left" Margin="603,352,0,0" VerticalAlignment="Top" Click="AddCar"/>
                     <Button Content="ОБНОВИТЬ" HorizontalAlignment="Left" Margin="479,352,0,0" VerticalAlignment="Top" Click="Refresh"/>
+                    <Rectangle HorizontalAlignment="Left" Height="54" Margin="11,1,0,0" VerticalAlignment="Top" Width="80" RenderTransformOrigin="0.5,0.5">
+                        <Rectangle.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform Angle="0.914"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Rectangle.RenderTransform>
+                        <Rectangle.Fill>
+                            <ImageBrush ImageSource="/Images/newLogo.png"/>
+                        </Rectangle.Fill>
+                    </Rectangle>
                     <Ellipse HorizontalAlignment="Left" Height="200" Margin="-23,-149,0,0" VerticalAlignment="Top" Width="233" Fill="#19FFFFFF"/>
-                    <Label Content="Все доступные машины для лизинга" HorizontalAlignment="Left" Margin="22,19,0,0" VerticalAlignment="Top" Foreground="#E5FFFFFF" FontSize="18" FontFamily="Arial Black"/>
+                    <Label Content="Все машины для лизинга" HorizontalAlignment="Left" Margin="233,16,0,0" VerticalAlignment="Top" Foreground="#E5FFFFFF" FontSize="18" FontFamily="Arial Black"/>
                 </Grid>
             </Grid>
         </materialDesign:Card>
+        <Border x:Name="DarkOverlay" Background="#80000000" Visibility="Collapsed"
+      HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+      Margin="{Binding Margin, ElementName=MainCard}" />
     </Grid>
 </Page>
 

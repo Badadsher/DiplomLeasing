@@ -29,10 +29,11 @@ namespace Leasing.Pages.AdminsPage
 
         private void EditUserClick(object sender, RoutedEventArgs e)
         {
-            var curUser = DataGR.SelectedItem as UserView;
-            var curUS = AppData.db.Users.Where(u => u.ID == curUser.Id).FirstOrDefault();
+           
             try
             {
+                var curUser = DataGR.SelectedItem as UserView;
+                var curUS = AppData.db.Users.Where(u => u.ID == curUser.Id).FirstOrDefault();
                 if ( combob.SelectedItem != null || !string.IsNullOrEmpty(TxbLogin.Text) || !string.IsNullOrEmpty(TxbPassword.Password.ToString()) || statusbox.SelectedItem != null) 
                 {
 

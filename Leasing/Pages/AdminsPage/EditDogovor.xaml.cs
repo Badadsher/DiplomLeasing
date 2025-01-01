@@ -28,7 +28,7 @@ namespace Leasing.Pages.AdminsPage
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            DataGR.ItemsSource = AppData.db.Leases.ToList();
+            Refresher();
         }
 
         private void EditDogovorClick(object sender, RoutedEventArgs e)
@@ -41,35 +41,36 @@ namespace Leasing.Pages.AdminsPage
 
                 {
 
-                    var curLeasing = DataGR.SelectedItem as Leases;
-                    if (curLeasing != null)
+                    var curLeasingInNew = DataGR.SelectedItem as LeaseViewModel;
+                    var curLeaseDog = AppData.db.Leases.Where(u => u.ID == curLeasingInNew.LeaseID).FirstOrDefault();
+                    if (curLeaseDog != null)
                     {
                         if (!string.IsNullOrEmpty(TxbClient.Text))
                         {
-                            curLeasing.ClientID = Convert.ToInt32(TxbClient.Text);
+                            curLeaseDog.ClientID = Convert.ToInt32(TxbClient.Text);
                         }
                         if (!string.IsNullOrEmpty(TxbCarID.Text))
                         {
-                            curLeasing.CarID = Convert.ToInt32(TxbCarID.Text);
+                            curLeaseDog.CarID = Convert.ToInt32(TxbCarID.Text);
                         }
 
                         if (combob.SelectedItem != null & combob.SelectedIndex == 0)
                         {
-                            curLeasing.Status = "В процессе";
+                            curLeaseDog.StatusID = 1;
                         }
                         else if (combob.SelectedItem != null & combob.SelectedIndex == 1)
                         {
-                            curLeasing.Status = "Закончен";
+                            curLeaseDog.StatusID = 2;
                         }
                         if (enddate.HasValue)
                         {
-                            curLeasing.EndDate = enddate.Value.Date;
+                            curLeaseDog.EndDate = enddate.Value.Date;
                         }
                         if (startdate.HasValue)
                         {
-                            curLeasing.StartDate = startdate.Value.Date;
+                            curLeaseDog.StartDate = startdate.Value.Date;
                         }
-
+                        Refresher();
                         AppData.db.SaveChanges();
                         MessageBox.Show("Изменения внесены!");
                         this.Close();
@@ -91,6 +92,35 @@ namespace Leasing.Pages.AdminsPage
             }
         }
 
+        private void Refresher()
+        {
+
+
+
+
+
+            var query = from lease in AppData.db.Leases
+                        join leaseObject in AppData.db.LeaseObjects
+
+                        on lease.CarID equals leaseObject.ID
+                        join leasestus in AppData.db.LeaseStatus
+                        on lease.StatusID equals leasestus.ID
+                        select new LeaseViewModel
+                        {
+                            LeaseID = lease.ID,
+                            CarId = (int)lease.CarID,
+                            Name = leaseObject.Name,
+                            Images = leaseObject.Images,
+                            MothlyPrice = (int)leaseObject.MothlyPrice,
+                            StartDate = lease.StartDate,
+                            EndDate = lease.EndDate,
+                            Status = leasestus.StatusLeaseName,
+                            CarID = (int)lease.CarID,
+                            ClientID = lease.ClientID
+                        };
+            DataGR.ItemsSource = query.ToList();
+      
+        }
         private void ExitClick(object sender, RoutedEventArgs e)
         {
             this.Close();

@@ -28,6 +28,7 @@ namespace Leasing.Model
         public virtual DbSet<CarStatus> CarStatus { get; set; }
         public virtual DbSet<LeaseObjects> LeaseObjects { get; set; }
         public virtual DbSet<Leases> Leases { get; set; }
+        public virtual DbSet<LeaseStatus> LeaseStatus { get; set; }
         public virtual DbSet<Roles> Roles { get; set; }
         public virtual DbSet<StatusTable> StatusTable { get; set; }
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }

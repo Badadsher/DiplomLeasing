@@ -57,3 +57,7 @@ C:\Users\Heisenberg\Downloads\LeasingApp\Leasing\Leasing\obj\Debug\Leasing.cspro
 C:\Users\Heisenberg\Downloads\LeasingApp\Leasing\Leasing\obj\Debug\Leasing.csproj.Up2Date
 C:\Users\Heisenberg\Downloads\LeasingApp\Leasing\Leasing\obj\Debug\Leasing.exe
 C:\Users\Heisenberg\Downloads\LeasingApp\Leasing\Leasing\obj\Debug\Leasing.pdb
+C:\Users\Heisenberg\Downloads\LeasingApp\Leasing\Leasing\obj\Debug\Pages\AdminsPage\AdminPageLeasesAdd.g.cs
+C:\Users\Heisenberg\Downloads\LeasingApp\Leasing\Leasing\obj\Debug\Pages\AdminsPage\AdminPageLeasesAdd.baml
+C:\Users\Heisenberg\Downloads\LeasingApp\Leasing\Leasing\obj\Debug\Pages\AdminsPage\CarWindow.g.cs
+C:\Users\Heisenberg\Downloads\LeasingApp\Leasing\Leasing\obj\Debug\Pages\AdminsPage\CarWindow.baml
