@@ -122,8 +122,7 @@ namespace Leasing.Pages.AdminsPage
                             StartDate = lease.StartDate,
                             EndDate = lease.EndDate,
                             Status = leasestus.StatusLeaseName,
-                            CarID = (int)lease.CarID,
-                            ClientID = lease.ClientID
+                            CarID = (int)lease.CarID
                         };
 
             DataGR.ItemsSource = query.ToList();

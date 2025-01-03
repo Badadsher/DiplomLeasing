@@ -66,8 +66,9 @@
                         <materialDesign:PackIcon Kind="Close" Foreground="White"/>
                     </Button>
                     <DataGrid x:Name="DataGR" Margin="10,56,18,102" AutoGenerateColumns="False" HorizontalScrollBarVisibility="Disabled">
+                        
                         <DataGrid.Columns>
-                            <DataGridTextColumn Header="НАЗВАНИЕ" Width="121" Binding="{Binding Name}"/>
+                            <DataGridTextColumn Header="НАЗВАНИЕ" Width="131" Binding="{Binding Name}"/>
                             <DataGridTemplateColumn Header="ФОТО">
                                 <DataGridTemplateColumn.CellTemplate>
                                     <DataTemplate>
@@ -77,12 +78,14 @@
                                 </DataGridTemplateColumn.CellTemplate>
                             </DataGridTemplateColumn>
                             <DataGridTextColumn Header="ТАРИФ" Width="83" Binding="{Binding MothlyPrice}"/>
-                            <DataGridTextColumn Header="ДАТА НАЧАЛА" Width="152" Binding="{Binding StartDate}"/>
-                            <DataGridTextColumn Header="ДАТА КОНЦА" Width="152" Binding="{Binding EndDate}"/>
+                            <DataGridTextColumn Header="ДАТА НАЧАЛА" Binding="{Binding FormattedStartDate, Mode=OneWay}" />
+                            <!-- Используем OneWay -->
+                            <DataGridTextColumn Header="ДАТА КОНЦА" Binding="{Binding FormattedEndDate, Mode=OneWay}" />
+                            <!-- Используем OneWay -->
                             <DataGridTextColumn Header="СТАТУС" Width="115" Binding="{Binding Status}"/>
                         </DataGrid.Columns>
                     </DataGrid>
-                    <Button Content="ОТМЕНИТЬ" HorizontalAlignment="Left" Margin="22,344,0,0" VerticalAlignment="Top" Click="CloseLease"/>
+                    <Button Content="ОТМЕНИТЬ" HorizontalAlignment="Left" Margin="10,344,0,0" VerticalAlignment="Top" Click="CloseLease"/>
                     <Rectangle HorizontalAlignment="Left" Height="54" Margin="11,1,0,0" VerticalAlignment="Top" Width="80" RenderTransformOrigin="0.5,0.5">
                         <Rectangle.RenderTransform>
                             <TransformGroup>
@@ -97,7 +100,7 @@
                         </Rectangle.Fill>
                     </Rectangle>
                     <Ellipse HorizontalAlignment="Left" Height="200" Margin="-23,-149,0,0" VerticalAlignment="Top" Width="233" Fill="#19FFFFFF"/>
-                    <Button Content="ОБНОВИТЬ" HorizontalAlignment="Left" Margin="612,344,0,0" VerticalAlignment="Top" Click="Refresh" Cursor="Hand"/>
+                    <Button Content="ОБНОВИТЬ" HorizontalAlignment="Left" Margin="129,344,0,0" VerticalAlignment="Top" Click="Refresh" Cursor="Hand"/>
                     <Label Content="Ваши лизинги" HorizontalAlignment="Center" Margin="0,17,0,0" VerticalAlignment="Top" Foreground="#E5FFFFFF" FontSize="18" FontFamily="Arial Black"/>
                 </Grid>
             </Grid>

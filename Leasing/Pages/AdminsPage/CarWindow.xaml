@@ -25,7 +25,7 @@
                 <Grid HorizontalAlignment="Left" Margin="38,81,0,0" VerticalAlignment="Top">
                     <Image x:Name="myImage" Width="200" Height="150" Stretch="UniformToFill" />
                 </Grid>
-                <Label x:Name="nameLabel" Content="Название" HorizontalAlignment="Left" Margin="284,80,0,0" VerticalAlignment="Top" Foreground="#E5000000" FontSize="18" FontFamily="Arial Black" Height="47" Width="250"/>
+                <Label x:Name="nameLabel" Content="Название" HorizontalAlignment="Left" Margin="284,80,0,0" VerticalAlignment="Top" Foreground="#E5000000" FontSize="18" FontFamily="Arial Black" Height="47" Width="281"/>
                 <Label x:Name="statusLabel" Content="Статус" HorizontalAlignment="Left" Margin="284,107,0,0" VerticalAlignment="Top" Foreground="#E5000000" FontSize="18" FontFamily="Arial Black" Height="47" Width="250"/>
                 <Label x:Name="priceLabel" Content="Цена" HorizontalAlignment="Left" Margin="284,134,0,0" VerticalAlignment="Top" Foreground="#E5000000" FontSize="18" FontFamily="Arial Black" Height="48" Width="250"/>
                 <Label x:Name="tarifLabel" Content="Тариф" HorizontalAlignment="Left" Margin="284,163,0,0" VerticalAlignment="Top" Foreground="#E5000000" FontSize="18" FontFamily="Arial Black" Height="47" Width="250"/>

@@ -1,6 +1,7 @@
 ﻿using Leasing.Model;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -127,25 +128,33 @@ namespace Leasing.Pages.AdminsPage
 
         private void OpenCarCard(object sender, MouseButtonEventArgs e)
         {
-            // Получаем источник события
-            var border = sender as Border;
-            if (border != null)
+            try
             {
-                // Получаем DataContext из элемента
-                var cur = border.DataContext as CarView;
-                if (cur != null)
+                // Получаем источник события
+                var border = sender as Border;
+                if (border != null)
                 {
-                    int cared = cur.Id;
-                    DarkOverlay.Visibility = Visibility.Visible;
-                    Window profileWindow = new CarWindow(cared)
+                    // Получаем DataContext из элемента
+                    var cur = border.DataContext as CarView;
+                    if (cur != null)
                     {
-                        Owner = Window.GetWindow(this), // Установите владельца окна
-                        WindowStartupLocation = WindowStartupLocation.CenterOwner
-                    };
-                    profileWindow.ShowDialog();
-                    DarkOverlay.Visibility = Visibility.Collapsed;
+                        int cared = cur.Id;
+                        DarkOverlay.Visibility = Visibility.Visible;
+                        Window profileWindow = new CarWindow(cared)
+                        {
+                            Owner = Window.GetWindow(this), // Установите владельца окна
+                            WindowStartupLocation = WindowStartupLocation.CenterOwner
+                        };
+                        profileWindow.ShowDialog();
+                        DarkOverlay.Visibility = Visibility.Collapsed;
+                    }
                 }
             }
+            catch
+            {   
+                MessageBox.Show("Ошибка");
+            }
+          
 
         }
     }

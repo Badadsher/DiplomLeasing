@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Leasing.Pages.AdminsPage"
                  xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
         mc:Ignorable="d"
-        Title="ProfileWindow" IsEnabled="True" Height="357" Width="595" Loaded="Window_Loaded" ResizeMode="NoResize"  AllowsTransparency="True" WindowStartupLocation="CenterScreen" WindowStyle="None" Background="Transparent">
+        Title="ProfileWindow" IsEnabled="True" Height="307" Width="595" Loaded="Window_Loaded" ResizeMode="NoResize"  AllowsTransparency="True" WindowStartupLocation="CenterScreen" WindowStyle="None" Background="Transparent">
     <Grid>
         <materialDesign:Card Margin="10" UniformCornerRadius="20">
             <Grid Margin="0,0,0,-21">
@@ -16,7 +16,7 @@
                     Background="{x:Null}" 
                     Foreground="Black" 
                     x:Name="CloseButton" 
-                    Margin="509,10,0,292" 
+                    Margin="509,8,0,244" 
                     Cursor="Hand" 
                     Click="ExitClick">
                     <materialDesign:PackIcon Kind="Close" Foreground="Black" Height="39" Width="39" VerticalAlignment="Center"/>

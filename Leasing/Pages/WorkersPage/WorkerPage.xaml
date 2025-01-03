@@ -67,28 +67,40 @@
                     </Button>
 
 
-                    <DataGrid x:Name="DataGR" Margin="22,56,22,102" AutoGenerateColumns="False" HorizontalScrollBarVisibility="Disabled">
-                        <DataGrid.Columns>
-                            <DataGridTextColumn Header="НАЗВАНИЕ" Width="111" Binding="{Binding Name}"/>
-                            <DataGridTextColumn Header="CРОК" Width="66" Binding="{Binding MonthCount}"/>
-                            <DataGridTextColumn Header="СТОИМОСТЬ" Width="112" Binding="{Binding CarPrice}"/>
-                            <DataGridTextColumn Header="АВАНС" Width="95" Binding="{Binding Avance}"/>
-                            <DataGridTemplateColumn Header="ФОТО">
-                                <DataGridTemplateColumn.CellTemplate>
-                                    <DataTemplate>
-                                        <Image Width="100" Height="100" 
-                          Source="{Binding Images, Converter={StaticResource ByteArrayToImageConverter}}" />
-                                    </DataTemplate>
-                                </DataGridTemplateColumn.CellTemplate>
-                            </DataGridTemplateColumn>
-                            <DataGridTextColumn Header="ПОЛНАЯ ЦЕНА" Width="126" Binding="{Binding AllAmount}"/>
-                        </DataGrid.Columns>
-                    </DataGrid>
+                    <ScrollViewer VerticalScrollBarVisibility="Auto" Margin="14,56,39,83">
+                        <ItemsControl Name="CardContainer" Margin="10" HorizontalAlignment="Center">
+                            <ItemsControl.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <WrapPanel Orientation="Horizontal" ItemWidth="180" ItemHeight="270" />
+                                    <!-- Уменьшите значения -->
+                                </ItemsPanelTemplate>
+                            </ItemsControl.ItemsPanel>
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <Border BorderBrush="Gray" BorderThickness="1" Margin="5" CornerRadius="10" Background="White" Padding="5" MouseRightButtonDown="OpenCarCard" >
+                                        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                                            <!-- Изображение с фиксированной рамкой -->
+                                            <Grid Height="180" Width="200">
+                                                <Image Source="{Binding Images}" Stretch="UniformToFill" />
+                                            </Grid>
+                                            <!-- Центрированный текст -->
+                                            <TextBlock Text="{Binding Name}" FontWeight="Bold" FontSize="16" TextAlignment="Center" Margin="0,5" />
+                                            <TextBlock Text="Цена:" FontWeight="SemiBold" FontSize="14" TextAlignment="Center" Margin="0,1" />
+                                            <TextBlock FontSize="14" TextAlignment="Center" Margin="0,5">
+    <Run Text="{Binding CarPrice}" />
+    <Run Text=" ₽" FontWeight="Bold"/> <!-- Добавляем значок рубля -->
+                                            </TextBlock>
+                                        </StackPanel>
+                                    </Border>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </ScrollViewer>
 
-                    <Button Content="ВЗЯТЬ В ЛИЗИНГ" HorizontalAlignment="Left" Margin="22,344,0,0" VerticalAlignment="Top" Click="TakeLease"/>
+                    <Button Content="ВЗЯТЬ В ЛИЗИНГ" HorizontalAlignment="Left" Margin="22,355,0,0" VerticalAlignment="Top" Click="TakeLease"/>
 
                     <Ellipse HorizontalAlignment="Left" Height="200" Margin="-23,-149,0,0" VerticalAlignment="Top" Width="233" Fill="#19FFFFFF"/>
-                    <Button Content="ОБНОВИТЬ" HorizontalAlignment="Left" Margin="612,344,0,0" VerticalAlignment="Top" Click="Refresh" Cursor="Hand"/>
+                    <Button Content="ОБНОВИТЬ" HorizontalAlignment="Left" Margin="612,355,0,0" VerticalAlignment="Top" Click="Refresh" Cursor="Hand"/>
                     <Label Content="Доступные лизинги" HorizontalAlignment="Center" Margin="0,16,0,0" VerticalAlignment="Top" Foreground="#E5FFFFFF" FontSize="18" FontFamily="Arial Black"/>
                     <Rectangle HorizontalAlignment="Left" Height="54" Margin="11,1,0,0" VerticalAlignment="Top" Width="80" RenderTransformOrigin="0.5,0.5">
                         <Rectangle.RenderTransform>
@@ -106,6 +118,9 @@
                 </Grid>
             </Grid>
         </materialDesign:Card>
+        <Border x:Name="DarkOverlay" Background="#80000000" Visibility="Collapsed"
+ HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+ Margin="{Binding Margin, ElementName=MainCard}" />
     </Grid>
 </Page>
 

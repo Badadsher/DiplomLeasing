@@ -71,11 +71,13 @@
                     </Button>
                     <DataGrid x:Name="DataGR" Margin="22,56,11,102" AutoGenerateColumns="False" HorizontalScrollBarVisibility="Disabled">
                         <DataGrid.Columns>
-                            <DataGridTextColumn Header="Айди клиента" Width="120" Binding="{Binding ClientID}"/>
-                            <DataGridTextColumn Header="Айди машины" Width="120" Binding="{Binding CarID}"/>
-                            <DataGridTextColumn Header="Дата начала" Width="186" Binding="{Binding StartDate}"/>
-                            <DataGridTextColumn Header="Дата окончания" Width="185" Binding="{Binding EndDate}"/>
-                            <DataGridTextColumn Header="Статус" Width="115" Binding="{Binding Status}"/>
+                            <DataGridTextColumn Header="АЙДИ КЛИЕНТА" Width="120" Binding="{Binding ClientID}"/>
+                            <DataGridTextColumn Header="АЙДИ МАШИНЫ" Width="120" Binding="{Binding CarID}"/>
+                            <DataGridTextColumn Header="ДАТА НАЧАЛА" Binding="{Binding FormattedStartDate, Mode=OneWay}" />
+                            <!-- Используем OneWay -->
+                            <DataGridTextColumn Header="ДАТА КОНЦА" Binding="{Binding FormattedEndDate, Mode=OneWay}" />
+                            <!-- Используем OneWay -->
+                            <DataGridTextColumn Header="СТАТУС" Width="115" Binding="{Binding Status}"/>
                         </DataGrid.Columns>
                     </DataGrid>
                     <Button Content="РЕДАКТИРОВАТЬ" HorizontalAlignment="Left" Margin="20,352,0,0" VerticalAlignment="Top" Click="EditDogovor"/>

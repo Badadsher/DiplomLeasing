@@ -1,4 +1,5 @@
 ﻿using Leasing.Model;
+using Leasing.Pages.AdminsPage;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -36,32 +37,32 @@ namespace Leasing.Pages.WorkersPage
 
         private void TakeLease(object sender, RoutedEventArgs e)
         {
-            try
-            {
-                var curobj = DataGR.SelectedItem as CarView;
-                var curCAR = AppData.db.LeaseObjects.Where(u => u.ID == curobj.Id).FirstOrDefault();
-                if (curobj != null)
-                {
-                    Leases newlease = new Leases();
-                    newlease.ID = AppData.db.Leases.Any() ? AppData.db.Leases.Max(u => u.ID) + 1 : 1;
-                    newlease.ClientID = usid;
-                    newlease.StartDate = DateTime.Now.Date;
+            //try
+            //{
+            //    var curobj = DataGR.SelectedItem as CarView;
+            //    var curCAR = AppData.db.LeaseObjects.Where(u => u.ID == curobj.Id).FirstOrDefault();
+            //    if (curobj != null)
+            //    {
+            //        Leases newlease = new Leases();
+            //        newlease.ID = AppData.db.Leases.Any() ? AppData.db.Leases.Max(u => u.ID) + 1 : 1;
+            //        newlease.ClientID = usid;
+            //        newlease.StartDate = DateTime.Now.Date;
 
-                    newlease.CarID = curCAR.ID;
-                    newlease.StatusID = 1;
+            //        newlease.CarID = curCAR.ID;
+            //        newlease.StatusID = 1;
 
-                    curCAR.CarStatusID = 2;
-                    AppData.db.Leases.Add(newlease);
-                    AppData.db.SaveChanges();
-                    MessageBox.Show("Успешно");
-                    Refresher();
+            //        curCAR.CarStatusID = 2;
+            //        AppData.db.Leases.Add(newlease);
+            //        AppData.db.SaveChanges();
+            //        MessageBox.Show("Успешно");
+            //        Refresher();
 
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            //    }
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show(ex.Message);
+            //}
         }
 
         private void Refresh(object sender, RoutedEventArgs e)
@@ -78,7 +79,6 @@ namespace Leasing.Pages.WorkersPage
         {
             var query = from car in AppData.db.LeaseObjects
                         join carstatus in AppData.db.CarStatus on car.CarStatusID equals carstatus.ID
-                        where car.CarStatusID != 2
                         select new CarView
 
                         {
@@ -93,8 +93,7 @@ namespace Leasing.Pages.WorkersPage
                             Status = carstatus.StatusName
                         };
 
-            DataGR.ItemsSource = query.ToList();
-   
+            CardContainer.ItemsSource = query.ToList();
         }
 
 
@@ -107,6 +106,36 @@ namespace Leasing.Pages.WorkersPage
         private void OpenHistory(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new WorkerHistoryPage(usid));
+        }
+
+        private void OpenCarCard(object sender, MouseButtonEventArgs e)
+        {
+            try
+            {
+                // Получаем источник события
+                var border = sender as Border;
+                if (border != null)
+                {
+                    // Получаем DataContext из элемента
+                    var cur = border.DataContext as CarView;
+                    if (cur != null)
+                    {
+                        int cared = cur.Id;
+                        DarkOverlay.Visibility = Visibility.Visible;
+                        Window profileWindow = new CarWindow(cared)
+                        {
+                            Owner = Window.GetWindow(this), // Установите владельца окна
+                            WindowStartupLocation = WindowStartupLocation.CenterOwner
+                        };
+                        profileWindow.ShowDialog();
+                        DarkOverlay.Visibility = Visibility.Collapsed;
+                    }
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Ошибка");
+            }
         }
     }
 }

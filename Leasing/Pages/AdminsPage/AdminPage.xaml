@@ -63,15 +63,16 @@
                     </Button>
 
                     <ScrollViewer VerticalScrollBarVisibility="Auto" Margin="14,56,39,83">
-                        <ItemsControl Name="CardContainer" Margin="10">
+                        <ItemsControl Name="CardContainer" Margin="10" HorizontalAlignment="Center">
                             <ItemsControl.ItemsPanel>
                                 <ItemsPanelTemplate>
-                                    <WrapPanel Orientation="Horizontal" ItemWidth="220" ItemHeight="350" />
+                                    <WrapPanel Orientation="Horizontal" ItemWidth="180" ItemHeight="270" />
+                                    <!-- Уменьшите значения -->
                                 </ItemsPanelTemplate>
                             </ItemsControl.ItemsPanel>
                             <ItemsControl.ItemTemplate>
                                 <DataTemplate>
-                                    <Border BorderBrush="Gray" BorderThickness="1" Margin="10" CornerRadius="10" Background="White" Padding="10" MouseRightButtonDown="OpenCarCard" >
+                                    <Border BorderBrush="Gray" BorderThickness="1" Margin="5" CornerRadius="10" Background="White" Padding="5" MouseRightButtonDown="OpenCarCard" >
                                         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
                                             <!-- Изображение с фиксированной рамкой -->
                                             <Grid Height="180" Width="200">
@@ -79,8 +80,11 @@
                                             </Grid>
                                             <!-- Центрированный текст -->
                                             <TextBlock Text="{Binding Name}" FontWeight="Bold" FontSize="16" TextAlignment="Center" Margin="0,5" />
-                                            <TextBlock Text="Price:" FontWeight="SemiBold" FontSize="14" TextAlignment="Center" Margin="0,5" />
-                                            <TextBlock Text="{Binding CarPrice}" FontSize="14" TextAlignment="Center" Margin="0,5" />
+                                            <TextBlock Text="Цена:" FontWeight="SemiBold" FontSize="14" TextAlignment="Center" Margin="0,1" />
+                                            <TextBlock FontSize="14" TextAlignment="Center" Margin="0,5">
+<Run Text="{Binding CarPrice}" />
+<Run Text=" ₽" FontWeight="Bold"/> <!-- Добавляем значок рубля -->
+                                            </TextBlock>
                                         </StackPanel>
                                     </Border>
                                 </DataTemplate>
