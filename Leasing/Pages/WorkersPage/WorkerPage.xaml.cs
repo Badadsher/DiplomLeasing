@@ -122,7 +122,7 @@ namespace Leasing.Pages.WorkersPage
                     {
                         int cared = cur.Id;
                         DarkOverlay.Visibility = Visibility.Visible;
-                        Window profileWindow = new CarWindow(cared)
+                        Window profileWindow = new CarWindowForUser(cared, usid)
                         {
                             Owner = Window.GetWindow(this), // Установите владельца окна
                             WindowStartupLocation = WindowStartupLocation.CenterOwner

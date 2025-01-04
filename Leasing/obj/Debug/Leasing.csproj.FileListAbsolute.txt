@@ -61,3 +61,5 @@ C:\Users\Heisenberg\Downloads\LeasingApp\Leasing\Leasing\obj\Debug\Pages\AdminsP
 C:\Users\Heisenberg\Downloads\LeasingApp\Leasing\Leasing\obj\Debug\Pages\AdminsPage\AdminPageLeasesAdd.baml
 C:\Users\Heisenberg\Downloads\LeasingApp\Leasing\Leasing\obj\Debug\Pages\AdminsPage\CarWindow.g.cs
 C:\Users\Heisenberg\Downloads\LeasingApp\Leasing\Leasing\obj\Debug\Pages\AdminsPage\CarWindow.baml
+C:\Users\Heisenberg\Downloads\LeasingApp\Leasing\Leasing\obj\Debug\Pages\AdminsPage\CarWindowForUser.g.cs
+C:\Users\Heisenberg\Downloads\LeasingApp\Leasing\Leasing\obj\Debug\Pages\AdminsPage\CarWindowForUser.baml

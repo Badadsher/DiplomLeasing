@@ -120,6 +120,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\AdminsPage\CarWindowForUser.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\AdminsPage\EditDogovor.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -224,6 +228,9 @@
     </Compile>
     <Compile Include="Pages\AdminsPage\CarWindow.xaml.cs">
       <DependentUpon>CarWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AdminsPage\CarWindowForUser.xaml.cs">
+      <DependentUpon>CarWindowForUser.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\AdminsPage\EditDogovor.xaml.cs">
       <DependentUpon>EditDogovor.xaml</DependentUpon>

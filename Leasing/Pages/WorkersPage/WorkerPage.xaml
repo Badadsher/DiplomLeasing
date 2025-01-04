@@ -97,10 +97,8 @@
                         </ItemsControl>
                     </ScrollViewer>
 
-                    <Button Content="ВЗЯТЬ В ЛИЗИНГ" HorizontalAlignment="Left" Margin="22,355,0,0" VerticalAlignment="Top" Click="TakeLease"/>
-
                     <Ellipse HorizontalAlignment="Left" Height="200" Margin="-23,-149,0,0" VerticalAlignment="Top" Width="233" Fill="#19FFFFFF"/>
-                    <Button Content="ОБНОВИТЬ" HorizontalAlignment="Left" Margin="612,355,0,0" VerticalAlignment="Top" Click="Refresh" Cursor="Hand"/>
+                    <Button Content="ОБНОВИТЬ" HorizontalAlignment="Left" Margin="40,360,0,0" VerticalAlignment="Top" Click="Refresh" Cursor="Hand"/>
                     <Label Content="Доступные лизинги" HorizontalAlignment="Center" Margin="0,16,0,0" VerticalAlignment="Top" Foreground="#E5FFFFFF" FontSize="18" FontFamily="Arial Black"/>
                     <Rectangle HorizontalAlignment="Left" Height="54" Margin="11,1,0,0" VerticalAlignment="Top" Width="80" RenderTransformOrigin="0.5,0.5">
                         <Rectangle.RenderTransform>

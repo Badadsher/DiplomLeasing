@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:Leasing.Pages"
           xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="450" d:DesignWidth="830"
       Title="RegPage">
 
     <Grid>
@@ -24,30 +24,30 @@
                     </Style>
                 </Grid.Resources>
                 <Grid Background="White" Name="RenderPages" Grid.ColumnSpan="2" Margin="285,0,5,0">
-                    <Button Content="ЗАРЕГИСТРИРОВАТЬСЯ" Style="{StaticResource MaterialDesignRaisedButton}" HorizontalAlignment="Left" Margin="250,278,0,0" VerticalAlignment="Top" Width="223" FontSize="14" Click="Regclick" Height="51"/>
-                    <Button Content="ВХОД" Style="{StaticResource MaterialDesignOutlinedButton}" Margin="301,340,69,0" VerticalAlignment="Top" FontSize="12" Click="AuthClick" Height="34"/>
+                    <Button Content="ЗАРЕГИСТРИРОВАТЬСЯ" Style="{StaticResource MaterialDesignRaisedButton}" HorizontalAlignment="Left" Margin="287,146,0,0" VerticalAlignment="Top" Width="223" FontSize="14" Click="Regclick" Height="51"/>
+                    <Button Content="ВХОД" Style="{StaticResource MaterialDesignOutlinedButton}" Margin="360,211,10,0" VerticalAlignment="Top" FontSize="12" Click="AuthClick" Height="34"/>
                     <Button Style="{StaticResource MaterialDesignFloatingActionButton}" HorizontalAlignment="Left" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="Black" x:Name="btnExit"   Margin="444,-10,0,384" Click="ExitClick">
 
                         <materialDesign:PackIcon Kind="Close"/>
 
                     </Button>
 
-                    <PasswordBox x:Name="TxbPassword" HorizontalContentAlignment="Center" Style="{StaticResource MaterialDesignOutlinedPasswordBox}" Margin="-259,123,523,259" Background="#4C673AB7"></PasswordBox>
-                    <TextBox x:Name="TxbLogin" HorizontalContentAlignment="Center" Style="{StaticResource MaterialDesignOutlinedTextBox}" Margin="-258,53,522,329" Background="#4C673AB7" FontFamily="Bahnschrift Condensed"></TextBox>
-                    <Label Content="РЕГИСТРАЦИЯ" HorizontalAlignment="Left" Margin="32,0,0,0" VerticalAlignment="Top" Height="46" Width="174" Foreground="#FF6E5894" FontSize="36" FontFamily="Bahnschrift Condensed"/>
+                    <PasswordBox x:Name="TxbPassword" HorizontalContentAlignment="Center" Style="{StaticResource MaterialDesignOutlinedPasswordBox}" Margin="-265,187,529,195" Background="#4C673AB7"></PasswordBox>
+                    <TextBox x:Name="TxbLogin" HorizontalContentAlignment="Center" Style="{StaticResource MaterialDesignOutlinedTextBox}" Margin="-264,117,528,265" Background="#4C673AB7" FontFamily="Bahnschrift Condensed"></TextBox>
+                    <Label Content="РЕГИСТРАЦИЯ" HorizontalAlignment="Left" Margin="-258,0,0,0" VerticalAlignment="Top" Height="46" Width="174" Foreground="#FF6E5894" FontSize="36" FontFamily="Bahnschrift Condensed"/>
 
 
-                    <TextBox x:Name="TxbName" HorizontalContentAlignment="Center" Style="{StaticResource MaterialDesignOutlinedTextBox}" Margin="-259,191,523,191" Background="#4C673AB7" FontFamily="Bahnschrift Condensed"/>
-                    <Label Content="Имя" HorizontalAlignment="Left" Margin="-159,169,0,0" VerticalAlignment="Top" Height="24" Width="26" Foreground="#FF7D32FF" FontSize="14" FontFamily="Bahnschrift Condensed"/>
-                    <Label Content="Пароль" HorizontalAlignment="Left" Margin="-167,100,0,0" VerticalAlignment="Top" Height="24" Width="48" Foreground="#FF7D32FF" FontSize="14" FontFamily="Bahnschrift Condensed"/>
-                    <Label Content="Логин" HorizontalAlignment="Left" Margin="-164,32,0,0" VerticalAlignment="Top" Height="24" Width="48" Foreground="#FF7D32FF" FontSize="14" FontFamily="Bahnschrift Condensed"/>
-                    <Label Content="Отчество" HorizontalAlignment="Left" Margin="-174,311,0,0" VerticalAlignment="Top" Height="24" Width="56" Foreground="#FF7D32FF" FontSize="14" FontFamily="Bahnschrift Condensed"/>
-                    <TextBox x:Name="TxbSurname" HorizontalContentAlignment="Center" Style="{StaticResource MaterialDesignOutlinedTextBox}" Margin="-259,262,523,120" Background="#4C673AB7" FontFamily="Bahnschrift Condensed"/>
-                    <TextBox x:Name="TxbPatronymic" HorizontalContentAlignment="Center" Style="{StaticResource MaterialDesignOutlinedTextBox}" Margin="-259,333,523,49" Background="#4C673AB7" FontFamily="Bahnschrift Condensed"/>
-                    <Label Content="Фамилия" HorizontalAlignment="Left" Margin="-172,239,0,0" VerticalAlignment="Top" Height="24" Width="56" Foreground="#FF7D32FF" FontSize="14" FontFamily="Bahnschrift Condensed"/>
-                    <TextBox x:Name="TxbNumber" HorizontalContentAlignment="Center" Style="{StaticResource MaterialDesignOutlinedTextBox}" Margin="1,156,263,226" Background="#4C673AB7" FontFamily="Bahnschrift Condensed"/>
-                    <Label Content="Номер" HorizontalAlignment="Left" Margin="95,135,0,0" VerticalAlignment="Top" Height="24" Width="48" Foreground="#FF7D32FF" FontSize="14" FontFamily="Bahnschrift Condensed"/>
-                    <Button Content="Добавить фото" HorizontalAlignment="Left" Margin="48,217,0,0" VerticalAlignment="Top" Click="AddImg" Background="#FF56AB5B" BorderBrush="#FF56AB5B"/>
+                    <TextBox x:Name="TxbName" HorizontalContentAlignment="Center" Style="{StaticResource MaterialDesignOutlinedTextBox}" Margin="-265,255,529,127" Background="#4C673AB7" FontFamily="Bahnschrift Condensed"/>
+                    <Label Content="ИМЯ" HorizontalAlignment="Left" Margin="-151,235,0,0" VerticalAlignment="Top" Height="24" Width="30" Foreground="#FF7D32FF" FontSize="14" FontFamily="Bahnschrift Condensed"/>
+                    <Label Content="ПАРОЛЬ" HorizontalAlignment="Left" Margin="-158,165,0,0" VerticalAlignment="Top" Height="24" Width="56" Foreground="#FF7D32FF" FontSize="14" FontFamily="Bahnschrift Condensed"/>
+                    <Label Content="ЛОГИН" HorizontalAlignment="Left" Margin="-154,97,0,0" VerticalAlignment="Top" Height="24" Width="55" Foreground="#FF7D32FF" FontSize="14" FontFamily="Bahnschrift Condensed"/>
+                    <Label Content="ОТЧЕСТВО" HorizontalAlignment="Left" Margin="105,167,0,0" VerticalAlignment="Top" Height="24" Width="66" Foreground="#FF7D32FF" FontSize="14" FontFamily="Bahnschrift Condensed"/>
+                    <TextBox x:Name="TxbSurname" HorizontalContentAlignment="Center" Style="{StaticResource MaterialDesignOutlinedTextBox}" Margin="4,117,260,265" Background="#4C673AB7" FontFamily="Bahnschrift Condensed"/>
+                    <TextBox x:Name="TxbPatronymic" HorizontalContentAlignment="Center" Style="{StaticResource MaterialDesignOutlinedTextBox}" Margin="4,188,260,194" Background="#4C673AB7" FontFamily="Bahnschrift Condensed"/>
+                    <Label Content="ФАМИЛИЯ" HorizontalAlignment="Left" Margin="104,97,0,0" VerticalAlignment="Top" Height="24" Width="66" Foreground="#FF7D32FF" FontSize="14" FontFamily="Bahnschrift Condensed"/>
+                    <TextBox x:Name="TxbNumber" HorizontalContentAlignment="Center" Style="{StaticResource MaterialDesignOutlinedTextBox}" Margin="5,254,259,128" Background="#4C673AB7" FontFamily="Bahnschrift Condensed"/>
+                    <Label Content="НОМЕР" HorizontalAlignment="Left" Margin="114,234,0,0" VerticalAlignment="Top" Height="24" Width="48" Foreground="#FF7D32FF" FontSize="14" FontFamily="Bahnschrift Condensed"/>
+                    <Button Content="Добавить фото" HorizontalAlignment="Left" Margin="-63,314,0,0" VerticalAlignment="Top" Click="AddImg" Background="#FF56AB5B" BorderBrush="#FF56AB5B"/>
                 </Grid>
             </Grid>
         </materialDesign:Card>

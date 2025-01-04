@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\Heisenberg\Downloads\LeasingApp\Leasing\Leasing\App.xaml
-17526495502
+181885170813
 2739969757
-411865242421
+421309250774
 211896250862
-MainWindow.xaml;Pages\AdminsPage\AddDogovor.xaml;Pages\AdminsPage\AddLeas.xaml;Pages\AdminsPage\AddUser.xaml;Pages\AdminsPage\AdminHistory.xaml;Pages\AdminsPage\AdminPageLeasesAdd.xaml;Pages\AdminsPage\AdminPage.xaml;Pages\AdminsPage\AdminUsers.xaml;Pages\AdminsPage\CarWindow.xaml;Pages\AdminsPage\EditDogovor.xaml;Pages\AdminsPage\EditLease.xaml;Pages\AdminsPage\EditUser.xaml;Pages\AdminsPage\ProfileWindow.xaml;Pages\AuthPage.xaml;Pages\RegPage.xaml;Pages\WorkersPage\WorkerHistoryPage.xaml;Pages\WorkersPage\WorkerPage.xaml;
+MainWindow.xaml;Pages\AdminsPage\AddDogovor.xaml;Pages\AdminsPage\AddLeas.xaml;Pages\AdminsPage\AddUser.xaml;Pages\AdminsPage\AdminHistory.xaml;Pages\AdminsPage\AdminPageLeasesAdd.xaml;Pages\AdminsPage\AdminPage.xaml;Pages\AdminsPage\AdminUsers.xaml;Pages\AdminsPage\CarWindow.xaml;Pages\AdminsPage\CarWindowForUser.xaml;Pages\AdminsPage\EditDogovor.xaml;Pages\AdminsPage\EditLease.xaml;Pages\AdminsPage\EditUser.xaml;Pages\AdminsPage\ProfileWindow.xaml;Pages\AuthPage.xaml;Pages\RegPage.xaml;Pages\WorkersPage\WorkerHistoryPage.xaml;Pages\WorkersPage\WorkerPage.xaml;
 
 True
 
