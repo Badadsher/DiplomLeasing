@@ -75,9 +75,9 @@ namespace Leasing.Pages.AdminsPage
                         MessageBox.Show("Заполните хоть одно поле!");
                     }
             }
-            catch
+            catch(Exception er)
             {
-                MessageBox.Show("Ошибка");
+                MessageBox.Show(er.Message);
             }
         }
 

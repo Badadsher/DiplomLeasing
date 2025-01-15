@@ -69,6 +69,7 @@ namespace Leasing.Pages.AdminsPage
 
         private void Refresher()
         {
+            DataGR.ItemsSource = null;
             DataGR.Items.Clear();
             var query = from user in AppData.db.Users
                         join userData in AppData.db.UsersData on user.ID equals userData.ID

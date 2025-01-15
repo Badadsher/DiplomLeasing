@@ -7,7 +7,7 @@
        
         xmlns:local="clr-namespace:Leasing"
       mc:Ignorable="d"
-        Title="MainWindow" ResizeMode="NoResize" Height="450" Width="830" AllowsTransparency="True" WindowStartupLocation="CenterScreen" WindowStyle="None" Background="Transparent">
+        Title="MainWindow" ResizeMode="NoResize" Height="550" Width="1030" AllowsTransparency="True" WindowStartupLocation="CenterScreen" WindowStyle="None" Background="Transparent">
 
 
     <Grid>

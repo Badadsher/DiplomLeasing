@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Leasing.Pages.AdminsPage"
            xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
         mc:Ignorable="d"
-        Title="CarWindowForUser" Loaded="Window_Loaded" IsEnabled="True" Height="357" Width="595" ResizeMode="NoResize"  AllowsTransparency="True" WindowStartupLocation="CenterScreen" WindowStyle="None" Background="Transparent">
+        Title="CarWindowForUser" Loaded="Window_Loaded" IsEnabled="True" Height="457" Width="695" ResizeMode="NoResize"  AllowsTransparency="True" WindowStartupLocation="CenterScreen" WindowStyle="None" Background="Transparent">
     <Grid>
         <materialDesign:Card Margin="10" UniformCornerRadius="20">
             <Grid Margin="0,0,0,-21">
@@ -16,22 +16,28 @@
                    Background="{x:Null}" 
                    Foreground="Black" 
                    x:Name="CloseButton" 
-                   Margin="509,10,0,292" 
+                   Margin="619,0,0,402" 
                    Cursor="Hand" 
                    Click="ExitClick">
                     <materialDesign:PackIcon Kind="Close" Foreground="Black" Height="39" Width="39" VerticalAlignment="Center"/>
                 </Button>
                 <!-- Изображение с фиксированной шириной и высотой -->
                 <Grid HorizontalAlignment="Left" Margin="38,81,0,0" VerticalAlignment="Top">
-                    <Image x:Name="myImage" Width="200" Height="150" Stretch="UniformToFill" />
+                    <Image x:Name="myImage" Width="250" Height="200" Stretch="UniformToFill" />
                 </Grid>
-                <Label x:Name="nameLabel" Content="Название" HorizontalAlignment="Left" Margin="284,80,0,0" VerticalAlignment="Top" Foreground="#E5000000" FontSize="18" FontFamily="Arial Black" Height="47" Width="281"/>
-                <Label x:Name="statusLabel" Content="Статус" HorizontalAlignment="Left" Margin="284,107,0,0" VerticalAlignment="Top" Foreground="#E5000000" FontSize="18" FontFamily="Arial Black" Height="47" Width="250"/>
-                <Label x:Name="priceLabel" Content="Цена" HorizontalAlignment="Left" Margin="284,134,0,0" VerticalAlignment="Top" Foreground="#E5000000" FontSize="18" FontFamily="Arial Black" Height="48" Width="250"/>
-                <Label x:Name="tarifLabel" Content="Тариф" HorizontalAlignment="Left" Margin="284,163,0,0" VerticalAlignment="Top" Foreground="#E5000000" FontSize="18" FontFamily="Arial Black" Height="47" Width="250"/>
-                <Label x:Name="countLabel" Content="Срок" HorizontalAlignment="Left" Margin="284,190,0,0" VerticalAlignment="Top" Foreground="#E5000000" FontSize="18" FontFamily="Arial Black" Height="47" Width="250"/>
-                <Label x:Name="avanceLabel" Content="Аванс" HorizontalAlignment="Left" Margin="284,216,0,0" VerticalAlignment="Top" Foreground="#E5000000" FontSize="18" FontFamily="Arial Black" Height="52" Width="250"/>
-                <Button Content="Взять в лизинг" HorizontalAlignment="Center" Margin="0,273,0,0" VerticalAlignment="Top" Click="TakeLease" Width="156"/>
+                <Label x:Name="nameLabel" Content="Название:" HorizontalAlignment="Left" Margin="318,80,0,0" VerticalAlignment="Top" Foreground="#E5000000" FontSize="18" FontFamily="Arial Black" Height="47" Width="116"/>
+                <Label x:Name="statusLabel" Content="Статус:" HorizontalAlignment="Left" Margin="318,107,0,0" VerticalAlignment="Top" Foreground="#E5000000" FontSize="18" FontFamily="Arial Black" Height="47" Width="250"/>
+                <Label x:Name="priceLabel" Content="Цена:" HorizontalAlignment="Left" Margin="318,134,0,0" VerticalAlignment="Top" Foreground="#E5000000" FontSize="18" FontFamily="Arial Black" Height="48" Width="250"/>
+                <Label x:Name="tarifLabel" Content="Тариф:" HorizontalAlignment="Left" Margin="318,163,0,0" VerticalAlignment="Top" Foreground="#E5000000" FontSize="18" FontFamily="Arial Black" Height="47" Width="250"/>
+                <Label x:Name="countLabel" Content="Срок:" HorizontalAlignment="Left" Margin="318,190,0,0" VerticalAlignment="Top" Foreground="#E5000000" FontSize="18" FontFamily="Arial Black" Height="47" Width="250"/>
+                <Label x:Name="avanceLabel" Content="Аванс:" HorizontalAlignment="Left" Margin="318,216,0,0" VerticalAlignment="Top" Foreground="#E5000000" FontSize="18" FontFamily="Arial Black" Height="52" Width="250"/>
+                <Button Content="Взять в лизинг" HorizontalAlignment="Center" Margin="0,346,0,0" VerticalAlignment="Top" Click="TakeLease" Width="248" Height="50"/>
+                <Label x:Name="nameBox" Content="Название" HorizontalAlignment="Left" Margin="428,81,0,0" VerticalAlignment="Top" Foreground="#E5888888" FontSize="18" FontFamily="Bahnschrift SemiBold" Height="47" Width="184"/>
+                <Label x:Name="statusBox" Content="Название" HorizontalAlignment="Left" Margin="394,108,0,0" VerticalAlignment="Top" Foreground="#E5888888" FontSize="18" FontFamily="Bahnschrift SemiBold" Height="47" Width="218"/>
+                <Label x:Name="priceBox" Content="Название" HorizontalAlignment="Left" Margin="380,136,0,0" VerticalAlignment="Top" Foreground="#E5888888" FontSize="18" FontFamily="Bahnschrift SemiBold" Height="47" Width="232"/>
+                <Label x:Name="tarifBox" Content="Название" HorizontalAlignment="Left" Margin="394,164,0,0" VerticalAlignment="Top" Foreground="#E5888888" FontSize="18" FontFamily="Bahnschrift SemiBold" Height="47" Width="220"/>
+                <Label x:Name="countBox" Content="Название" HorizontalAlignment="Left" Margin="378,191,0,0" VerticalAlignment="Top" Foreground="#E5888888" FontSize="18" FontFamily="Bahnschrift SemiBold" Height="47" Width="232"/>
+                <Label x:Name="avanceBox" Content="Название" HorizontalAlignment="Left" Margin="388,218,0,0" VerticalAlignment="Top" Foreground="#E5888888" FontSize="18" FontFamily="Bahnschrift SemiBold" Height="48" Width="226"/>
 
             </Grid>
         </materialDesign:Card>

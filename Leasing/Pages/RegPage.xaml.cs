@@ -86,5 +86,7 @@ namespace Leasing.Pages
                 MessageBox.Show("Изображение выбрано.");
             }
         }
+
+     
     }
 }

@@ -53,7 +53,7 @@ namespace Leasing.Pages.AdminsPage
             try
             {
                 if (!string.IsNullOrEmpty(TxbLogin.Text) && !string.IsNullOrEmpty(TxbPassword.Password.ToString())
-                   && !string.IsNullOrEmpty(TxbName.Text) && !string.IsNullOrEmpty(TxbSurname.Text)
+                   && !string.IsNullOrEmpty(TxbName.Text) && !string.IsNullOrEmpty(TxbSurname.Text) && _imageDatуa != null
                  )
                 {
                     Users people = new Users();
@@ -82,9 +82,9 @@ namespace Leasing.Pages.AdminsPage
                     MessageBox.Show("Ошибка, некоторые поля пустые", "Уведомление", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
             }
-            catch
+            catch(Exception ere)
             {
-                MessageBox.Show("Ошибка");
+                MessageBox.Show(ere.Message);
             }
         }
 

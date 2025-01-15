@@ -25,10 +25,14 @@
                 <Grid HorizontalAlignment="Left" Margin="38,81,0,0" VerticalAlignment="Top">
                     <Image x:Name="myImage" Width="200" Height="150" Stretch="UniformToFill" />
                 </Grid>
-                <Label x:Name="nameLabel" Content="Имя" HorizontalAlignment="Left" Margin="262,64,0,0" VerticalAlignment="Top" Foreground="#E5000000" FontSize="18" FontFamily="Arial Black" Height="47" Width="303"/>
-                <Label x:Name="surnameLabel" Content="Фамилия" HorizontalAlignment="Left" Margin="262,111,0,0" VerticalAlignment="Top" Foreground="#E5000000" FontSize="18" FontFamily="Arial Black" Height="47" Width="303"/>
-                <Label x:Name="patronymicLabel" Content="Отчество" HorizontalAlignment="Left" Margin="262,162,0,0" VerticalAlignment="Top" Foreground="#E5000000" FontSize="18" FontFamily="Arial Black" Height="47" Width="303"/>
-                <Label x:Name="numberLabel" Content="Номер" HorizontalAlignment="Left" Margin="262,210,0,0" VerticalAlignment="Top" Foreground="#E5000000" FontSize="18" FontFamily="Arial Black" Height="47" Width="303"/>
+                <Label x:Name="nameLabel" Content="Имя:" HorizontalAlignment="Center" Margin="0,64,0,0" VerticalAlignment="Top" Foreground="#E5000000" FontSize="18" FontFamily="Arial Black" Height="47" Width="55"/>
+                <Label x:Name="surnameLabel" Content="Фамилия:" HorizontalAlignment="Left" Margin="262,111,0,0" VerticalAlignment="Top" Foreground="#E5000000" FontSize="18" FontFamily="Arial Black" Height="47" Width="106"/>
+                <Label x:Name="patronymicLabel" Content="Отчество:" HorizontalAlignment="Left" Margin="262,162,0,0" VerticalAlignment="Top" Foreground="#E5000000" FontSize="18" FontFamily="Arial Black" Height="47" Width="303"/>
+                <Label x:Name="numberLabel" Content="Номер:" HorizontalAlignment="Left" Margin="262,210,0,0" VerticalAlignment="Top" Foreground="#E5000000" FontSize="18" FontFamily="Arial Black" Height="47" Width="79"/>
+                <Label x:Name="nameLabelBox" Content="Имя:" HorizontalAlignment="Left" Margin="310,65,0,0" VerticalAlignment="Top" Foreground="#E5757575" FontSize="18" FontFamily="Bahnschrift" Height="47" Width="252"/>
+                <Label x:Name="surnameLabelBox" Content="Имя:" HorizontalAlignment="Left" Margin="363,111,0,0" VerticalAlignment="Top" Foreground="#E5757575" FontSize="18" FontFamily="Bahnschrift" Height="47" Width="213"/>
+                <Label x:Name="patronymicLabelBox" Content="Имя:" HorizontalAlignment="Left" Margin="363,163,0,0" VerticalAlignment="Top" Foreground="#E5757575" FontSize="18" FontFamily="Bahnschrift" Height="47" Width="213"/>
+                <Label x:Name="numberLabelBox" Content="Имя:" HorizontalAlignment="Left" Margin="337,211,0,0" VerticalAlignment="Top" Foreground="#E5757575" FontSize="18" FontFamily="Bahnschrift" Height="47" Width="234"/>
             </Grid>
         </materialDesign:Card>
     </Grid>

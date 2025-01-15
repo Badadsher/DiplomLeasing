@@ -6,8 +6,8 @@
       xmlns:local="clr-namespace:Leasing.Pages.AdminsPage"
       xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
       mc:Ignorable="d" 
-      d:DesignHeight="450"
-      Title="AdminPage" Loaded="Page_Loaded" Width="830">
+      d:DesignHeight="550"
+      Title="AdminPage" Loaded="Page_Loaded" Width="1030">
 
     <Page.Resources>
         <local:ImageConverter x:Key="ByteArrayToImageConverter"/>
@@ -18,7 +18,7 @@
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="1*" />
-                    <ColumnDefinition Width="15*" />
+                    <ColumnDefinition Width="20*" />
                 </Grid.ColumnDefinitions>
                 <Grid.Resources>
                     <Style TargetType="materialDesign:PackIcon">
@@ -70,9 +70,18 @@ BorderBrush="{x:Null}" Background="{x:Null}" Foreground="Black" Click="DogovorCl
                     </ListView>
                 </Grid>
                 <Grid Grid.Column="1" Background="#FF221835" Name="RenderPages" Margin="0,0,-10,0">
-                    <Ellipse HorizontalAlignment="Left" Height="292" Margin="561,254,0,0" VerticalAlignment="Top" Width="376" Fill="#19FFFFFF"/>
-
-                    <Button Style="{StaticResource MaterialDesignFloatingActionButton}" HorizontalAlignment="Left" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="Black" x:Name="CloseButton"   Margin="679,-5,0,379" Click="ExitClick" Cursor="Hand" RenderTransformOrigin="0.5,0.5">
+                    <Ellipse HorizontalAlignment="Left" Height="197" Margin="868,483,0,0" VerticalAlignment="Top" Width="294" Fill="#19FFFFFF"/>
+                    <Ellipse HorizontalAlignment="Left" Height="220" Margin="-60,-166,0,0" VerticalAlignment="Top" Width="282" Fill="#19FFFFFF" RenderTransformOrigin="0.5,0.5">
+                        <Ellipse.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform Angle="0.133"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Ellipse.RenderTransform>
+                    </Ellipse>
+                    <Button Style="{StaticResource MaterialDesignFloatingActionButton}" HorizontalAlignment="Left" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="Black" x:Name="CloseButton"   Margin="905,4,0,470" Click="ExitClick" Cursor="Hand" RenderTransformOrigin="0.5,0.5">
                         <Button.RenderTransform>
                             <TransformGroup>
                                 <ScaleTransform/>
@@ -92,7 +101,7 @@ BorderBrush="{x:Null}" Background="{x:Null}" Foreground="Black" Click="DogovorCl
                             </materialDesign:PackIcon.RenderTransform>
                         </materialDesign:PackIcon>
                     </Button>
-                    <ScrollViewer VerticalScrollBarVisibility="Auto" Margin="14,56,39,83">
+                    <ScrollViewer VerticalScrollBarVisibility="Auto" Margin="14,52,39,93">
                         <ItemsControl Name="CardContainer" Margin="10" HorizontalAlignment="Center">
                             <ItemsControl.ItemsPanel>
                                 <ItemsPanelTemplate>
@@ -121,11 +130,10 @@ BorderBrush="{x:Null}" Background="{x:Null}" Foreground="Black" Click="DogovorCl
                             </ItemsControl.ItemTemplate>
                         </ItemsControl>
                     </ScrollViewer>
-                    <Button Content="РЕДАКТИРОВАТЬ" HorizontalAlignment="Left" Margin="14,352,0,0" VerticalAlignment="Top" Click="EditLease"/>
-                    <Button Content="ДОБАВИТЬ" HorizontalAlignment="Left" Margin="603,352,0,0" VerticalAlignment="Top" Click="AddCar"/>
-                    <Button Content="ОБНОВИТЬ" HorizontalAlignment="Left" Margin="479,352,0,0" VerticalAlignment="Top" Click="Refresh"/>
-                    <Ellipse HorizontalAlignment="Left" Height="200" Margin="-23,-149,0,0" VerticalAlignment="Top" Width="233" Fill="#19FFFFFF"/>
-                    <Rectangle HorizontalAlignment="Left" Height="54" Margin="11,1,0,0" VerticalAlignment="Top" Width="80" RenderTransformOrigin="0.5,0.5">
+                    <Button Content="РЕДАКТИРОВАТЬ" HorizontalAlignment="Left" Margin="14,443,0,0" VerticalAlignment="Top" Click="EditLease"/>
+                    <Button Content="ДОБАВИТЬ" HorizontalAlignment="Left" Margin="823,443,0,0" VerticalAlignment="Top" Click="AddCar"/>
+                    <Button Content="ОБНОВИТЬ" HorizontalAlignment="Left" Margin="699,443,0,0" VerticalAlignment="Top" Click="Refresh"/>
+                    <Rectangle HorizontalAlignment="Left" Height="54" Margin="11,1,0,0" VerticalAlignment="Top" Width="77" RenderTransformOrigin="0.5,0.5">
                         <Rectangle.RenderTransform>
                             <TransformGroup>
                                 <ScaleTransform/>
@@ -138,7 +146,7 @@ BorderBrush="{x:Null}" Background="{x:Null}" Foreground="Black" Click="DogovorCl
                             <ImageBrush ImageSource="/Images/newLogo.png"/>
                         </Rectangle.Fill>
                     </Rectangle>
-                    <Label Content="Все машины для лизинга" HorizontalAlignment="Left" Margin="215,16,0,0" VerticalAlignment="Top" Foreground="#E5FFFFFF" FontSize="18" FontFamily="Arial Black"/>
+                    <Label Content="Все машины для лизинга" HorizontalAlignment="Center" Margin="0,14,0,0" VerticalAlignment="Top" Foreground="#E5FFFFFF" FontSize="18" FontFamily="Arial Black"/>
                 </Grid>
             </Grid>
         </materialDesign:Card>

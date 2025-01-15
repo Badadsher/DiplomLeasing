@@ -94,11 +94,6 @@ namespace Leasing.Pages.AdminsPage
 
         private void Refresher()
         {
-
-
-
-
-
             var query = from lease in AppData.db.Leases
                         join leaseObject in AppData.db.LeaseObjects
 

@@ -13,17 +13,17 @@
                 <Button Style="{StaticResource MaterialDesignFloatingActionButton}" HorizontalAlignment="Left" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="Black" x:Name="CloseButton"   Margin="414,10,0,385" Click="ExitClick" Cursor="Hand">
                     <materialDesign:PackIcon Kind="Close" Foreground="Black" Height="39" Width="39" VerticalAlignment="Center"/>
                 </Button>
-                <TextBox x:Name="TxbClient" HorizontalContentAlignment="Center"   Style="{StaticResource MaterialDesignOutlinedTextBox}" HorizontalAlignment="Center" Margin="0,41,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="240" Height="52" Background="#FF6F63C5" Foreground="White"/>
+                <TextBox x:Name="TxbClient" HorizontalContentAlignment="Center"   Style="{StaticResource MaterialDesignOutlinedTextBox}" HorizontalAlignment="Center" Margin="0,41,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="240" Height="52" Background="#FF6F63C5" Foreground="White" FontSize="16"/>
                 <Label Content="Айди клиента" HorizontalAlignment="Center" Margin="0,18,0,0" VerticalAlignment="Top" Height="24" Width="72" Foreground="#FF7D32FF" FontSize="14" FontFamily="Bahnschrift Condensed"/>
-                <Label Content="Начала лизинга" HorizontalAlignment="Left" Margin="199,98,0,0" VerticalAlignment="Top" Height="24" Width="96" Foreground="#FF7D32FF" FontSize="14" FontFamily="Bahnschrift Condensed"/>
-                <Label Content="Конец лизинга" HorizontalAlignment="Left" Margin="203,179,0,0" VerticalAlignment="Top" Height="24" Width="96" Foreground="#FF7D32FF" FontSize="14" FontFamily="Bahnschrift Condensed"/>
-                <Label Content="Статус" HorizontalAlignment="Center" Margin="0,255,0,0" VerticalAlignment="Top" Height="24" Width="38" Foreground="#FF7D32FF" FontSize="14" FontFamily="Bahnschrift Condensed"/>
+                <Label Content="Начала лизинга" HorizontalAlignment="Left" Margin="199,103,0,0" VerticalAlignment="Top" Height="24" Width="96" Foreground="#FF7D32FF" FontSize="14" FontFamily="Bahnschrift Condensed"/>
+                <Label Content="Конец лизинга" HorizontalAlignment="Left" Margin="203,184,0,0" VerticalAlignment="Top" Height="24" Width="96" Foreground="#FF7D32FF" FontSize="14" FontFamily="Bahnschrift Condensed"/>
+                <Label Content="Статус" HorizontalAlignment="Center" Margin="0,262,0,0" VerticalAlignment="Top" Height="24" Width="38" Foreground="#FF7D32FF" FontSize="14" FontFamily="Bahnschrift Condensed"/>
                 <Button Content="Добавить" HorizontalAlignment="Center" Margin="0,455,0,0" VerticalAlignment="Top" Click="AddDogovorClick"/>
-                <DatePicker x:Name="datestart"  Style="{StaticResource MaterialDesignOutlinedDatePicker}" HorizontalAlignment="Center" Margin="0,127,0,0" VerticalAlignment="Top" Height="45" Width="122"/>
-                <DatePicker x:Name="dateend"  Style="{StaticResource MaterialDesignOutlinedDatePicker}" HorizontalAlignment="Center" Margin="0,208,0,0" VerticalAlignment="Top" Height="45" Width="122"/>
-                <TextBox x:Name="CarId" HorizontalContentAlignment="Center"   Style="{StaticResource MaterialDesignOutlinedTextBox}" HorizontalAlignment="Center" Margin="0,366,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="240" Height="52" Background="#FF6F63C5" Foreground="White"/>
+                <DatePicker x:Name="datestart"  Style="{StaticResource MaterialDesignOutlinedDatePicker}" HorizontalAlignment="Center" Margin="0,127,0,0" VerticalAlignment="Top" Height="55" Width="122"/>
+                <DatePicker x:Name="dateend"  Style="{StaticResource MaterialDesignOutlinedDatePicker}" HorizontalAlignment="Center" Margin="0,208,0,0" VerticalAlignment="Top" Height="55" Width="122"/>
+                <TextBox x:Name="CarId" HorizontalContentAlignment="Center"   Style="{StaticResource MaterialDesignOutlinedTextBox}" HorizontalAlignment="Center" Margin="0,366,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="240" Height="52" Background="#FF6F63C5" Foreground="White" FontSize="16"/>
                 <Label Content="Айди машины" HorizontalAlignment="Center" Margin="0,337,0,0" VerticalAlignment="Top" Height="24" Width="72" Foreground="#FF7D32FF" FontSize="14" FontFamily="Bahnschrift Condensed"/>
-                <ComboBox x:Name="combob" Style="{StaticResource MaterialDesignOutlinedComboBox}" HorizontalAlignment="Center" Margin="0,284,0,0" VerticalAlignment="Top" Width="120" Height="42">
+                <ComboBox x:Name="combob" Style="{StaticResource MaterialDesignOutlinedComboBox}" HorizontalAlignment="Center" Margin="0,284,0,0" VerticalAlignment="Top" Width="120" Height="55">
                     <ComboBoxItem Content="В процессе" Tag="1" />
                     <ComboBoxItem Content="Закончен" Tag="2" />
                 </ComboBox>

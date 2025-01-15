@@ -6,18 +6,18 @@
       xmlns:local="clr-namespace:Leasing.Pages.AdminsPage"
       xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="550" d:DesignWidth="1030"
       Title="AdminUsers" Loaded="Page_Loaded">
 
     <Grid>
 
         <materialDesign:Card x:Name="MainCard" Margin="10" UniformCornerRadius="20" Background="#00000000">
-            
+
             <Grid>
-                
+
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="1*" />
-                    <ColumnDefinition Width="15*" />
+                    <ColumnDefinition Width="20*" />
                 </Grid.ColumnDefinitions>
                 <Grid.Resources>
                     <Style TargetType="materialDesign:PackIcon">
@@ -69,9 +69,18 @@ BorderBrush="{x:Null}" Background="{x:Null}" Foreground="Black" Click="DogovorCl
                     </ListView>
                 </Grid>
                 <Grid Grid.Column="1" Background="#FF221835" Name="RenderPages" Margin="0,0,-10,0">
-                    <Ellipse HorizontalAlignment="Left" Height="200" Margin="-23,-149,0,0" VerticalAlignment="Top" Width="233" Fill="#19FFFFFF"/>
-                    <Ellipse HorizontalAlignment="Left" Height="292" Margin="561,254,0,0" VerticalAlignment="Top" Width="376" Fill="#19FFFFFF"/>
-                    <Rectangle HorizontalAlignment="Left" Height="54" Margin="11,1,0,0" VerticalAlignment="Top" Width="80" RenderTransformOrigin="0.5,0.5">
+                    <Ellipse HorizontalAlignment="Left" Height="197" Margin="868,483,0,0" VerticalAlignment="Top" Width="294" Fill="#19FFFFFF"/>
+                    <Ellipse HorizontalAlignment="Left" Height="220" Margin="-60,-166,0,0" VerticalAlignment="Top" Width="282" Fill="#19FFFFFF" RenderTransformOrigin="0.5,0.5">
+                        <Ellipse.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform Angle="0.133"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Ellipse.RenderTransform>
+                    </Ellipse>
+                    <Rectangle HorizontalAlignment="Left" Height="54" Margin="11,1,0,0" VerticalAlignment="Top" Width="77" RenderTransformOrigin="0.5,0.5">
                         <Rectangle.RenderTransform>
                             <TransformGroup>
                                 <ScaleTransform/>
@@ -84,7 +93,7 @@ BorderBrush="{x:Null}" Background="{x:Null}" Foreground="Black" Click="DogovorCl
                             <ImageBrush ImageSource="/Images/newLogo.png"/>
                         </Rectangle.Fill>
                     </Rectangle>
-                    <Button Style="{StaticResource MaterialDesignFloatingActionButton}" HorizontalAlignment="Left" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="Black" x:Name="CloseButton"   Margin="679,-5,0,379" Click="ExitClick" Cursor="Hand">
+                    <Button Style="{StaticResource MaterialDesignFloatingActionButton}" HorizontalAlignment="Left" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="Black" x:Name="CloseButton"    Margin="905,4,0,470" Click="ExitClick" Cursor="Hand">
                         <materialDesign:PackIcon Kind="Close" Foreground="White"/>
                     </Button>
                     <DataGrid x:Name="DataGR" Margin="22,56,22,102" AutoGenerateColumns="False" HorizontalScrollBarVisibility="Disabled" MouseRightButtonDown="OpenProfile" 
@@ -96,9 +105,9 @@ BorderBrush="{x:Null}" Background="{x:Null}" Foreground="Black" Click="DogovorCl
                             <DataGridTextColumn Header="СТАТУС" Width="111" Binding="{Binding Status}"/>
                         </DataGrid.Columns>
                     </DataGrid>
-                    <Button Content="РЕДАКТИРОВАТЬ" HorizontalAlignment="Left" Margin="20,352,0,0" VerticalAlignment="Top" Click="EditUser"/>
-                    <Button Content="ДОБАВИТЬ" HorizontalAlignment="Left" Margin="603,352,0,0" VerticalAlignment="Top" Click="AddClick"/>
-                    <Button Content="ОБНОВИТЬ" HorizontalAlignment="Left" Margin="479,352,0,0" VerticalAlignment="Top" Click="Refresh"/>
+                    <Button Content="РЕДАКТИРОВАТЬ" HorizontalAlignment="Left" Margin="22,443,0,0" VerticalAlignment="Top" Click="EditUser"/>
+                    <Button Content="ДОБАВИТЬ" HorizontalAlignment="Left" Margin="844,443,0,0" VerticalAlignment="Top" Click="AddClick"/>
+                    <Button Content="ОБНОВИТЬ" HorizontalAlignment="Left" Margin="717,443,0,0" VerticalAlignment="Top" Click="Refresh"/>
                     <Label Content="Список пользователей" HorizontalAlignment="Center" Margin="0,16,0,0" VerticalAlignment="Top" Foreground="#E5FFFFFF" FontSize="18" FontFamily="Arial Black"/>
                 </Grid>
             </Grid>
@@ -106,6 +115,7 @@ BorderBrush="{x:Null}" Background="{x:Null}" Foreground="Black" Click="DogovorCl
         <Border x:Name="DarkOverlay" Background="#80000000" Visibility="Collapsed"
             HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
             Margin="{Binding Margin, ElementName=MainCard}" />
+       
     </Grid>
 </Page>
 

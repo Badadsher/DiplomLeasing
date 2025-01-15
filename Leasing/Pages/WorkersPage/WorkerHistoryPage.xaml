@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:Leasing.Pages.WorkersPage"
       xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="900"
+      d:DesignHeight="550" d:DesignWidth="1030"
       Title="WorkerHistoryPage" Loaded="Page_Loaded">
     <Page.Resources>
         <local:ImageConverterer x:Key="ByteArrayToImageConverter"/>
@@ -16,7 +16,7 @@
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="1*" />
-                    <ColumnDefinition Width="15*" />
+                    <ColumnDefinition Width="20*" />
                 </Grid.ColumnDefinitions>
                 <Grid.Resources>
                     <Style TargetType="materialDesign:PackIcon">
@@ -60,13 +60,22 @@
                     </ListView>
                 </Grid>
                 <Grid Grid.Column="1" Background="#FF221835" Name="RenderPages" Margin="0,0,-10,0">
-                    <Ellipse HorizontalAlignment="Left" Height="292" Margin="561,254,0,0" VerticalAlignment="Top" Width="376" Fill="#19FFFFFF"/>
-
-                    <Button Style="{StaticResource MaterialDesignFloatingActionButton}" HorizontalAlignment="Left" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="Black" x:Name="CloseButton"   Margin="679,-5,0,379"  Cursor="Hand" Click="CloseApp">
+                    <Ellipse HorizontalAlignment="Left" Height="197" Margin="868,483,0,0" VerticalAlignment="Top" Width="294" Fill="#19FFFFFF"/>
+                    <Ellipse HorizontalAlignment="Left" Height="220" Margin="-60,-166,0,0" VerticalAlignment="Top" Width="282" Fill="#19FFFFFF" RenderTransformOrigin="0.5,0.5">
+                        <Ellipse.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform Angle="0.133"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Ellipse.RenderTransform>
+                    </Ellipse>
+                    <Button Style="{StaticResource MaterialDesignFloatingActionButton}" HorizontalAlignment="Left" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="Black" x:Name="CloseButton"    Margin="905,4,0,470"  Cursor="Hand" Click="CloseApp">
                         <materialDesign:PackIcon Kind="Close" Foreground="White"/>
                     </Button>
                     <DataGrid x:Name="DataGR" Margin="10,56,18,102" AutoGenerateColumns="False" HorizontalScrollBarVisibility="Disabled">
-                        
+
                         <DataGrid.Columns>
                             <DataGridTextColumn Header="НАЗВАНИЕ" Width="131" Binding="{Binding Name}"/>
                             <DataGridTemplateColumn Header="ФОТО">
@@ -85,8 +94,8 @@
                             <DataGridTextColumn Header="СТАТУС" Width="115" Binding="{Binding Status}"/>
                         </DataGrid.Columns>
                     </DataGrid>
-                    <Button Content="ОТМЕНИТЬ" HorizontalAlignment="Left" Margin="10,344,0,0" VerticalAlignment="Top" Click="CloseLease"/>
-                    <Rectangle HorizontalAlignment="Left" Height="54" Margin="11,1,0,0" VerticalAlignment="Top" Width="80" RenderTransformOrigin="0.5,0.5">
+                    <Button Content="ОТМЕНИТЬ" HorizontalAlignment="Left" Margin="11,443,0,0" VerticalAlignment="Top" Click="CloseLease"/>
+                    <Rectangle HorizontalAlignment="Left" Height="54" Margin="11,1,0,0" VerticalAlignment="Top" Width="77" RenderTransformOrigin="0.5,0.5">
                         <Rectangle.RenderTransform>
                             <TransformGroup>
                                 <ScaleTransform/>
@@ -99,8 +108,7 @@
                             <ImageBrush ImageSource="/Images/newLogo.png"/>
                         </Rectangle.Fill>
                     </Rectangle>
-                    <Ellipse HorizontalAlignment="Left" Height="200" Margin="-23,-149,0,0" VerticalAlignment="Top" Width="233" Fill="#19FFFFFF"/>
-                    <Button Content="ОБНОВИТЬ" HorizontalAlignment="Left" Margin="129,344,0,0" VerticalAlignment="Top" Click="Refresh" Cursor="Hand"/>
+                    <Button Content="ОБНОВИТЬ" HorizontalAlignment="Left" Margin="130,443,0,0" VerticalAlignment="Top" Click="Refresh" Cursor="Hand"/>
                     <Label Content="Ваши лизинги" HorizontalAlignment="Center" Margin="0,17,0,0" VerticalAlignment="Top" Foreground="#E5FFFFFF" FontSize="18" FontFamily="Arial Black"/>
                 </Grid>
             </Grid>

@@ -38,10 +38,10 @@ namespace Leasing.Pages.AdminsPage
             myImage.Source = bitmapImage;
 
          
-            nameLabel.Content = "ИМЯ: " + curUs.Name;
-            surnameLabel.Content = "ФАМИЛИЯ: " + curUs.Surname;
-            patronymicLabel.Content = "ОТЧЕСТВО: " + curUs.Patronymic;
-            numberLabel.Content = "НОМЕР: " + curUs.Number;
+            nameLabelBox.Content =  curUs.Name;
+            surnameLabelBox.Content = curUs.Surname;
+            patronymicLabelBox.Content = curUs.Patronymic;
+            numberLabelBox.Content = curUs.Number;
         }
 
         private void ExitClick(object sender, RoutedEventArgs e)

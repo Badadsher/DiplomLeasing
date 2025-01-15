@@ -58,12 +58,12 @@ namespace Leasing.Pages.AdminsPage
             myImage.Source = bitmapImage;
 
 
-            nameLabel.Content = "ИМЯ: " + curCar.Name;
-            statusLabel.Content = "СТАТУС: " + curQuery.Status;
-            priceLabel.Content = "ЦЕНА: " + curCar.CarPrice + "₽";
-            tarifLabel.Content = "ТАРИФ: " + curCar.MothlyPrice + "₽/В МЕС";
-            countLabel.Content = "СРОК: " + curCar.MonthCount + "(В МЕСЯЦАХ)";
-            avanceLabel.Content = "АВАНС: " + curCar.Avance + "₽";
+            nameBox.Content =curCar.Name;
+            statusBox.Content =curQuery.Status;
+            priceBox.Content =curCar.CarPrice + "₽";
+            tarifBox.Content =curCar.MothlyPrice + "₽/В МЕС";
+            countBox.Content =curCar.MonthCount + "(В МЕСЯЦАХ)";
+            avanceBox.Content = curCar.Avance + "₽";
         }
 
         private void ExitClick(object sender, RoutedEventArgs e)

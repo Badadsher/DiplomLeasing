@@ -115,6 +115,7 @@ namespace Leasing.Pages.AdminsPage
                         on lease.StatusID equals leasestus.ID
                         select new LeaseViewModel
                         {
+                            LeaseID = lease.ID,
                             CarId = (int)lease.CarID,
                             Name = leaseObject.Name,
                             Images = leaseObject.Images,
@@ -122,7 +123,8 @@ namespace Leasing.Pages.AdminsPage
                             StartDate = lease.StartDate,
                             EndDate = lease.EndDate,
                             Status = leasestus.StatusLeaseName,
-                            CarID = (int)lease.CarID
+                            CarID = (int)lease.CarID,
+                            ClientID = lease.ClientID
                         };
 
             DataGR.ItemsSource = query.ToList();

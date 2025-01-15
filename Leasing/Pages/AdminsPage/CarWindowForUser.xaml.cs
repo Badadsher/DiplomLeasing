@@ -58,12 +58,12 @@ namespace Leasing.Pages.AdminsPage
             myImage.Source = bitmapImage;
 
 
-            nameLabel.Content = "ИМЯ: " + curCar.Name;
-            statusLabel.Content = "СТАТУС: " + curQuery.Status;
-            priceLabel.Content = "ЦЕНА: " + curCar.CarPrice + "₽";
-            tarifLabel.Content = "ТАРИФ: " + curCar.MothlyPrice + "₽/В МЕС";
-            countLabel.Content = "СРОК: " + curCar.MonthCount + "(В МЕСЯЦАХ)";
-            avanceLabel.Content = "АВАНС: " + curCar.Avance + "₽";
+            nameBox.Content = curCar.Name;
+            statusBox.Content = curQuery.Status;
+            priceBox.Content = curCar.CarPrice + "₽";
+            tarifBox.Content = curCar.MothlyPrice + "₽/В МЕС";
+            countBox.Content = curCar.MonthCount + "(В МЕСЯЦАХ)";
+            avanceBox.Content = curCar.Avance + "₽";
 
         }
 
@@ -88,12 +88,13 @@ namespace Leasing.Pages.AdminsPage
                   newlease.CarID = curCAR.ID;
                   newlease.StatusID = 1;
 
-                   curCAR.CarStatusID = 2;
-                AppData.db.Leases.Add(newlease);
-                  AppData.db.SaveChanges();
-                   MessageBox.Show("Успешно");
+                    curCAR.CarStatusID = 2;
+                    AppData.db.Leases.Add(newlease);
+                    AppData.db.SaveChanges();
+                    MessageBox.Show("Успешно");
+                    this.Close();
 
-               }
+                }
             }
             catch (Exception ex)
            {

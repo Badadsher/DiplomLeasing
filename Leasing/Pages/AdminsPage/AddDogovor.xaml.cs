@@ -54,7 +54,7 @@ namespace Leasing.Pages.AdminsPage
                         {
                             Leases leasing = new Leases();
 
-                            leasing.ID = AppData.db.LeaseObjects.Any() ? AppData.db.LeaseObjects.Max(u => u.ID) + 1 : 1;
+                            leasing.ID = AppData.db.Leases.Any() ? AppData.db.Leases.Max(u => u.ID) + 1 : 1;
 
                             if (combob.SelectedItem != null & combob.SelectedIndex == 0)
                             {
@@ -81,9 +81,9 @@ namespace Leasing.Pages.AdminsPage
                     MessageBox.Show("Ошибка, некоторые поля пустые", "Уведомление", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
             }
-            catch (Exception er)
+            catch (Exception ex)
             {
-                MessageBox.Show(er.Message);
+                MessageBox.Show(ex.InnerException?.Message ?? ex.Message, "Ошибка");
             }
         }
     }

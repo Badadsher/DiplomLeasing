@@ -7,7 +7,7 @@
 
          xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="830"
+      d:DesignHeight="550" d:DesignWidth="1030"
       Title="AuthPage">
 
 
@@ -26,11 +26,11 @@
                     </Style>
                 </Grid.Resources>
                 <Grid Grid.Column="0" Background="#FF221835" Margin="-27,0,5,0">
-                    <Ellipse HorizontalAlignment="Left" Height="174" Margin="-37,314,0,0" VerticalAlignment="Top" Width="174" Fill="#19FFFFFF"/>
-                    <Ellipse HorizontalAlignment="Left" Height="174" Margin="72,279,0,0" VerticalAlignment="Top" Width="174" Fill="#19FFFFFF"/>
-                    <Ellipse HorizontalAlignment="Left" Height="174" Margin="191,314,0,0" VerticalAlignment="Top" Width="174" Fill="#19FFFFFF"/>
-                    <Label Content="ДОБРО ПОЖАЛОВАТЬ" HorizontalAlignment="Left" Margin="38,34,0,0" VerticalAlignment="Top" Height="48" Width="290" Foreground="#E5FFFFFF" FontSize="36" FontFamily="Bahnschrift Condensed"/>
-                    <Rectangle HorizontalAlignment="Left" Height="69" Margin="126,355,0,0" VerticalAlignment="Top" Width="85" RenderTransformOrigin="0.5,0.5">
+                    <Ellipse HorizontalAlignment="Left" Height="174" Margin="-45,426,0,0" VerticalAlignment="Top" Width="174" Fill="#19FFFFFF"/>
+                    <Ellipse HorizontalAlignment="Left" Height="174" Margin="64,390,0,0" VerticalAlignment="Top" Width="174" Fill="#19FFFFFF"/>
+                    <Ellipse HorizontalAlignment="Left" Height="174" Margin="183,426,0,0" VerticalAlignment="Top" Width="174" Fill="#19FFFFFF"/>
+                    <Label Content="ДОБРО ПОЖАЛОВАТЬ" HorizontalAlignment="Left" Margin="39,41,0,0" VerticalAlignment="Top" Height="48" Width="290" Foreground="#E5FFFFFF" FontSize="36" FontFamily="Bahnschrift Condensed"/>
+                    <Rectangle HorizontalAlignment="Left" Height="70" Margin="118,466,0,0" VerticalAlignment="Top" Width="85" RenderTransformOrigin="0.5,0.5">
                         <Rectangle.RenderTransform>
                             <TransformGroup>
                                 <ScaleTransform/>
@@ -46,17 +46,17 @@
 
                 </Grid>
                 <Grid Background="White" Name="RenderPages" Grid.ColumnSpan="2" Margin="285,0,0,0">
-                    <PasswordBox x:Name="TxbPassword" HorizontalContentAlignment="Center" Style="{StaticResource MaterialDesignOutlinedPasswordBox}" Margin="150,208,114,174" Background="#4C673AB7" Foreground="#FF673AB7"></PasswordBox>
-                    <TextBox x:Name="TxbLogin" HorizontalContentAlignment="Center" Style="{StaticResource MaterialDesignOutlinedTextBox}" Margin="150,144,114,238" Background="#4C673AB7" FontFamily="Bahnschrift Condensed" Foreground="#FF673AB7"></TextBox>
-                    <Button Content="ЗАРЕГИСТРИРОВАТЬСЯ" Style="{StaticResource MaterialDesignOutlinedButton}"  Margin="269,285,114,113"  Width="142" FontSize="10" Click="RegClick"/>
-                    <Button Content="ВХОД" Style="{StaticResource MaterialDesignRaisedButton}" Margin="150,285,261,113"  FontSize="10" Click="AuthClick"/>
-                    <Label Content="ВХОД" HorizontalAlignment="Left" Margin="246,93,0,0" VerticalAlignment="Top" Height="46" Width="70" Foreground="#FF6E5894" FontSize="36" FontFamily="Bahnschrift Condensed"/>
+                    <PasswordBox x:Name="TxbPassword" HorizontalContentAlignment="Center" Style="{StaticResource MaterialDesignOutlinedPasswordBox}" Margin="228,266,175,206" Background="#4C673AB7" Foreground="#FF673AB7" FontSize="16"></PasswordBox>
+                    <TextBox x:Name="TxbLogin" HorizontalContentAlignment="Center" Style="{StaticResource MaterialDesignOutlinedTextBox}" Margin="228,194,175,278" Background="#4C673AB7" FontFamily="Bahnschrift Condensed" Foreground="#FF673AB7" FontSize="16"></TextBox>
+                    <Button Content="ЗАРЕГИСТРИРОВАТЬСЯ" Style="{StaticResource MaterialDesignOutlinedButton}"  Margin="354,348,175,150" FontSize="14" Click="RegClick"/>
+                    <Button Content="ВХОД" Style="{StaticResource MaterialDesignRaisedButton}" Margin="228,348,383,150"  FontSize="14" Click="AuthClick"/>
+                    <Label Content="ВХОД" HorizontalAlignment="Left" Margin="354,142,0,0" VerticalAlignment="Top" Height="46" Width="70" Foreground="#FF6E5894" FontSize="36" FontFamily="Bahnschrift Condensed"/>
 
-                    <materialDesign:PackIcon Kind="Account" Margin="115,153,0,0"/>
-                    <materialDesign:PackIcon Kind="Lock" Margin="115,217,0,0"/>
+                    <materialDesign:PackIcon Kind="Account" Margin="192,202,0,0"/>
+                    <materialDesign:PackIcon Kind="Lock" Margin="192,280,0,0"/>
 
                     <Button Style="{StaticResource MaterialDesignFloatingActionButton}" HorizontalAlignment="Left"
-   BorderBrush="{x:Null}" Background="{x:Null}" Foreground="Black" x:Name="btnExit" Click="ExitClick" Margin="444,-10,0,384">
+   BorderBrush="{x:Null}" Background="{x:Null}" Foreground="Black" x:Name="btnExit" Click="ExitClick" Margin="669,0,0,474">
 
                         <materialDesign:PackIcon Kind="Close"/>
 
